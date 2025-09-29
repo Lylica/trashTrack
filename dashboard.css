@@ -1,0 +1,165 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F0DC;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.barra-lateral {
+    background-color: #44633F;
+    border-radius: 10px;
+    width: 250px;
+    min-height: calc(100vh - 40px);
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    color: #fff;
+}
+
+.titulo-dashboard {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.titulo-dashboard img {
+    width: 20px;
+    height: 20px;
+}
+
+.config-grafico {
+    background-color: #DCDABE;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #3F4B3B;
+}
+
+.config-grafico h3 {
+    margin: 0;
+}
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-group button, select {
+    flex: 1;
+    padding: 5px 10px;
+    border: 1px solid #3F4B3B;
+    border-radius: 5px;
+    background-color: #F5F0DC;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-group button:hover, select:hover {
+    background-color: #DCDABE;
+}
+
+.btn-group button.active {
+    background-color: #3F4B3B;
+    color: #F5F0DC;
+    border-color: #3F4B3B;
+}
+
+#btnCSV {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3F4B3B;
+    color: #F5F0DC;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#btnCSV:hover {
+    background-color: #2f472b;
+}
+
+.conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#data-titulo {
+    text-align: center;
+    font-weight: bold;
+    color: #191919;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#chart {
+    flex: 1 1 600px;
+    min-width: 300px;
+    height: 400px;
+}
+
+#lixeira-container {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lixeira {
+    width: 40px;
+    height: 150px;
+    border: 2px solid #191919;
+    border-radius: 4px;
+    background: #F5F0DC;
+    position: relative;
+    overflow: hidden;
+}
+
+#nivel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #44633F;
+    transition: height 0.4s ease;
+}
+
+#percentual {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #191919;
+}
+
+.info-bloco {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #DCDABE;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #3F4B3B;
+    text-align: center;
+}
+
+/* Responsivo */
+@media(max-width: 768px){
+    body { flex-direction: column; padding: 10px; }
+    .barra-lateral { width: 100%; min-height: auto; }
+    .container { flex-direction: column; }
+}
