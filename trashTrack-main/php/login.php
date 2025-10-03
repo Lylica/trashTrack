@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row['tipo'] == 'admin') {
             header("Location: admin.php");
         } else {
-            header("Location: dashboard.php");
+            header("Location: index.php");
         }
         exit;
     } else {

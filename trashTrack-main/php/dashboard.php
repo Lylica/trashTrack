@@ -15,6 +15,8 @@
         <img src="../images/dashboard_icon.png" alt="Ícone do Dashboard">
         Dashboard
     </h2>
+    <a href="logout.php">Sair</a>
+
 
     <div class="config-grafico">
         <h3>Selecionar Dia</h3>
