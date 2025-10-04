@@ -5,23 +5,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
   }
   
   .login-container {
     background-color: #DCDABE;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 12px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     width: 320px;
     text-align: center;
     color: #3F4B3B;
+    max-width: 400px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .login-container:hover {
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.15);
   }
   
   .login-container h2 {
-    margin-bottom: 0.5rem;
-    color: #44633F;
+    margin-bottom: 30px;
+    color: #414833;
     font-weight: 700;
+    font-size: 1.8em;
   }
   
   .subtitle {
@@ -40,6 +48,7 @@ body {
     font-size: 0.9rem;
     margin-bottom: 0.4rem;
     color: #3F4B3B;
+    font-weight: 500;
   }
   
   .input-group input {
@@ -50,6 +59,14 @@ body {
     outline: none;
     background-color: #F5F0DC;
     color: #191919;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .input-group input:focus {
+    border-color: #656D4A;
+    box-shadow: 0 0 5px rgba(101, 109, 74, 0.5);
+    outline: none;
   }
   
   button {
@@ -57,16 +74,19 @@ body {
     padding: 0.7rem;
     border: none;
     border-radius: 8px;
-    background-color: #44633F;
+    background-color: #414833;
     color: #F5F0DC;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
   button:hover {
-    background-color: #2f472b;
+    background-color: #656D4A;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    transform: translateY(0);
   }
   
   .info {
@@ -86,13 +106,13 @@ body {
     margin-top: 0.5rem;
     padding: 0.6rem 1rem;
     border-radius: 8px;
-    background-color: #44633F;
+    background-color: #414833;
     color: #F5F0DC;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.2s;
+    transition: color 0.2s;
   }
   
   .btn-cadastro:hover {
-    background-color: #2f472b;
+    background-color: #656D4A;
   }
