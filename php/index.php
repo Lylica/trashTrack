@@ -2,12 +2,10 @@
 session_start();
 
 // Redireciona apenas admins
-if (isset($_SESSION['usuario']) && $_SESSION['tipo'] == 'admin') {
+if (isset($_SESSION['usuario']) && $_SESSION['tipo'] === 'admin') {
     header("Location: admin.php");
     exit;
 }
-
-// Usuários comuns logados continuam na página inicial
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
