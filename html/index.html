@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <!--rascunho cabeçalho-->
-    <header style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex">
+    <header>
         <!--Logo volta pro inicio-->
-        <a href="index.html">
-            <img  style="height: 40px; width: 40px; margin-top: 20px; margin-right: 10px; margin-left: auto;" src="../images/trash.png">
+        <a id="link-logo" href="index.html">
+            <img id="lata-lixo" src="../images/trash.png">
         </a>
         <div>
-                <h1 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker</h1>
+                <h1 id="trashtracker">TrashTracker</h1>
         </div>
-        <div style="margin-top: 2%; margin-left: 2%;">
-            <a href="index.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">INÍCIO</a>
-            <a href="sobre.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">SOBRE</a>
-            <a href="porque.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">PORQUE NÓS?</a>
-            <a href="dashboard.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">DASHBOARD</a>
-            <a href="forum.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">FORÚM</a>
+        <div id="nav">
+            <a class="menu-bar" href="index.html">INÍCIO</a>
+            <a class="menu-bar" href="sobre.html">SOBRE</a>
+            <a class="menu-bar" href="porque.html">PORQUE NÓS?</a>
+            <a class="menu-bar" href="dashboard.html">DASHBOARD</a>
+            <a class="menu-bar" href="forum.html">FORÚM</a>
         </div>
         <div style="margin-top: 1%; margin-left: auto;">
-            <button style="width: 100px; height: 50px;">Login</button>
+            <button id="btn-login-header">Login</button>
         </div>
     </header>
 
     <!--rascunho primeira div do site-->
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; display: flex;"> 
+    <section class="corpo-do-site"> 
         <div>
-            <h1 style="color: rgb(194, 197, 170); font-family: Inter; margin-top: 100px; margin-left: 100px;">Trash Tracker</h1>
-            <p style="font-family: Inter; color: rgb(194, 197, 170); font-weight: 500; margin-left: 100px;">Sua solução para o descarte incorreto de lixo!</p>
+            <h1 id="titulo-corpo-pagina">Trash Tracker</h1>
+            <p id="introdução">Sua solução para o descarte<br> incorreto de lixo!</p>
             <button style="margin-left: 100px;">Login</button>
             <button style="margin-left: 0px;">Dashboard</button>  
         </div>
@@ -39,7 +40,7 @@
     </section>
 
      <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px;">
-        <h1 style="font-family: Inter; color: rgb(194, 197, 170)">Destaques</h1>
+        <h1  style="font-family: Inter; color: rgb(194, 197, 170)">Destaques</h1>
     </section>
 
     <!--rascunho corpo do site-->

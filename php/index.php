@@ -20,9 +20,9 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 </head>
 <body>
     <!-- cabeçalho -->
-    <header style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex; align-items: center;">
+    <header>
         <a href="index.php">
-            <img style="height: 40px; width: 40px; margin-top: 20px; margin-right: 10px; margin-left: auto;" src="../images/trash.png" alt="Logo">
+            <img src="../images/trash.png" alt="Logo">
         </a>
         <div>
             <h1 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker</h1>
@@ -50,7 +50,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <!-- primeira seção -->
     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; display: flex;"> 
         <div>
-            <h1 style="color: rgb(194, 197, 170); font-family: Inter; margin-top: 100px; margin-left: 100px;">Trash Tracker</h1>
+            <h1 id="titulo-corpo-pagina">Trash Tracker</h1>
             <p style="font-family: Inter; color: rgb(194, 197, 170); font-weight: 500; margin-left: 100px;">Sua solução para o descarte incorreto de lixo!</p>
             <?php if(!isset($_SESSION['usuario'])): ?>
                 <a href="login.php"><button style="margin-left: 100px;">Login</button></a>
