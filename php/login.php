@@ -4,26 +4,25 @@ include("db.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
-    $senha   = md5($_POST['senha']); // md5 só pra teste, ideal seria password_hash
+    $senha = md5($_POST['senha']);
 
     $sql = "SELECT * FROM usuarios WHERE usuario='$usuario' AND senha='$senha'";
-    $result = $conn->query($sql);
+    $resultado = $conn->query($sql);
 
-    if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-        $_SESSION['usuario'] = $row['usuario'];
-        $_SESSION['tipo']    = $row['tipo'];
-
-        if ($row['tipo'] == 'admin') {
-            header("Location: admin.php");
-        } else {
-            header("Location: index.php");
-        }
+    if ($resultado->num_rows > 0) {
+        $user = $resultado->fetch_assoc();
+        $_SESSION['usuario'] = $user['usuario'];
+        $_SESSION['nome'] = $user['nome'];
+        $_SESSION['tipo'] = $user['tipo'];
+        $_SESSION['avatar'] = $user['avatar']; // <-- aqui pegamos o avatar
+        header("Location: index.php");
         exit;
     } else {
-        $erro = "Usuário ou senha inválidos!";
+        $erro = "Usuário ou senha incorretos.";
     }
 }
+?>
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
