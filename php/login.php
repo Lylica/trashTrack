@@ -14,15 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['tipo'] = $user['tipo'];
-        $_SESSION['avatar'] = $user['avatar']; // <-- aqui pegamos o avatar
+        $_SESSION['avatar'] = $user['avatar'];
         header("Location: index.php");
         exit;
     } else {
         $erro = "Usuário ou senha incorretos.";
     }
 }
-?>
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

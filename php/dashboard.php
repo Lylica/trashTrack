@@ -13,6 +13,7 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -50,27 +51,35 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
 <main class="conteudo">
 
     <!-- cabeçalho -->
-    <header style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex">
+    <header style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex; align-items: center;">
         <a href="index.php">
-            <img style="height: 40px; width: 40px; margin-top: 20px; margin-right: 10px; margin-left: auto;" src="../images/trash.png">
+            <img style="height: 40px; width: 40px; margin-right: 10px;" src="../images/trash.png">
         </a>
         <div>
             <h1 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker</h1>
         </div>
-        <div style="margin-top: 2%; margin-left: 2%;">
+        <div style="margin-left: 2%;">
             <a href="index.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">INÍCIO</a>
-            <a href="sobre.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">SOBRE</a>
-            <a href="porque.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">PORQUE NÓS?</a>
+            <a href="sobre.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">SOBRE</a>
+            <a href="porque.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">PORQUE NÓS?</a>
             <a href="dashboard.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">DASHBOARD</a>
-            <a href="forum.html" style="font-family: Inter; font-size: 22px; font-weight: bold;">FORÚM</a>
+            <a href="forum.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">FORÚM</a>
         </div>
-        <div style="margin-top: 1%; margin-left: auto;">
-            <?php if(isset($_SESSION['usuario'])): ?>
-                <span style="margin-right:10px;">Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-                <a href="logout.php"><button style="width: 100px; height: 50px;">Sair</button></a>
-            <?php else: ?>
-                <a href="login.php"><button style="width: 100px; height: 50px;">Login</button></a>
-            <?php endif; ?>
+
+        <div style="margin-left: auto; display: flex; align-items: center; gap: 10px;">
+           <div style="display:flex; align-items:center; gap:10px; margin-right:10px;">
+    <?php if(!empty($_SESSION['avatar'])): ?>
+        <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" 
+             alt="Avatar" 
+             style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+    <?php else: ?>
+        <img src="../php/avatares/avatar1.png" 
+             alt="Avatar padrão" 
+             style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+    <?php endif; ?>
+    <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
+</div>
+
         </div>
     </header>
 

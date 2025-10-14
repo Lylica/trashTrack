@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'db.php'; // Conexão com o banco
 
 // Redireciona apenas admins, só se 'tipo' estiver definido
 if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
@@ -33,19 +34,17 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <a href="dashboard.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">DASHBOARD</a>
             <a href="forum.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">FORÚM</a>
         </div>
-        <div class="header-user">
-          <?php if(isset($_SESSION['usuario'])): ?>
-    <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" 
-         alt="Avatar" 
-         style="width:40px; height:40px; border-radius:50%; margin-right:10px; object-fit: cover;">
-    <span style="margin-right:10px;">Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-    <a href="logout.php"><button style="width: 100px; height: 50px;">Sair</button></a>
-<?php else: ?>
-    <a href="login.php"><button style="width: 100px; height: 50px;">Login</button></a>
-<?php endif; ?>
-
-
-        </div>
+      <div class="header-user">
+    <?php if(isset($_SESSION['usuario'])): ?>
+        <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" 
+             alt="Avatar" 
+             style="width:40px; height:40px; border-radius:50%; object-fit: cover;">
+        <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
+        <a href="logout.php"><button style="width: 100px; height: 50px;">Sair</button></a>
+    <?php else: ?>
+        <a href="login.php"><button style="width: 100px; height: 50px;">Login</button></a>
+    <?php endif; ?>
+</div>
     </header>
 
     <!-- primeira seção -->
@@ -91,21 +90,52 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         <h1 style="font-family: Inter ; color: rgb(194, 197, 170)">Depoimentos</h1>
     </section>
 
-    <!-- footer/depoimentos -->
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; margin: auto; display: flex">
-        <div style="background: rgb(220, 218, 190); height: 140px; width: 400px; border-radius: 20px;  margin-left: 100px; margin-bottom: 30px;">
-            <p style="font-family: Inter; padding: 15px;">texto</p>
-            <cite style="font-family: Inter; padding: 10px">Anônimo - Salto de Pirapora</cite>
+  <!-- seção fórum-->
+<section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; margin: auto; display: flex; flex-wrap: wrap;">
+    <?php
+    $sql = "SELECT f.*, u.avatar FROM forum f 
+            LEFT JOIN usuarios u ON f.autor = u.usuario
+            ORDER BY f.data_criacao DESC"; // mais recentes primeiro
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0):
+        while($row = $result->fetch_assoc()):
+            $avatar = $row['avatar'] ?? 'avatar1.png';
+    ?>
+        <div style="background: rgb(220, 218, 190); 
+                    height: 140px; 
+                    width: 400px; 
+                    border-radius: 20px;  
+                    margin-left: 100px; 
+                    margin-bottom: 30px; 
+                    padding: 15px; 
+                    display: flex; 
+                    gap: 15px; 
+                    align-items: flex-start;">
+            <!-- avatar -->
+            <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" 
+                 alt="Avatar" 
+                 style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+            
+            <!-- conteúdo -->
+            <div>
+                <p style="font-family: Inter; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                    <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
+                </p>
+                <cite style="font-family: Inter; padding-top: 5px;"> 
+                    <?php echo htmlspecialchars($row['autor']); ?> - <?php echo $row['data_criacao']; ?>
+                </cite>
+            </div>
         </div>
-        <div style="background: rgb(220, 218, 190); height: 140px; width: 400px; border-radius: 20px; margin-left: 100px; margin-bottom: 30px;">
-            <p style="font-family: Inter; padding: 15px">texto</p>
-            <cite style="font-family: Inter; padding: 10px">Anônimo - Sorocaba</cite>
-        </div>
-        <div style="background: rgb(220, 218, 190); height: 140px; width: 400px; border-radius: 20px; margin-left: 100px; margin-bottom: 30px;">
-            <p style="font-family: Inter; padding: 15px">texto</p>
-            <cite style="font-family: Inter; padding: 10px">Anônimo - Itu</cite>
-        </div>
-    </section>
+    <?php
+        endwhile;
+    else:
+        echo "<p style='color:#F5F0DC; margin-left: 100px'>Ainda não há comentários.</p>";
+    endif;
+    ?>
+</section>
+
 
 </body>
 </html>
+     

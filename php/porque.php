@@ -25,12 +25,19 @@ session_start();
             <a href="forum.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">FORÚM</a>
         </div>
         <div style="margin-top: 1%; margin-left: auto;">
-            <?php if(isset($_SESSION['usuario'])): ?>
-                <span style="margin-right:10px;">Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-                <a href="logout.php"><button style="width: 100px; height: 50px;">Sair</button></a>
-            <?php else: ?>
-                <a href="login.php"><button style="width: 100px; height: 50px;">Login</button></a>
-            <?php endif; ?>
+          <div style="display:flex; align-items:center; gap:10px; margin-right:10px;">
+    <?php if(!empty($_SESSION['avatar'])): ?>
+        <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" 
+             alt="Avatar" 
+             style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+    <?php else: ?>
+        <img src="../php/avatares/avatar1.png" 
+             alt="Avatar padrão" 
+             style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+    <?php endif; ?>
+    <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
+</div>
+
         </div>
     </header>
 
