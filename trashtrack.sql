@@ -35,3 +35,12 @@ INSERT INTO forum (titulo, conteudo, autor)
 VALUES
 ('Primeiro Post', 'Bem-vindo ao fórum!', 'admin'),
 ('Dicas de Descarte', 'Separe o lixo corretamente!', 'admin');
+
+-- Tabela lixeiras
+CREATE TABLE lixeiras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    localizacao VARCHAR(255) NOT NULL,
+    nivel INT DEFAULT 0,
+    status ENUM('vazia', 'meia', 'cheia') DEFAULT 'vazia'
+);

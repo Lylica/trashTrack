@@ -7,11 +7,7 @@ if (!isset($_SESSION['usuario'])) {
     exit;
 }
 
-// Redireciona admins para a página de admin
-if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
-    header("Location: admin.php");
-    exit;
-}
+
 ?>
 
 <!DOCTYPE html>
