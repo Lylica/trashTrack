@@ -1,0 +1,179 @@
+/* Cabeçalho */
+header {
+    background-color: rgb(220, 218, 190);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+}
+
+.header-title h1 {
+    font-family: Inter;
+    color: rgb(65, 72, 51);
+    margin: 0;
+}
+
+.header-nav {
+    margin-left: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.header-nav a {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(65,72,51);
+    text-decoration: none;
+}
+
+.header-user {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+.header-user button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Seção topo */
+.section-top {
+    background-color: rgb(101, 109, 74);
+    color: rgb(194,197,170);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-top h1 {
+    margin: 0;
+    font-family: Inter;
+}
+
+.section-top p {
+    font-family: Inter;
+    font-size: 20px;
+}
+
+/* Botão adicionar */
+.btn-add-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#btn-form {
+    background-color: #44633F;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Formulário */
+.form-section form {
+    display: none; /* inicia escondido */
+    background: rgb(220, 218, 190);
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-section label {
+    font-family: Inter;
+    font-size: 20px;
+    color: rgb(65,72,51);
+}
+
+.form-section input[type="text"],
+.form-section textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-section textarea {
+    resize: none;
+    height: 200px;
+}
+
+.form-section input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Posts */
+.container-posts {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-card {
+    display: flex;
+    gap: 12px;
+    background: rgb(220,218,190);
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+}
+
+.post-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+.post-content h3 {
+    margin: 0 0 6px 0;
+    color: #414833;
+}
+
+.post-content p {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.post-content small {
+    color: #555;
+}
+
+.no-posts {
+    color: #F5F0DC;
+    text-align: center;
+    font-family: Inter;
+    margin-top: 20px;
+}

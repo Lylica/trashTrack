@@ -1,339 +1,207 @@
-header{
-  background-color: rgb(220, 218, 190); 
-  height: auto; 
-  width: auto; 
-  padding: 6px; 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#lata-lixo{
-  height: 40px; 
-  width: 40px; 
-  margin-top: 20px; 
-  margin-right: 10px; 
-  margin-left: auto;
-}
-
-#link-logo{
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #3d4b2f;
-  font-size: 1.2rem;
-}
-
-#trashtracker{
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #3d4b2f;
-  font-size: 25656D4Apx;
-  font-family: 'Inter', sans-serif;
-}
-
-#trashtracker:hover {
-  text-decoration: underline;
-}
-
-#nav{
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-left: 2%;
-  font-family: 'Inter', sans-serif;
-}
-
-.menu-bar{
-  font-family: 'Inter', sans-serif; 
-  font-size: 20px; 
-  font-weight: bold;
-  text-decoration: none;
-  color: #414833;
-}
-
-.menu-bar:hover {
-  color: #656D4A; 
-  text-decoration: underline;
-}
-
-#btn-login-header{
-  background-color: #4e2b09;
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  font-family: 'Inter', sans-serif;
-  overflow: visible;
-  align-content: center;
-  line-height: 145%;
-  letter-spacing: -0.5%;
-}
-
-#btn-login{
-  margin-left: 100px;
-  background-color: #4e2b09;
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  font-family: 'Inter', sans-serif;
-  overflow: visible;
-  align-content: center;
-  line-height: 145%;
-  letter-spacing: -0.5%;
-}
-
-#btn-dashboard{
-  margin-left: 0px;
-  background-color: rgb(220, 218, 190); 
-  color: #582F0E;
-  font-weight: 700;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  font-family: 'Inter', sans-serif;
-  overflow: visible;
-  align-content: center;
-  line-height: 145%;
-  letter-spacing: -0.5%;
-}
-
-#dashboard-img{
-  width: 500px; 
-  height: 300px; 
-  margin-left: 500px; 
-  margin-top: 20px;
-  flex: 1;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 900px) {
-  #dashboard-img{
-    max-width: 100%;
-  }
-}
-
-#btn-login-header:hover {
-  background-color: #656D4A;
-}
-
-.corpo-do-site{
-  background-color: rgb(101, 109, 74); 
-  height: auto; 
-  width: auto; 
-  padding: 20px; 
-  display: flex;
-}
-
-#titulo-corpo-pagina{
-  color: rgb(194, 197, 170); 
-  font-family: 'Inter', sans-serif; 
-  margin-top: 100px; 
-  margin-left: 100px;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-#introdução{
-  font-family: 'Inter', sans-serif; 
-  color: rgb(194, 197, 170); 
-  font-weight: 500; 
-  margin-left: 100px;
-}
-
-#section-destaques{
-  background-color: rgb(101, 109, 74); 
-  height: auto; 
-  width: auto; 
-  padding: 20px;
-}
-
-#destaques{
-  font-family: 'Inter', sans-serif; 
-  color: rgb(194, 197, 170)
-}
-
-#section-lixeiras{
-  background-color: rgb(101, 109, 74); 
-  height: auto; 
-  width: auto; 
-  padding: 20px; 
-  display: flex;
-}
-
-.lixo{
-  height: 200px; 
-  width: 200px; 
-  margin: 20px; 
-  margin-left: 100px;
-}
-
-#sobre{
-  color: rgb(88, 47, 14); 
-  font-family: 'Inter', sans-serif; 
-  margin-left: 100px;
-}
-
-.descrição{
-  font-family: 'Inter', sans-serif; 
-  color: rgb(194, 197, 170); 
-  font-weight: 500; 
-  margin-left: 100px;
-  text-align: justify;
-}
-
-#porque{
-  color: rgb(166, 138, 100); 
-  font-family: 'Inter', sans-serif; 
-  margin-left: 100px;
-}
-
-#dashboard{
-  color: rgb(220, 218, 190); 
-  font-family: 'Inter', sans-serif; 
-  margin-left: 100px;
-}
-
-#section-depoimentos{
-  background-color: rgb(101, 109, 74); 
-  height: auto; 
-  width: auto; 
-  padding: 20px;
-}
-
-#depoimentos{
-  font-family: 'Inter', sans-serif; 
-  color: rgb(194, 197, 170)
-}
-
-#section-rodape{
-  background-color: rgb(101, 109, 74); 
-  flex-wrap: wrap;
-  padding: 50px; 
-  justify-content: center;
-  gap: 24px;
-  display: flex;
-  font-family: 'Poppins', sans-serif;
-}
-
-.div-depoimentos{
-  background: rgb(220, 218, 190);  
-  width: 280px; 
-  border-radius: 12px;  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease;
-}
-
-.div-depoimentos:hover {
-  transform: translateY(-3px);
-}
-
-.texto-depoimento{
-  font-family: 'Inter', sans-serif; 
-  text-align: justify;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.pessoa{
-  font-family: 'Inter', sans-serif; 
-  display: block;
-  font-style: normal;
-  font-weight: 600;
-}
-
-.lugar{
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  color: #555;
-}
-
-#autor1-icon{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-#autor3-ico{
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  
-}
-
-
-@media (min-width: 600px) {
-  .btn-group {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .btn {
-    width: 48%;
-  }
-}
-
-.header {
-    background-color: #DCDABE;
+/* Cabeçalho */
+header {
+    background-color: rgb(220, 218, 190);
     display: flex;
     align-items: center;
-    padding: 6px;
+    padding: 12px;
 }
 
-.logo {
+header img {
     height: 40px;
     width: 40px;
-    margin-right: 10px;
 }
 
-.menu a {
-    margin-left: 15px;
-    font-family: 'Inter', sans-serif;
+.header-title h1 {
+    font-family: Inter;
+    color: rgb(65, 72, 51);
+    margin: 0;
+}
+
+.header-nav {
+    margin-left: 20px;
+}
+
+.header-nav a {
+    font-family: Inter;
     font-size: 22px;
     font-weight: bold;
+    color: rgb(65,72,51);
     text-decoration: none;
-    color: #414833;
+    margin-right: 12px;
 }
 
 .header-user {
     margin-left: auto;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-.header-avatar {
+.header-user img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 10px;
 }
 
-.header-user {
-    display: flex;           /* organiza os filhos em linha */
-    align-items: center;     /* alinha verticalmente */
-    gap: 10px;               /* espaço entre avatar, texto e botão */
+.header-user button {
+    padding: 8px 12px;
 }
 
+/* Primeira seção */
+.section-main {
+    background-color: rgb(101, 109, 74);
+    padding: 20px;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
+.section-main .section-text {
+    margin-left: 100px;
+}
+
+.section-main h1#titulo-corpo-pagina {
+    font-family: Inter;
+    color: rgb(194, 197, 170);
+}
+
+.section-main p {
+    font-family: Inter;
+    color: rgb(194, 197, 170);
+    font-weight: 500;
+}
+
+.section-main img {
+    width: 500px;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+/* Botões da primeira seção */
+.btn-login {
+    margin-left: 100px;
+}
+
+.btn-dashboard {
+    margin-left: 10px;
+}
+
+/* Seções de título */
+.section-title {
+    background-color: rgb(101, 109, 74);
+    padding: 20px;
+    color: rgb(194,197,170);
+}
+
+.section-title h1 {
+    font-family: Inter;
+}
+
+/* Conteúdo principal */
+.section-content {
+    display: flex;
+    background-color: rgb(101, 109, 74);
+    padding: 20px;
+}
+
+.content-box {
+    margin-left: 100px;
+}
+
+.content-box img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+.content-box h2 {
+    font-family: Inter;
+    margin-left: 100px;
+}
+
+.content-box.sobre h2 {
+    color: rgb(88, 47, 14);
+}
+
+.content-box.porque h2 {
+    color: rgb(166, 138, 100);
+}
+
+.content-box.dashboard-box h2 {
+    color: rgb(220, 218, 190);
+}
+
+.content-box p {
+    font-family: Inter;
+    color: rgb(194,197,170);
+    font-weight: 500;
+    margin-left: 100px;
+}
+
+/* Fórum */
+.section-forum {
+    background-color: rgb(101, 109, 74);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post-card {
+    background: rgb(220, 218, 190);
+    width: 400px;
+    height: 140px;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.post-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+.post-card .post-content p {
+    font-family: Inter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.post-card .post-content cite {
+    font-family: Inter;
+    padding-top: 5px;
+}
+
+/* Botão ver todos */
+.btn-ver-todos {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-ver-todos a {
+    background-color: rgb(220, 218, 190);
+    color: rgb(65, 72, 51);
+    font-family: Inter;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* Mensagem sem posts */
+.no-posts {
+    color: #F5F0DC;
+    margin-left: 100px;
+}

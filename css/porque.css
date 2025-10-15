@@ -1,0 +1,113 @@
+/* Cabeçalho */
+header {
+    background-color: rgb(220, 218, 190);
+    display: flex;
+    align-items: center;
+    padding: 6px 20px;
+    gap: 12px;
+}
+
+header img {
+    height: 40px;
+    width: 40px;
+}
+
+.header-title h1 {
+    font-family: Inter;
+    color: rgb(65, 72, 51);
+    margin: 0;
+}
+
+.header-nav {
+    margin-left: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+.header-nav a {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(65,72,51);
+    text-decoration: none;
+}
+
+.user-area {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-area img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+/* Primeira seção */
+.section-main {
+    background-color: rgb(101, 109, 74);
+    padding: 60px;
+    color: rgb(194, 197, 170);
+}
+
+.section-main h1 {
+    font-family: Inter;
+    color: rgb(194, 197, 170);
+}
+
+.section-main p {
+    font-family: Inter;
+    color: rgb(194, 197, 170);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Diferenciais título */
+.section-title {
+    background-color: rgb(101, 109, 74);
+    padding: 20px;
+}
+
+.section-title h1 {
+    font-family: Inter;
+    color: rgb(194, 197, 170);
+    margin-left: 50px;
+}
+
+/* Diferenciais */
+.section-diferenciais {
+    background-color: rgb(101, 109, 74);
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.diferencial-box {
+    background: rgb(220, 218, 190);
+    height: 600px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.diferencial-title {
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.diferencial-text {
+    font-family: Inter;
+    font-size: 22px;
+    padding: 5px;
+    margin-top: auto;
+}

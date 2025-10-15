@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha   = md5($_POST['senha']);
     $avatar  = $_POST['avatar'] ?? 'avatar1.png'; // se não escolher, pega o padrão
 
-    // Certifique-se de que a coluna no banco se chama 'avatar'
     $sql = "INSERT INTO usuarios (nome, usuario, email, senha, avatar) 
             VALUES ('$nome','$usuario','$email','$senha','$avatar')";
     
@@ -62,37 +61,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Cadastrar</button>
         <div class="extra-actions">
-      <p>Já possui uma conta?</p>
-      <a href="login.php" class="btn-login">Login</a>
-    </div>
+            <p>Já possui uma conta?</p>
+            <a href="login.php" class="btn-login">Login</a>
+        </div>
     </form>
 </div>
 
-<script>
-const totalAvatars = 11;
-let current = 1;
-
-const avatarDisplay = document.getElementById('avatarDisplay');
-const avatarInput = document.getElementById('avatarInput');
-
-document.querySelector('.arrow.left').addEventListener('click', () => {
-    current--;
-    if (current < 1) current = totalAvatars;
-    updateAvatar();
-});
-
-document.querySelector('.arrow.right').addEventListener('click', () => {
-    current++;
-    if (current > totalAvatars) current = 1;
-    updateAvatar();
-});
-
-function updateAvatar() {
-    const filename = `avatar${current}.png`;
-    avatarDisplay.src = `avatares/${filename}`;
-    avatarInput.value = filename;
-}
-</script>
+<!-- JS separado -->
+<script src="cadastro.js"></script>
 
 </body>
 </html>
