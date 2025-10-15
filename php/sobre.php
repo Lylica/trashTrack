@@ -28,7 +28,7 @@ session_start();
                 <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar'] ?? 'avatar1.png'); ?>" alt="Avatar" class="avatar">
                 <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
             <?php else: ?>
-                <span>Olá, visitante!</span>
+                <a href="login.php"><button>Login</button></a>
             <?php endif; ?>
         </div>
     </header>
