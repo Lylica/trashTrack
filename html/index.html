@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--rascunho cabeçalho-->
@@ -33,63 +36,68 @@
         <div>
             <h1 id="titulo-corpo-pagina">Trash Tracker</h1>
             <p id="introdução">Sua solução para o descarte<br> incorreto de lixo!</p>
-            <button style="margin-left: 100px;">Login</button>
-            <button style="margin-left: 0px;">Dashboard</button>  
+            <button id="btn-login">Login</button>
+            <button id="btn-dashboard">Dashboard</button>  
         </div>
-        <img style="width: 500px; height: 300px; margin-left: 500px; margin-top: 20px;" src="../images/dashboard.png">
+        <img id="dashboard-img" src="../images/dashboard.png">
     </section>
 
-     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px;">
-        <h1  style="font-family: Inter; color: rgb(194, 197, 170)">Destaques</h1>
+     <section id="section-destaques">
+        <h1 id="destaques">Destaques</h1>
     </section>
 
     <!--rascunho corpo do site-->
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; display: flex;">
+    <section id="section-lixeiras">
         
         <!--sobre-->
         <div>
-            <img  style="height: 200px; width: 200px; margin: 20px; margin-left: 100px;" src="../images/4-semfundo.png">
-            <h2 style="color: rgb(88, 47, 14); font-family: Inter; margin-left: 100px;">SOBRE</h2>
-            <p style="font-family: Inter; color: rgb(194, 197, 170); font-weight: 500; margin-left: 100px;">Lorem ipsum</p>
+            <img class="lixo" src="../images/4-semfundo.png">
+            <h2 id="sobre">SOBRE</h2>
+            <p class="descrição">Writing for websites is both simple and complex. On the one hand, all you need to do is say what you mean and in your words.</p>
         </div>
 
         <!--porque?-->
         <div>
-            <img  style="height: 200px; width: 200px; margin: 20px; margin-left: 100px;" src="../images/1-semfundo.png">
-            <h2 style="color: rgb(166, 138, 100); font-family: Inter; margin-left: 100px;">PORQUE?</h2>
-            <p style="font-family: Inter; color: rgb(194, 197, 170); font-weight: 500; margin-left: 100px;">Lorem ipsum</p>
+            <img class="lixo" src="../images/1-semfundo.png">
+            <h2 id="porque">PORQUE?</h2>
+            <p class="descrição">Writing for websites is both simple and complex. On the one hand, all you need to do is say what you mean and in your words.</p>
         </div>
 
         <!--dashboard-->
         <div>
-            <img  style="height: 200px; width: 200px; margin: 20px; margin-left: 100px;" src="../images/2-semfundo.png">
-            <h2 style="color: rgb(220, 218, 190); font-family: Inter; margin-left: 100px;">DASHBOARD</h2>
-            <p style="font-family: Inter; color: rgb(194, 197, 170); font-weight: 500; margin-left: 100px;">Lorem ipsum</p>
+            <img class="lixo" src="../images/2-semfundo.png">
+            <h2 id="dashboard">DASHBOARD</h2>
+            <p class="descrição">Writing for websites is both simple and complex. On the one hand, all you need to do is say what you mean and in your words.</p>
         </div>
         
     </section>
 
 
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px;">
-        <h1 style="font-family: Inter ; color: rgb(194, 197, 170)">Depoimentos</h1>
+    <section id="section-depoimentos">
+        <h1 id="depoimentos">Depoimentos</h1>
     </section>
 
     <!--rascunho footer-->
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; margin: auto; display: flex">
+    <section id="section-rodape">
              <!--depoimento 1-->
-        <div style="background: rgb(220, 218, 190); height: 140px; width: 400px; border-radius: 20px;  margin-left: 100px; margin-bottom: 30px;">
-            <p style="font-family: Inter; padding: 15px;">texto</p>
-            <cite style="font-family: Inter; padding: 10px">Anônimo - Salto de Pirapora</cite>
+        <div class="div-depoimentos">
+            <p class="texto-depoimento">É muito útil, porque facilita a procura por lixeiras para fazermos o descarte correto do lixo!</p>
+            <cite class="pessoa">Anônimo - Salto de Pirapora</cite>
         </div>
              <!--depoimento 2-->
-        <div style="background: rgb(220, 218, 190); height: 140px; width: 400px; border-radius: 20px; margin-left: 100px; margin-bottom: 30px;">
-            <p style="font-family: Inter; padding: 15px">texto</p>
-            <cite style="font-family: Inter; padding: 10px">Anônimo - Sorocaba</cite>
+        <div class="div-depoimentos">
+            <p class="texto-depoimento">O dashboard é uma iniciativa tecnológica para operar melhor sobre lixos e destinação de descarte, melhora o cuidado de não ter lixo em locais errados da cidade.</p>
+            <cite class="pessoa">Anônimo - Sorocaba</cite>
         </div>
              <!--depoimento 3-->
-        <div style="background: rgb(220, 218, 190); height: 140px; width: 400px; border-radius: 20px; margin-left: 100px; margin-bottom: 30px;">
-            <p style="font-family: Inter; padding: 15px">texto</p>
-            <cite style="font-family: Inter; padding: 10px">Anônimo - Itu</cite>
+        <div class="div-depoimentos">
+            <p class="texto-depoimento">Perdemos menos tempo, antes iamos descartar o lixo e encontravamos as lixeiras vazias. Agora podemos fazer essa checagem antes de sairmos de cada.</p>
+            <cite class="pessoa">Anônimo - Itu</cite>
+        </div>
+        <!--depoimento 4-->
+        <div class="div-depoimentos">
+            <p class="texto-depoimento">O projeto é muito útil, pois quando a lixeira mais próxima está cheia, eu posso encontrar outra que esteva livre sem precisar ficar me deslocando para muito longe.</p>
+            <cite class="pessoa">Anônimo - Salto de Pirapora</cite>
         </div>
     </section>
 
