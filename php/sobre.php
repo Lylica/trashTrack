@@ -11,8 +11,10 @@ session_start();
 </head>
 <body>
     <!-- cabeçalho -->
-    <header>
-        <a href="index.php"><img src="../images/trash.png" alt="Logo"></a>
+    <header class="header-admin">
+        <a href="index.php">
+            <img src="../images/trash.png" alt="Logo" class="logo">
+        </a>
         <div class="header-title"><h1>TrashTracker</h1></div>
         <nav class="header-nav">
             <a href="index.php">INÍCIO</a>
@@ -21,13 +23,13 @@ session_start();
             <a href="dashboard.php">DASHBOARD</a>
             <a href="forum.php">FORÚM</a>
         </nav>
-        <div class="user-area">
-            <?php if(!empty($_SESSION['avatar'])): ?>
-                <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+        <div class="header-user">
+            <?php if(!empty($_SESSION['usuario'])): ?>
+                <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar'] ?? 'avatar1.png'); ?>" alt="Avatar" class="avatar">
+                <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
             <?php else: ?>
-                <img src="../php/avatares/avatar1.png" alt="Avatar padrão">
+                <span>Olá, visitante!</span>
             <?php endif; ?>
-            <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
         </div>
     </header>
 
