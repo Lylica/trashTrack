@@ -89,13 +89,13 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px;">
         <h1 style="font-family: Inter ; color: rgb(194, 197, 170)">Depoimentos</h1>
     </section>
-
-  <!-- seção fórum-->
-<section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; margin: auto; display: flex; flex-wrap: wrap;">
+<!-- seção fórum-->
+<section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; margin: auto; display: flex; flex-wrap: wrap; justify-content:center;">
     <?php
     $sql = "SELECT f.*, u.avatar FROM forum f 
             LEFT JOIN usuarios u ON f.autor = u.usuario
-            ORDER BY f.data_criacao DESC"; // mais recentes primeiro
+            ORDER BY f.data_criacao DESC 
+            LIMIT 3"; // só os 3 mais recentes
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0):
@@ -106,8 +106,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
                     height: 140px; 
                     width: 400px; 
                     border-radius: 20px;  
-                    margin-left: 100px; 
-                    margin-bottom: 30px; 
+                    margin: 15px; 
                     padding: 15px; 
                     display: flex; 
                     gap: 15px; 
@@ -123,7 +122,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
                     <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
                 </p>
                 <cite style="font-family: Inter; padding-top: 5px;"> 
-                    <?php echo htmlspecialchars($row['autor']); ?> - <?php echo $row['data_criacao']; ?>
+                    <?php echo htmlspecialchars($row['autor']); ?> - <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
                 </cite>
             </div>
         </div>
@@ -134,6 +133,22 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     endif;
     ?>
 </section>
+
+<!-- botão 'Ver todos' -->
+<div style="text-align: center; margin: 20px;">
+    <a href="forum.php" 
+       style="background-color: rgb(220, 218, 190); 
+              color: rgb(65, 72, 51); 
+              font-family: Inter; 
+              font-weight: bold;
+              text-decoration: none; 
+              padding: 10px 20px; 
+              border-radius: 15px;">
+       Ver todos
+    </a>
+</div>
+
+
 
 
 </body>

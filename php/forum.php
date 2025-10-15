@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'db.php'; // adiciona conexão com o banco
 
 // Só permite acesso se o usuário estiver logado
 if (!isset($_SESSION['usuario'])) {
@@ -13,66 +14,128 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum - TrashTracker</title>
+    <style>
+        /* estilos mínimos embarcados só pra ficar apresentável */
+        header { background-color: rgb(220, 218, 190); padding: 12px; display:flex; align-items:center; gap:12px; }
+        header img { height:40px; width:40px; }
+        nav a { margin-right:12px; font-family:Inter; font-weight:700; color: rgb(65,72,51); text-decoration:none; }
+        .user-area { margin-left:auto; display:flex; align-items:center; gap:10px; }
+        .section-top { background-color: rgb(101, 109, 74); padding: 40px; color: rgb(194,197,170); }
+        .container { padding: 24px; max-width: 1000px; margin: 0 auto; }
+        .btn-adicionar { background-color:#44633F; color:#F5F0DC; padding:10px 16px; border-radius:8px; border:none; cursor:pointer; }
+        .post-card { background: rgb(220, 218, 190); border-radius:16px; padding:15px; display:flex; gap:12px; margin-bottom:14px; align-items:flex-start; }
+        .post-card img { width:40px;height:40px;border-radius:50%; object-fit:cover; border:2px solid #555; }
+        .form-post { background: rgb(220, 218, 190); padding:20px; border-radius:20px; max-width:700px; margin: 16px 0; display:none; flex-direction:column; gap:10px; }
+        .form-post textarea { width:100%; height:160px; resize:none; font-size:16px; padding:8px; border-radius:8px; border:1px solid #ccc; }
+        .form-post input[type="text"] { width:100%; padding:8px; border-radius:8px; border:1px solid #ccc; font-size:16px; }
+        .form-post input[type="submit"] { background:#28a745; color:#fff; padding:10px 14px; border-radius:12px; border:none; cursor:pointer; align-self:flex-end; }
+        .ver-todos { display:inline-block; margin-top:12px; background:#DCDABE; color:#414833; padding:8px 14px; border-radius:10px; text-decoration:none; }
+    </style>
 </head>
 <body>
     <!-- cabeçalho -->
-    <header style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex">
-        <a href="index.php">
-            <img  style="height: 40px; width: 40px; margin-top: 20px; margin-right: 10px; margin-left: auto;" src="../images/trash.png">
-        </a>
-        <div>
-            <h1 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker</h1>
-        </div>
-        <div style="margin-top: 2%; margin-left: 2%;">
-            <a href="index.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">INÍCIO</a>
-            <a href="sobre.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">SOBRE</a>
-            <a href="porque.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">PORQUE NÓS?</a>
-            <a href="dashboard.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">DASHBOARD</a>
-            <a href="forum.php" style="font-family: Inter; font-size: 22px; font-weight: bold;">FORÚM</a>
-        </div>
-        <div style="margin-top: 1%; margin-left: auto;">
-           <div style="display:flex; align-items:center; gap:10px; margin-right:10px;">
-    <?php if(!empty($_SESSION['avatar'])): ?>
-        <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" 
-             alt="Avatar" 
-             style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
-    <?php else: ?>
-        <img src="../php/avatares/avatar1.png" 
-             alt="Avatar padrão" 
-             style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
-    <?php endif; ?>
-    <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-</div>
+    <header>
+        <a href="index.php"><img src="../images/trash.png" alt="Logo"></a>
+        <div><h1 style="font-family: Inter; color: rgb(65, 72, 51); margin:0;">TrashTracker</h1></div>
+        <nav style="margin-left:20px;">
+            <a href="index.php">INÍCIO</a>
+            <a href="sobre.php">SOBRE</a>
+            <a href="porque.php">PORQUE NÓS?</a>
+            <a href="dashboard.php">DASHBOARD</a>
+            <a href="forum.php">FÓRUM</a>
+        </nav>
 
+        <div class="user-area">
+            <?php if (!empty($_SESSION['avatar'])): ?>
+                <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            <?php else: ?>
+                <img src="avatares/avatar1.png" alt="Avatar padrão">
+            <?php endif; ?>
+
+            <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
+            <a href="logout.php"><button style="padding:8px 12px; border-radius:8px; margin-left:8px;">Sair</button></a>
         </div>
     </header>
 
     <!-- seção principal -->
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 60px;"> 
-        <div>
-            <h1 style="color: rgb(194, 197, 170); font-family: Inter">FÓRUM</h1>
-            <p style="font-family: Inter; color: rgb(194, 197, 170); font-weight: 500; font-size: 20px;">Bem-vindo ao fórum! Aqui você pode enviar comentários e interagir com outros usuários.</p>
+    <section class="section-top">
+        <div class="container">
+            <h2 style="margin:0; font-family:Inter; color: rgb(194, 197, 170);">FÓRUM</h2>
+            <p style="font-family:Inter; color: rgb(194,197,170); margin-top:8px;">
+                Bem-vindo ao fórum! Aqui você pode enviar comentários e interagir com outros usuários.
+            </p>
         </div>
     </section>
 
-    <!-- formulário de postagem -->
-    <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 40px;">
-        <form method="post" action="processa_post.php">
-            <div style="background: rgb(220, 218, 190); height: auto; width: 500px; padding: 20px; margin-left: 35%; margin-bottom: 15px; border-radius: 20px;">
-                
-                <label for="title" style="color: rgb(65, 72, 51); font-family: Inter; font-size: 25px;">Título da postagem</label> <br>
-                <input style="height: 10%; width: 100%; font-size: 22px;" type="text" id="title" name="title" required> <br><br>
-                
-                <label for="autor" style="color: rgb(65, 72, 51); font-family: Inter; font-size: 25px;">Postagem feita por: </label> <br>
-                <!-- usuário logado já preenchido e readonly -->
-                <input style="height: 10%; width: 100%; font-size: 22px;" type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($_SESSION['usuario']); ?>" readonly> <br><br>
+    <main class="container">
+        <!-- botão que mostra/esconde o formulário -->
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+            <button id="btn-adicionar" class="btn-adicionar">+ Adicionar postagem</button>
+            <a class="ver-todos" href="index.php">Voltar</a>
+        </div>
 
-                <label for="conteudo" style="color: rgb(65, 72, 51); font-family: Inter; font-size: 25px;">Conteúdo</label> <br>
-                <textarea style="height: 200px; width: 100%; resize: none; font-size: 18px;" id="conteudo" name="conteudo" required></textarea> <br><br>
-                
-                <input style="height: 50px; width: 500px; border-radius: 60px;" type="submit" value="Enviar"> 
-            </div>
+        <!-- formulário (inicialmente escondido) -->
+        <form id="form-post" class="form-post" method="post" action="processa_post.php">
+            <label for="title" style="font-weight:700; color:#414833;">Título da postagem</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="conteudo" style="font-weight:700; color:#414833;">Conteúdo</label>
+            <textarea id="conteudo" name="conteudo" required></textarea>
+
+            <!-- autor preenchido automaticamente (campo oculto) -->
+            <input type="hidden" name="autor" value="<?php echo htmlspecialchars($_SESSION['usuario']); ?>">
+
+            <input type="submit" value="Enviar">
         </form>
-    </section>
+
+        <!-- lista de posts -->
+        <section>
+            <?php
+            // Recupera todos os posts do fórum (mais recentes primeiro)
+            $sql = "SELECT f.*, u.avatar FROM forum f 
+                    LEFT JOIN usuarios u ON f.autor = u.usuario
+                    ORDER BY f.data_criacao DESC";
+            $result = $conn->query($sql);
+
+            if ($result && $result->num_rows > 0):
+                while ($row = $result->fetch_assoc()):
+                    $avatar = !empty($row['avatar']) ? $row['avatar'] : 'avatar1.png';
+            ?>
+                <article class="post-card">
+                    <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
+                    <div>
+                        <h3 style="margin:0 0 6px 0; color:#414833;"><?php echo htmlspecialchars($row['titulo']); ?></h3>
+                        <p style="margin:0 0 8px 0; color:#333;"><?php echo nl2br(htmlspecialchars($row['conteudo'])); ?></p>
+                        <small style="color:#555;"><?php echo htmlspecialchars($row['autor']); ?> — <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?></small>
+                    </div>
+                </article>
+            <?php
+                endwhile;
+            else:
+                echo "<p style='color:#F5F0DC;'>Ainda não há comentários.</p>";
+            endif;
+            ?>
+        </section>
+    </main>
+
+    <script>
+    // Mostrar/esconder formulário de postagem
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('btn-adicionar');
+        const form = document.getElementById('form-post');
+
+        btn.addEventListener('click', () => {
+            if (form.style.display === 'flex' || form.style.display === 'block') {
+                form.style.display = 'none';
+                btn.textContent = '+ Adicionar postagem';
+            } else {
+                form.style.display = 'flex';
+                btn.textContent = 'Cancelar';
+                // rola a página até o formulário (opcional)
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    });
+    </script>
 </body>
 </html>
