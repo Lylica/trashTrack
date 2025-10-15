@@ -42,6 +42,15 @@ if (isset($_POST['nova_lixeira'])) {
     exit;
 }
 
+// Excluir lixeira
+if (isset($_GET['deleteLixeira'])) {
+    $idLixeira = intval($_GET['deleteLixeira']);
+    $conn->query("DELETE FROM lixeiras WHERE id=$idLixeira");
+    header("Location: admin.php");
+    exit;
+}
+
+
 // Excluir depoimento
 if (isset($_GET['deleteDep'])) {
     $idDep = intval($_GET['deleteDep']);
@@ -73,6 +82,8 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao FR
 <body>
   <h2>Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario']); ?> (Admin)</h2>
   <a href="logout.php">Sair</a>
+
+  
 
   <!-- menu principal -->
   <div class="menu-admin">
@@ -155,9 +166,9 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao FR
   <a href="dashboard.php?id=<?php echo $lixeira['id']; ?>&nome=<?php echo urlencode($lixeira['nome']); ?>&localizacao=<?php echo urlencode($lixeira['localizacao']); ?>" 
      class="btn-dashboard">
      Ver Dashboard
-  </a>
-  <button>Editar</button>
-  <button>Excluir</button>
+  </a> |
+ 
+  <a href="admin.php?deleteLixeira=<?php echo $lixeira['id']; ?>" onclick="return confirm('Excluir lixeira?')">Excluir</a> |
 </td>
       </tr>
       <?php } ?>
@@ -203,42 +214,6 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao FR
   </div>
 
   <!-- ================= SCRIPTS ================= -->
-  <script>
-    function mostrarSecao(secao) {
-      document.querySelectorAll('.secao-admin').forEach(div => div.style.display = 'none');
-      document.getElementById(secao).style.display = 'block';
-    }
-
-    function editarUsuario(id, nome, usuario, email, tipo){
-      document.getElementById('form-editar').style.display = 'block';
-      document.getElementById('edit-id').value = id;
-      document.getElementById('edit-nome').value = nome;
-      document.getElementById('edit-usuario').value = usuario;
-      document.getElementById('edit-email').value = email;
-      document.getElementById('edit-tipo').value = tipo;
-      window.scrollTo(0,document.body.scrollHeight);
-    }
-
-    function toggleNovaLixeira(){
-      const form = document.getElementById('form-nova-lixeira');
-      form.style.display = form.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function verDashboard(id){
-      alert('Abrir dashboard da lixeira ID: ' + id);
-    }
-
-    function verDepoimentos(usuario) {
-      mostrarSecao('depoimentos'); // Abre a seção
-      const linhas = document.querySelectorAll('#tabela-depoimentos .dep-row');
-      linhas.forEach(linha => {
-        if (linha.getAttribute('data-usuario') === usuario) {
-          linha.style.display = '';
-        } else {
-          linha.style.display = 'none';
-        }
-      });
-    }
-  </script>
+   <script src="../js/admin.js"></script>
 </body>
 </html>

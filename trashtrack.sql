@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS forum (
     FOREIGN KEY (autor) REFERENCES usuarios(usuario) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- Inserir exemplos de posts no fórum
+
 INSERT INTO forum (titulo, conteudo, autor) 
 VALUES
 ('Primeiro Post', 'Bem-vindo ao fórum!', 'admin'),
