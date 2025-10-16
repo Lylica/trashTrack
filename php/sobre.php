@@ -8,6 +8,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - TrashTracker</title>
     <link rel="stylesheet" href="../css/sobre.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- cabeçalho -->
@@ -36,7 +39,7 @@ session_start();
     <!-- seção principal -->
     <section class="section-main">
         <div>
-            <h1>Sobre o TrashTracker</h1>
+            <h1 class="sobre-tt" >Sobre o TrashTracker</h1>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
             </p>

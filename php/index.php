@@ -17,22 +17,25 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- cabeçalho -->
     <header>
-        <a href="index.php">
-            <img src="../images/trash.png" alt="Logo">
+        <a id="link-logo" href="index.php">
+            <img id="lata-lixo" src="../images/trash.png" alt="Logo">
         </a>
         <div class="header-title">
-            <h1>TrashTracker</h1>
+            <h1 id="trashtracker">TrashTracker</h1>
         </div>
-        <div class="header-nav">
-            <a href="index.php">INÍCIO</a>
-            <a href="sobre.php">SOBRE</a>
-            <a href="porque.php">PORQUE NÓS?</a>
-            <a href="dashboard.php">DASHBOARD</a>
-            <a href="forum.php">FORÚM</a>
+        <div class="nav">
+            <a class="menu-bar" href="index.php">INÍCIO</a>
+            <a class="menu-bar" href="sobre.php">SOBRE</a>
+            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+            <a class="menu-bar" href="forum.php">FORÚM</a>
         </div>
         <div class="header-user">
         <?php if(isset($_SESSION['usuario'])): ?>
@@ -40,57 +43,57 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
             <a href="logout.php"><button>Sair</button></a>
         <?php else: ?>
-            <a href="login.php"><button>Login</button></a>
+            <a href="login.php"><button id="btn-login-header">Login</button></a>
         <?php endif; ?>
         </div>
     </header>
 
     <!-- primeira seção -->
-    <section class="section-main">
+    <section class="corpo-do-site">
         <div class="section-text">
             <h1 id="titulo-corpo-pagina">Trash Tracker</h1>
-            <p>Sua solução para o descarte incorreto de lixo!</p>
+            <p id="introdução">Sua solução para o descarte incorreto de lixo!</p>
             <?php if(!isset($_SESSION['usuario'])): ?>
                 <a href="login.php"><button class="btn-login">Login</button></a>
             <?php endif; ?>
             <a href="dashboard.php"><button class="btn-dashboard">Dashboard</button></a>
         </div>
-        <img src="../images/dashboard.png" alt="Dashboard">
+        <img id="dashboard-img" src="../images/dashboard.png" alt="Dashboard">
     </section>
 
     <!-- destaques -->
-    <section class="section-title">
-        <h1>Destaques</h1>
+    <section id="section-destaques">
+        <h1 id="destaques">Destaques</h1>
     </section>
 
     <!-- conteúdo principal -->
-    <section class="section-content">
+    <section id="section-lixeiras">
         <div class="content-box sobre">
-            <img src="../images/4-semfundo.png" alt="Sobre">
-            <h2>SOBRE</h2>
-            <p>Lorem ipsum</p>
+            <img class="lixo" src="../images/4-semfundo.png" alt="Sobre">
+            <h2 id="sobre">SOBRE</h2>
+            <p class="descrição">Lorem ipsum</p>
         </div>
 
-        <div class="content-box porque">
+        <div class="lixo">
             <img src="../images/1-semfundo.png" alt="Porque">
-            <h2>PORQUE?</h2>
-            <p>Lorem ipsum</p>
+            <h2 id="porque">PORQUE?</h2>
+            <p class="descrição">Lorem ipsum</p>
         </div>
 
         <div class="content-box dashboard-box">
-            <img src="../images/2-semfundo.png" alt="Dashboard">
-            <h2>DASHBOARD</h2>
-            <p>Lorem ipsum</p>
+            <img class="lixo" src="../images/2-semfundo.png" alt="Dashboard">
+            <h2 id="dashboard">DASHBOARD</h2>
+            <p class="descrição">Lorem ipsum</p>
         </div>
     </section>
 
     <!-- depoimentos -->
-    <section class="section-title">
-        <h1>Depoimentos</h1>
+    <section id="section-depoimentos">
+        <h1 id="depoimentos">Depoimentos</h1>
     </section>
 
     <!-- seção fórum -->
-    <section class="section-forum">
+    <section id="carrossel-depoimentos">
     <?php
     $sql = "SELECT f.*, u.avatar FROM forum f 
             LEFT JOIN usuarios u ON f.autor = u.usuario
@@ -102,7 +105,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         while($row = $result->fetch_assoc()):
             $avatar = $row['avatar'] ?? 'avatar1.png';
     ?>
-        <div class="post-card">
+        <div class="div-depoimentos">
             <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
             <div class="post-content">
                 <p><?php echo nl2br(htmlspecialchars($row['conteudo'])); ?></p>

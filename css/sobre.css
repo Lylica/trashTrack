@@ -55,8 +55,11 @@ header img {
 }
 
 .section-main h1 {
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     color: rgb(194, 197, 170);
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .section-main p {
@@ -99,3 +102,4 @@ header img {
     margin-left: auto;
     margin-bottom: auto;
 }
+
