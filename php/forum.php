@@ -48,8 +48,8 @@ if (!isset($_SESSION['usuario'])) {
 
     <!-- seção principal -->
     <section class="section-top">
-        <h1>FÓRUM</h1>
-        <p>Boas-vindas ao forúm, aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
+        <h1 id="forum">Fórum</h1>
+        <p id="intro-forum">Boas-vindas ao forúm, aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
             da comunidade TrashTracker. Sinta-se a vontade para compartilhar conosco a sua ideia ou opinião!</p>
     </section>
 
@@ -61,17 +61,18 @@ if (!isset($_SESSION['usuario'])) {
     <!-- formulário de postagem -->
     <section class="form-section">
         <form method="post" action="processa_post.php">
-            <label for="title">Título da postagem</label>
+            <h2>POST FORÚM</h2>
+            <label for="title" class="campo-inserir">Título da postagem</label>
             <input type="text" id="title" name="title" required>
 
-            <label for="autor">Postagem feita por:</label>
+            <label for="autor" class="campo-inserir">Postagem feita por:</label>
             <input type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($_SESSION['usuario']); ?>"
                 readonly>
 
-            <label for="conteudo">Conteúdo</label>
+            <label for="conteudo" class="campo-inserir">Conteúdo</label>
             <textarea id="conteudo" name="conteudo" required></textarea>
 
-            <input type="submit" value="Enviar">
+            <input id="btn-enviar" type="submit" value="Enviar">
         </form>
     </section>
 
