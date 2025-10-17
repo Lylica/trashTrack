@@ -9,12 +9,14 @@ if (!isset($_SESSION['usuario'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum - TrashTracker</title>
     <link rel="stylesheet" href="../css/forum.css">
 </head>
+
 <body>
     <!-- cabeçalho -->
     <header>
@@ -33,11 +35,13 @@ if (!isset($_SESSION['usuario'])) {
         </nav>
         <div class="header-user">
             <?php if(!empty($_SESSION['avatar'])): ?>
-                <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
             <?php else: ?>
-                <img src="../php/avatares/avatar1.png" alt="Avatar padrão">
+            <img src="../php/avatares/avatar1.png" alt="Avatar padrão">
             <?php endif; ?>
-            <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
+            <span>Olá,
+                <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
+            </span>
             <a href="logout.php"><button>Sair</button></a>
         </div>
     </header>
@@ -45,7 +49,8 @@ if (!isset($_SESSION['usuario'])) {
     <!-- seção principal -->
     <section class="section-top">
         <h1>FÓRUM</h1>
-        <p>Bem-vindo ao fórum! Aqui você pode enviar comentários e interagir com outros usuários.</p>
+        <p>Boas-vindas ao forúm, aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
+            da comunidade TrashTracker. Sinta-se a vontade para compartilhar conosco a sua ideia ou opinião!</p>
     </section>
 
     <!-- botão adicionar postagem -->
@@ -60,7 +65,8 @@ if (!isset($_SESSION['usuario'])) {
             <input type="text" id="title" name="title" required>
 
             <label for="autor">Postagem feita por:</label>
-            <input type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($_SESSION['usuario']); ?>" readonly>
+            <input type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($_SESSION['usuario']); ?>"
+                readonly>
 
             <label for="conteudo">Conteúdo</label>
             <textarea id="conteudo" name="conteudo" required></textarea>
@@ -82,14 +88,21 @@ if (!isset($_SESSION['usuario'])) {
             while ($row = $result->fetch_assoc()):
                 $avatar = !empty($row['avatar']) ? $row['avatar'] : 'avatar1.png';
         ?>
-            <article class="post-card">
-                <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
-                <div class="post-content">
-                    <h3><?php echo htmlspecialchars($row['titulo']); ?></h3>
-                    <p><?php echo nl2br(htmlspecialchars($row['conteudo'])); ?></p>
-                    <small><?php echo htmlspecialchars($row['autor']); ?> — <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?></small>
-                </div>
-            </article>
+        <article class="post-card">
+            <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
+            <div class="post-content">
+                <h3>
+                    <?php echo htmlspecialchars($row['titulo']); ?>
+                </h3>
+                <p>
+                    <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
+                </p>
+                <small>
+                    <?php echo htmlspecialchars($row['autor']); ?> —
+                    <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
+                </small>
+            </div>
+        </article>
         <?php
             endwhile;
         else:
@@ -98,6 +111,14 @@ if (!isset($_SESSION['usuario'])) {
         ?>
     </main>
 
+    <!--rodapé-->
+    <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
+        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
+            src="../images/trash.png">
+        <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
+    </footer>
+
     <script src="../js/forum.js"></script>
 </body>
+
 </html>

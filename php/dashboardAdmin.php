@@ -6,9 +6,10 @@ if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit;
 }
+
+
 ?>
 
-<!-- HTML -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -22,6 +23,7 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body>
+
     <aside class="barra-lateral">
         <h2 class="titulo-dashboard">
             <img src="../images/dashboard_icon.png" alt="Ícone do Dashboard">
@@ -52,7 +54,6 @@ if (!isset($_SESSION['usuario'])) {
             <a href="index.php">
                 <img style="height: 40px; width: 40px; margin-right: 10px;" src="../images/trash.png">
             </a>
-
             <div>
                 <h1 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker</h1>
             </div>
@@ -98,6 +99,20 @@ if (!isset($_SESSION['usuario'])) {
             <p><strong>Última atualização:</strong> <span id="ultima-atualizacao">--:--</span></p>
             <p><strong>Nível atual:</strong> <span id="nivel-atual">0%</span></p>
             <p><strong>Status:</strong> <span id="status-lixeira">--</span></p>
+        </div>
+
+        <div id="info-bloco" class="info-bloco">
+            <h2>ROTA INTELIGENTE</h2>
+            <p><strong>Tempo de rota: </strong> <span>1 hora</span></p>
+            <p><strong>Qtd de lixeiras: </strong><span>20 lixeiras</span></p>
+            <p><strong>Distância total: </strong> <span>20km</span> <br>
+                <strong>Rota inteligente: </strong> <span>20km</span> <br>
+            </p>
+            <p><strong>Combustível rota comum: </strong> <span>8L</span> <br>
+                <strong>Combustível rota inteligente: </strong> <span>3,2L</span> <br> <br>
+                <strong>Combustível economizado: </strong> <span>4,8L</span> <br>
+            </p>
+            <img src="../images/maps.jpg" alt="Maps">
         </div>
 
     </main>
