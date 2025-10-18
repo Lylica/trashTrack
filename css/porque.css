@@ -55,15 +55,16 @@ header img {
 }
 
 .section-main h1 {
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     color: rgb(194, 197, 170);
 }
 
 .section-main p {
-    font-family: Inter;
-    color: rgb(194, 197, 170);
+    font-family: 'Inter', sans-serif;
+    color: #F5F0DC;
     font-weight: 500;
     font-size: 20px;
+    text-align: justify;
 }
 
 /* Diferenciais título */
@@ -82,7 +83,7 @@ header img {
 
 #diferenciais{
     font-family: 'Inter', sans-serif; 
-    color: rgb(194, 197, 170); 
+    color: #C2C5AA; 
     margin-left: 50px;
 }
 
@@ -105,20 +106,22 @@ header img {
     z-index: 10;
     flex-grow: 1;
     font-family: 'Inter', sans-serif;
+    text-align: justify;
 }    
 
 .card-texto h3 {
     margin-top: 0;
     font-size: 1.4rem;
-    text-decoration: underline;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
+    color:#C2C5AA;
 }
 
 .card-texto p {
-    font-size: 1.1rem;
+    font-size: 20px;
     line-height: 1.5;
     font-family: 'Inter', sans-serif;
+    color: #000000;
 }
 
 .card-imagem-textura {
@@ -170,4 +173,114 @@ header img {
     font-size: 22px;
     padding: 5px;
     margin-top: auto;
+}
+
+#section-dados{
+    background-color: rgb(101, 109, 74); 
+    height: auto; 
+    width: auto; 
+    padding: 20px;
+}
+
+.dados-container{
+    background-color: rgb(101, 109, 74); 
+    margin: 0 auto;
+    max-width: 1200px;  
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.dado-item{
+    background: #414833; 
+    padding: 20px 30px; 
+    border-radius: 15px;
+    color: black;
+}
+
+.dado-texto h3::before {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.dado-item.co2 h3::before {
+    content: '●'; /* Círculo */
+}
+
+.dado-item.combustivel h3::before {
+    content: '♦'; /* Losango */
+}
+
+.dado-item.rotas h3::before {
+    content: '▲'; /* Triângulo */
+}
+
+.dado-texto h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    padding: 5px; 
+    margin-left: auto; 
+    font-weight: bold;
+    color: #C2C5AA
+}
+
+.dado-texto p {
+    margin: 0;
+    font-size: 1rem;
+    color: #F5F0DC;
+    font-family: 'Inter', sans-serif; 
+    margin-left: auto; 
+    padding: 5px; 
+    margin-bottom: auto; 
+    font-size: 22px;
+}
+
+.footer{
+    background-color: rgb(220, 218, 190); 
+    height: 80px; 
+    width: auto; 
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.footer img {
+    height: 24px; /* Ajuste de tamanho */
+    width: 24px;
+}
+
+.footer h2 {
+    font-family:'Inter', sans-serif; 
+    color: rgb(65, 72, 51); 
+    margin: 0;
+    font-size: 16px;
+}
+
+#section-dados h1{
+    font-family: 'Inter', sans-serif; 
+    color: rgb(194, 197, 170); 
+    margin-left: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }   
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .titulo-secao {
+        text-align: center;
+        font-size: 2.2rem;
+    }
 }
