@@ -195,6 +195,7 @@ header img {
     text-decoration: none;
     color: #c2c5aa;
     font-weight: bold;
+    font-family: 'Inter', sans-serif;
 }
 
 .linkedin-link:hover {
@@ -203,8 +204,10 @@ header img {
 
 .linkedin-link img {
     height: 20px;
-
+    vertical-align: middle;
 }
+
+.linkedin-link span{}
 
 /* Rodapé */
 .footer{

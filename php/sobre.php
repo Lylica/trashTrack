@@ -102,7 +102,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
                         <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                         src="../images/linkedin.png">
-                        <p>Linkedin</p>
+                        <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         
@@ -117,7 +117,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/bividal/">
                     <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                     src="../images/linkedin.png">
-                    <p>Linkedin</p>
+                    <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 3-->
@@ -130,7 +130,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/clara-rondello/">
                     <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                     src="../images/linkedin.png">
-                    <p>Linkedin</p>
+                    <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 4-->
@@ -144,7 +144,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
                     <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                     src="../images/linkedin.png">
-                    <p>Linkedin</p>
+                    <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 5-->
@@ -158,7 +158,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
                     <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                     src="../images/linkedin.png">
-                    <p>Linkedin</p>
+                    <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 6-->
@@ -172,7 +172,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/phsdias/">
                     <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                     src="../images/linkedin.png">
-                    <p>Linkedin</p>
+                    <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 7-->
@@ -186,7 +186,7 @@ session_start();
                     <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
                     <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
                     src="../images/linkedin.png">
-                    <p>Linkedin</p>
+                    <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         </div>    
