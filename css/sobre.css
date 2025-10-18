@@ -62,6 +62,13 @@ header img {
     font-style: normal;
 }
 
+/* Motivações */
+
+
+.sobre-tt{
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+}
 .section-main p {
     font-family: Inter;
     color: rgb(194, 197, 170);
@@ -69,37 +76,157 @@ header img {
     font-size: 20px;
 }
 
-/* Motivações */
-.section-motivacoes {
-    background-color: rgb(101, 109, 74);
-    padding: 40px;
+#section-motivações{
+    background-color: rgb(101, 109, 74); 
+    height: auto; 
+    width: auto; 
+    padding: 20px;
 }
 
-.section-motivacoes h1 {
-    font-family: Inter;
-    color: rgb(194, 197, 170);
+#section-motivações h1{
+    font-family: 'Inter', sans-serif; 
+    color: rgb(194, 197, 170); 
+    margin-left: 50px;
+}
+
+.motivacao-item{
+    background: #414833; 
+    padding: 20px 30px; 
+    border-radius: 15px;
+    color: black;
     margin-bottom: 20px;
 }
 
-.motivacao-box {
-    background: rgb(220, 218, 190);
-    height: 100px;
-    width: auto;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-    border-radius: 20px;
+.motivacao-texto h3::before {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    vertical-align: middle;
 }
 
-.motivacao-title {
-    font-family: Inter;
-    padding: 2px;
-    margin-left: auto;
+.motivacao-item.menos-lixo h3::before {
+    content: '●'; /* Círculo */
+}
+
+.motivacao-item.menos-tempo h3::before {
+    content: '♦'; /* Losango */
+}
+
+.motivacao-item.participacao h3::before {
+    content: '▲'; /* Triângulo */
+}
+
+.motivacao-texto h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    padding: 5px; 
+    margin-left: auto; 
+    font-weight: bold;
+    color: #C2C5AA
+}
+
+.motivacao-texto p {
+    margin: 0;
+    font-size: 1rem;
+    color: #F5F0DC;
+    font-family: 'Inter', sans-serif; 
+    margin-left: auto; 
+    padding: 5px; 
+    margin-bottom: auto; 
+}
+
+#colaboradores-section{
+    background-color: rgb(101, 109, 74); 
+    height: auto; 
+    width: auto; 
+    padding: 60px 20px;
+}
+
+.colaboradores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}     
+
+.colaborador-card {
+    flex-basis: 300px;
+    text-align: center;
+    color: #c2c5aa;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nome-container img {
+    height: 24px;
+}
+
+.colaborador-card h2 {
+    color: #dde2d4;
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.colaborador-card .bio {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #c2c5aa;
     font-weight: bold;
 }
 
-.motivacao-text {
-    font-family: Inter;
-    margin-left: auto;
-    margin-bottom: auto;
+.linkedin-link:hover {
+    color: #ffffff; /* Efeito ao passar o mouse */
+}
+
+.linkedin-link img {
+    height: 20px;
+
+}
+
+/* Rodapé */
+.footer{
+    background-color: rgb(220, 218, 190); 
+    height: 80px; 
+    width: auto; 
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.footer img {
+    height: 24px; /* Ajuste de tamanho */
+    width: 24px;
+}
+
+.footer h2 {
+    font-family:'Inter', sans-serif; 
+    color: rgb(65, 72, 51); 
+    margin: 0;
+    font-size: 16px;
 }
 
