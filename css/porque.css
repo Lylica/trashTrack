@@ -79,6 +79,66 @@ header img {
 }
 
 /* Diferenciais */
+
+#diferenciais{
+    font-family: 'Inter', sans-serif; 
+    color: rgb(194, 197, 170); 
+    margin-left: 50px;
+}
+
+.card{
+    background: rgb(220, 218, 190); 
+    border-radius: 30px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    flex-direction: column;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-texto {
+    background-color: #4a543b;
+    color: #dde2d4;
+    padding: 25px;
+    border-radius: 15px;
+    z-index: 10;
+    flex-grow: 1;
+    font-family: 'Inter', sans-serif;
+}    
+
+.card-texto h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-texto p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-imagem-textura {
+    height: 180px;
+    background-color: #fff8e7;
+    border: 8px solid white;
+    border-radius: 25px;
+    margin-top: -30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.5" fill="%23ff9900"/></svg>');
+}
+
+.cards-container{
+    background-color: rgb(101, 109, 74); 
+    padding: 40px; 
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .section-diferenciais {
     background-color: rgb(101, 109, 74);
     padding: 40px;

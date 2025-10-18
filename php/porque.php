@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porque nós? - TrashTracker</title>
-    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="../css/porque.css">
 </head>
 
 <body>
@@ -53,34 +53,39 @@ session_start();
 
     <!--diferenciais-->
     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; ">
-        <h1 style="font-family: Inter; color: rgb(194, 197, 170); margin-left: 50px;">Diferenciais</h1>
-        <div style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 40px; display: flex;">
+        <h1 id="diferenciais">Diferenciais</h1>
+        <div class="cards-container">
             <!--diferencial 1-->
-            <div
-                style="background: rgb(220, 218, 190); height: 350px; width: 450px; padding: 10px; margin-left: 100px; border-radius: 30px;">
-                <p style="font-family: Inter; padding: 5px; margin-left: auto; font-size: 25px; font-weight: bold;">
-                    Acesso ao nível de lixo</p>
-                <p style="font-family: Inter; margin-left: auto; padding: 5px; margin-bottom: auto; font-size: 22px;">
+            <div class="card">
+                <div class="card-texto">
+                    <h3 style="font-family: Inter; padding: 5px; margin-left: auto; font-size: 25px; font-weight: bold;">
+                    Acesso ao nível de lixo</h3>
+                    <p style="font-family: Inter; margin-left: auto; padding: 5px; margin-bottom: auto; font-size: 22px;">
                     Acesso a % de lixo de qualquer lixeira próxima a você, independente de onde você esteja!</p>
-            </div>
+                 </div>
+                 <div class="card-imagem-textura"></div>
+             </div>
             <!--diferencial 2-->
-            <div
-                style="background: rgb(220, 218, 190); height: 350px; width: 450px; padding: 10px; margin-left: 100px; border-radius: 30px;">
-                <p style="font-family: Inter; padding: 5px; margin-left: auto; font-size: 25px; font-weight: bold;">
-                    Dados estratégicos</p>
+            <div class="card">
+                <div class="card-texto">
+                <h3 style="font-family: Inter; padding: 5px; margin-left: auto; font-size: 25px; font-weight: bold;">
+                    Dados estratégicos</h3>
                 <p style="font-family: Inter; margin-left: auto; padding: 5px; margin-bottom: auto; font-size: 22px;">
                     Dados estratégicos para que empresas e órgãos governamentais tenham mais produtividade na coleta!
                 </p>
+                </div>
+                <div class="card-imagem-textura"></div>
             </div>
             <!--diferencial 3-->
-            <div
-                style="background: rgb(220, 218, 190); height: 350px; width: 450px; padding: 10px; margin-left: 100px; border-radius: 30px;">
+            <div class="card">
+                <div class="card-texto">
                 <p style="font-family: Inter; padding: 5px; margin-left: auto; font-size: 25px; font-weight: bold;">
                     Forúm</p>
                 <p style="font-family: Inter; margin-left: auto; padding: 5px; margin-bottom: auto; font-size: 22px;">No
                     forúm você pode deixar sugestões de melhorias, feedbacks e interagir com a comunidade!</p>
+                </div>
+                <div class="card-imagem-textura"></div>
             </div>
-        </div>
     </section>
 
     <!--dados-->
