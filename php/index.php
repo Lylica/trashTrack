@@ -30,7 +30,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <header class="header-admin">
         <!--Logo volta pro inicio-->
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/trash.png" alt="Logo">
+            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
@@ -65,7 +65,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <?php endif; ?>
             <a href="dashboard.php"><button class="btn-dashboard">Dashboard</button></a>
         </div>
-        <img id="dashboard-img" src="../images/dashboard.png" alt="Dashboard">
+        <img id="dashboard-img" src="../images/logo.png" alt="logo">
     </section>
 
     <!--rascunho corpo do site-->

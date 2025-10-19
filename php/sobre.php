@@ -20,17 +20,17 @@ session_start();
     <!-- cabeçalho -->
     <header class="header-admin">
         <a href="index.php">
-            <img src="../images/trash.png" alt="Logo" class="logo">
+            <img src="../images/logo.png" alt="Logo" class="logo">
         </a>
         <div class="header-title">
             <h1>TrashTracker</h1>
         </div>
-        <nav class="header-nav">
-            <a href="index.php">INÍCIO</a>
-            <a href="sobre.php">SOBRE</a>
-            <a href="porque.php">PORQUE NÓS?</a>
-            <a href="dashboard.php">DASHBOARD</a>
-            <a href="forum.php">FORÚM</a>
+        <nav class="nav">
+            <a class="menu-bar" href="index.php">INÍCIO</a>
+            <a class="menu-bar" href="sobre.php">SOBRE</a>
+            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+            <a class="menu-bar" href="forum.php">FORÚM</a>
         </nav>
         <div class="header-user">
             <?php if(!empty($_SESSION['usuario'])): ?>
