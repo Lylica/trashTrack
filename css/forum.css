@@ -1,17 +1,39 @@
 /* Cabeçalho */
 header {
     background-color: rgb(220, 218, 190);
-    padding: 15px 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 6px 20px;
+    gap: 12px;
+}
+header img {
+    height: 40px;
+    width: 40px;
 }
 
-.header-left {
+.header-title h1 {
+    font-family: 'Inter', sans-serif;
+    color: rgb(65, 72, 51);
+    margin: 0;
+}
+
+.nav {
+    margin-left: 2%;
     display: flex;
-    align-items: center;
-    gap: 40px; /* Espaço entre a logo e a navegação */
+    gap: 10px;
+}
+
+.nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(65,72,51);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(101, 109, 74);
 }
 
 .logo-container {
@@ -31,49 +53,7 @@ header {
     padding: 5px;
 }
 
-header img {
-    width: 40px;
-    height: 40px;
-}
-
-.header-title h1 {
-    font-family: 'Inter', sans-serif;
-    color: rgb(65, 72, 51);
-    margin: 0;
-}
-
-.header-nav {
-    display: flex;
-    gap: 25px; /* Espaço entre os links da navegação */
-}
-
-.header-nav a {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    color: rgb(65,72,51);
-    text-decoration: none;
-}
-
-.header-nav a:hover {
-    color: #414833; /* Cor ao passar o mouse */
-}
-
-.header-right .btn-login {
-    background-color: #6d4c41; /* Marrom escuro */
-    color: white;
-    padding: 10px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-}
-
-.header-right .btn-login:hover {
-    background-color: #5d4037; /* Marrom um pouco mais escuro */
-}
-
-.header-user {
+header-user {
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -89,11 +69,21 @@ header img {
 }
 
 .header-user button {
-    padding: 6px 12px;
-    border-radius: 8px;
+    background-color: #44633F;
+    color: #F5F0DC;
     border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
     cursor: pointer;
+    transition: 0.3s;
 }
+
+.header-user button:hover {
+    background-color: #5A7A52;
+}
+
+
+
 
 /* Seção topo */
 .section-top {
@@ -121,9 +111,7 @@ header img {
     padding: 10px;
     border: 2px solid #aeb49a;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.btn-add-wrapper {
+    width: 500px;
     margin-bottom: 20px;
 }
 
@@ -279,5 +267,25 @@ h2{
     background-color: #2b2f26;
 }
 
+.footer{
+    background-color: rgb(220, 218, 190); 
+    height: 80px; 
+    width: auto; 
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
 
+.footer img {
+    height: 24px; /* Ajuste de tamanho */
+    width: 24px;
+}
 
+.footer h2 {
+    font-family:'Inter', sans-serif; 
+    color: rgb(65, 72, 51); 
+    margin: 0;
+    font-size: 16px;
+}

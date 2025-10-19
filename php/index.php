@@ -137,10 +137,9 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     </section>
 
     <!--rodapé-->
-    <footer>
-        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="../images/trash.png">
-        <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
+    <footer class="footer">
+        <img src="../images/trash.png">
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
          <script src="../js/index.js"></script>

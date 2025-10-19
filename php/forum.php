@@ -15,39 +15,40 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum - TrashTracker</title>
     <link rel="stylesheet" href="../css/forum.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- cabeçalho -->
-    <header>
-        <div class="header-left">
-            <a href="index.php" class="logo-container">
-            <img src="../images/trash.png" alt="Logo">
+    <header class="header-admin">
+            <a href="index.php" id=link-logo>
+            <img id="lata-lixo" src="../images/trash.png" alt="Logo">
             </a>
-            <span>TrashTracker</span>
-    
-            <nav class="header-nav">
-            <a href="index.php">INÍCIO</a>
-            <a href="sobre.php">SOBRE</a>
-            <a href="porque.php">PORQUE NÓS?</a>
-            <a href="dashboard.php">DASHBOARD</a>
-            <a href="forum.php">FORÚM</a>
-            </nav>
-        </div>
+            <div class="header-title">
+                <h1 id="trashtracker">TrashTracker</h1>
+            </div>
+                <div class="nav">
+                    <a class="menu-bar" href="index.php">INÍCIO</a>
+                    <a class="menu-bar" href="sobre.php">SOBRE</a>
+                    <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+                    <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+                    <a class="menu-bar" href="forum.php">FORÚM</a>
+                </div>
+        
 
-        <div class="header-right">
+        <div class="header-user">
             <?php if(!empty($_SESSION['avatar'])): ?>
-                <div class="user-info">
-                    <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
-            
-            <img src="../php/avatares/avatar1.png" alt="Avatar padrão">
+            <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
             <a href="logout.php" class="btn-logout">Sair</a>
-            </div>
             <?php else: ?>
-            <a href="logout.php"><button class="btn-login">Sair</button></a>
+            <a href="logout.php"><button class="btn-sair-header">Sair</button></a>
             <?php endif; ?>    
         </div>
     </header>
@@ -119,10 +120,9 @@ if (!isset($_SESSION['usuario'])) {
     </main>
 
     <!--rodapé-->
-    <footer class="footer" style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
-        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="../images/trash.png">
-        <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
+    <footer class="footer">
+        <img src="../images/trash.png">
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
     <script src="../js/forum.js"></script>
