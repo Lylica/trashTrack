@@ -83,42 +83,43 @@ if (!isset($_SESSION['usuario'])) {
         </form>
     </section>
 
-    <!-- lista de posts -->
-    <main class="container-posts">
-        <?php
-        include 'db.php';
-        $sql = "SELECT f.*, u.avatar FROM forum f 
-                LEFT JOIN usuarios u ON f.autor = u.usuario
-                ORDER BY f.data_criacao DESC";
-        $result = $conn->query($sql);
+   <section id="carrossel-depoimentos">
+            <?php
+    $sql = "SELECT f.*, u.avatar FROM forum f 
+            LEFT JOIN usuarios u ON f.autor = u.usuario
+            ORDER BY f.data_criacao DESC";
+    $result = $conn->query($sql);
 
-        if ($result && $result->num_rows > 0):
-            while ($row = $result->fetch_assoc()):
-                $avatar = !empty($row['avatar']) ? $row['avatar'] : 'avatar1.png';
-        ?>
-        <article class="post-card">
-            <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
-            <div class="post-content">
-                <h3>
-                    <?php echo htmlspecialchars($row['titulo']); ?>
-                </h3>
-                <p>
-                    <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
-                </p>
-                <small>
-                    <?php echo htmlspecialchars($row['autor']); ?> —
-                    <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
-                </small>
+    if ($result->num_rows > 0):
+        while($row = $result->fetch_assoc()):
+            $avatar = $row['avatar'] ?? 'avatar1.png';
+    ?>
+            <div class="div-depoimentos">
+                <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
+                <div class="post-content">
+                    <p>
+                        <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
+                    </p>
+                    <cite>
+                        <?php echo htmlspecialchars($row['autor']); ?> -
+                        <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
+                    </cite>
+                </div>
             </div>
-        </article>
-        <?php
-            endwhile;
-        else:
-            echo "<p class='no-posts'>Ainda não há comentários.</p>";
-        endif;
-        ?>
-    </main>
+            <?php
+        endwhile;
+    else:
+        echo "<p class='no-posts'>Ainda não há comentários.</p>";
+    endif;
+    ?>
 
+        </section>
+        <!-- botão 'Ver todos' -->
+        <div class="btn-ver-todos">
+            <a href="forum.php">Ver todos</a>
+        </div>
+
+    </section>
     <!--rodapé-->
     <footer class="footer">
         <img src="../images/trash.png">

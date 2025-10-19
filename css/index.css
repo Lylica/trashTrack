@@ -67,6 +67,10 @@ header img {
     background-color: #5A7A52;
 }
 
+.header-user span{
+    font-family: 'Inter', sans-serif;
+}
+
 /* ======== PRIMEIRA SEÇÃO ======== */
 .corpo-do-site {
     background-color: rgb(101, 109, 74);
@@ -234,6 +238,7 @@ header img {
 /* Botão ver todos */
 .btn-ver-todos {
     margin-top: 30px;
+    font-family: 'Inter', sans-serif;
 }
 
 .btn-ver-todos a {
