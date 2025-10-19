@@ -20,29 +20,35 @@ if (!isset($_SESSION['usuario'])) {
 <body>
     <!-- cabeçalho -->
     <header>
-        <a href="index.php">
+        <div class="header-left">
+            <a href="index.php" class="logo-container">
             <img src="../images/trash.png" alt="Logo">
-        </a>
-        <div class="header-title">
-            <h1>TrashTracker</h1>
-        </div>
-        <nav class="header-nav">
+            </a>
+            <span>TrashTracker</span>
+    
+            <nav class="header-nav">
             <a href="index.php">INÍCIO</a>
             <a href="sobre.php">SOBRE</a>
             <a href="porque.php">PORQUE NÓS?</a>
             <a href="dashboard.php">DASHBOARD</a>
             <a href="forum.php">FORÚM</a>
-        </nav>
-        <div class="header-user">
+            </nav>
+        </div>
+
+        <div class="header-right">
             <?php if(!empty($_SESSION['avatar'])): ?>
-            <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
-            <?php else: ?>
+                <div class="user-info">
+                    <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            
             <img src="../php/avatares/avatar1.png" alt="Avatar padrão">
-            <?php endif; ?>
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
-            <a href="logout.php"><button>Sair</button></a>
+            <a href="logout.php" class="btn-logout">Sair</a>
+            </div>
+            <?php else: ?>
+            <a href="logout.php"><button class="btn-login">Sair</button></a>
+            <?php endif; ?>    
         </div>
     </header>
 
@@ -113,7 +119,7 @@ if (!isset($_SESSION['usuario'])) {
     </main>
 
     <!--rodapé-->
-    <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
+    <footer class="footer" style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
         <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
             src="../images/trash.png">
         <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
@@ -121,5 +127,4 @@ if (!isset($_SESSION['usuario'])) {
 
     <script src="../js/forum.js"></script>
 </body>
-
 </html>
