@@ -1,0 +1,164 @@
+/* ======== GERAL ======== */
+body {
+    background-color: rgb(101, 109, 74);
+    color: rgb(194, 197, 170);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======== CABEÇALHO ======== */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+a {
+    color: rgb(194, 197, 170);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* ======== MENU ADMIN ======== */
+.menu-admin {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.menu-admin button {
+    background-color: #44633F;
+    color: #F5F0DC;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-admin button:hover {
+    background-color: #5A7A52;
+}
+
+body {
+    background-color: red !important;
+}
+
+/* ======== SEÇÕES ======== */
+.secao-admin {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(80, 88, 60);
+    border-radius: 10px;
+}
+
+.secao-admin h3, .secao-admin h4 {
+    margin-top: 0;
+}
+
+/* ======== TABELAS ======== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgb(120, 130, 90);
+    font-size: 14px;
+}
+
+table th {
+    background-color: rgb(85, 93, 65);
+    color: #F5F0DC;
+}
+
+table tr:hover {
+    background-color: rgb(120, 130, 90);
+}
+
+table img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ======== FORMULÁRIOS ======== */
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: rgb(194, 197, 170);
+    color: rgb(50,50,50);
+}
+
+form button {
+    background-color: #44633F;
+    color: #F5F0DC;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #5A7A52;
+}
+
+/* ======== FORM EDITAR/ADICIONAR ======== */
+#form-editar, #form-nova-lixeira {
+    background-color: rgb(101, 109, 74);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+#form-editar label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ======== BOTÕES DASHBOARD ======== */
+.btn-dashboard {
+    background-color: #44633F;
+    color: #F5F0DC;
+    border-radius: 10px;
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-dashboard:hover {
+    background-color: #5A7A52;
+}
+
+/* ======== DEPOIMENTOS ======== */
+#tabela-depoimentos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#tabela-depoimentos th, #tabela-depoimentos td {
+    padding: 10px;
+    border-bottom: 1px solid rgb(120,130,90);
+}
+
+#tabela-depoimentos tr:hover {
+    background-color: rgb(120,130,90);
+}
