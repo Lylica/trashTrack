@@ -52,7 +52,7 @@ session_start();
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
-            <a href="logout.php"><button>Sair</button></a>
+            <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
             <?php else: ?>
             <a href="login.php"><button id="btn-login-header">Login</button></a>
             <?php endif; ?>
