@@ -58,6 +58,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+<<<<<<< HEAD
+  <!-- Cabeçalho -->
+  <header>
+      <a id="link-logo" href="index.php">
+          <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+      </a>
+      <div class="header-title">
+          <h1>TrashTracker</h1>
+      </div>
+      <div class="nav">
+          <a href="index.php">INÍCIO</a>
+          <a href="sobre.php">SOBRE</a>
+          <a href="porque.php">PORQUE NÓS?</a>
+          <a href="dashboard.php">DASHBOARD</a>
+          <a href="forum.php">FORÚM</a>
+      </div>
+      <div class="header-user">
+          <?php if(isset($_SESSION['usuario'])): ?>
+          <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+          <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
+          <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
+          <?php else: ?>
+          <a href="login.php"><button id="btn-login-header">Login</button></a>
+          <?php endif; ?>
+      </div>
+  </header>
+=======
     <!-- Cabeçalho -->
     <header>
         <a id="link-logo" href="index.php">
@@ -85,6 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
         </div>
     </header>
+>>>>>>> 73c7f2f41b46a2d856464aedb464b27a4e976e06
 
     <!-- Login -->
     <div class="login-container">

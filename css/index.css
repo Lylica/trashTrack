@@ -68,14 +68,32 @@ header img {
     border: 2px solid #555;
 }
 
-.header-user button {
+#btn-sair-header{
     background-color: #44633F;
-    color: #F5F0DC;
+    color: #DCDABE;
     border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
     cursor: pointer;
+    margin-right: 10px;
     transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+#btn-login-header{
+    background-color: #582F0E;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
 
 .header-user button:hover {
@@ -104,8 +122,8 @@ header img {
 
 #titulo-corpo-pagina {
     font-family: Inter;
-    font-size: 48px;
-    color: rgb(194, 197, 170);
+    font-size: 3.5em;
+    color: #C2C5AA;
     margin-bottom: 10px;
 }
 
@@ -117,20 +135,42 @@ header img {
 }
 
 /* Botões principais */
-.btn-login, .btn-dashboard {
+.btn-dashboard {
     background-color: #DCDABE;
     color: #582F0E;
     border: none;
     border-radius: 10px;
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     margin-right: 10px;
     transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
 
-.btn-login:hover, .btn-dashboard:hover {
-    background-color: #5A7A52;
+.btn-login{
+    background-color: #582F0E;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+.btn-dashboard:hover {
+    background-color: #582F0E;
+    color: #DCDABE;
+}
+
+.btn-login:hover{
+    background-color: #DCDABE;
+    color: #582F0E;
 }
 
 /* Imagem principal */
