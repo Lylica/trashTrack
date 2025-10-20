@@ -7,7 +7,7 @@
     <title>Página de erro 404 personalizada do site TrashTracker</title>
     <meta name="description"
         content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -39,7 +39,7 @@
 <body>
     <header class="header-admin">
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+            <img id="lata-lixo" src="images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>

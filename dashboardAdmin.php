@@ -17,7 +17,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="description" content="Página do dashboard de administrador do site TrashTracker, utilizado para visualização do dashboard e de rotas inteligentes de coleta para administradores">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../css/dashboardAdmin.css">
+    <link rel="stylesheet" href="css/dashboardAdmin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -50,7 +50,7 @@ if (!isset($_SESSION['usuario'])) {
      <!-- cabeçalho -->
     <header class="header-admin">
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+            <img id="lata-lixo" src="images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['usuario'])) {
     <main class="dashboard-main">
         <aside class="barra-lateral">
             <h2 class="titulo-dashboard">
-                <img src="../images/dashboard_icon.png" alt="Ícone">
+                <img src="images/dashboard_icon.png" alt="Ícone">
                 Dashboard
             </h2>
 
@@ -131,15 +131,15 @@ if (!isset($_SESSION['usuario'])) {
     </div>
 
     <div class="mapa-rotas-container info-bloco">
-        <img src="../images/maps.jpg" alt="Mapa da Rota" class="mapa-rotas">
+        <img src="images/maps.jpg" alt="Mapa da Rota" class="mapa-rotas">
     </div>
 </div>
 
     <footer class="footer">
-        <img src="../images/trash.png" alt="Logo">
+        <img src="images/trash.png" alt="Logo">
         <h2>TrashTracker - Todos os direitos reservados ℗</h2>
     </footer>
 
-    <script src="../js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

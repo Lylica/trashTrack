@@ -230,7 +230,7 @@ form button[type="submit"]:hover { background-color:#5A7A52; }
 <body>
 
 <header>
-    <a href="admin.php"><img src="../images/logo.png" alt="Logo"></a>
+    <a href="admin.php"><img src="images/logo.png" alt="Logo"></a>
     <div class="header-title"><h1>TrashTracker - Admin</h1></div>
     <div class="header-user">
         <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar'] ?? 'avatar1.png'); ?>">

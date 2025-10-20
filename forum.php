@@ -16,7 +16,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="css/forum.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -49,7 +49,7 @@ if (!isset($_SESSION['usuario'])) {
     <!-- cabeçalho -->
     <header class="header-admin">
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+            <img id="lata-lixo" src="images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
@@ -143,11 +143,11 @@ if (!isset($_SESSION['usuario'])) {
    
     <!-- rodapé -->
     <footer class="footer">
-        <img src="../images/trash.png">
+        <img src="images/trash.png">
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
     <!-- JS -->
-   <script src="../js/index.js"></script>
+   <script src="js/index.js"></script>
 </body>
 </html>

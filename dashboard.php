@@ -19,7 +19,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="css/forum.css">
 
     <!-- Media query -->
     <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="dashboard.css" />
@@ -50,7 +50,7 @@ if (!isset($_SESSION['usuario'])) {
         <header
             style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex; align-items: center;">
             <a href="index.php">
-                <img style="height: 40px; width: 40px; margin-right: 10px;" src="../images/trash.png">
+                <img style="height: 40px; width: 40px; margin-right: 10px;" src="images/trash.png">
             </a>
 
             <div>
@@ -67,10 +67,10 @@ if (!isset($_SESSION['usuario'])) {
             <div style="margin-left: auto; display: flex; align-items: center; gap: 10px;">
                 <div style="display:flex; align-items:center; gap:10px; margin-right:10px;">
                     <?php if(!empty($_SESSION['avatar'])): ?>
-                    <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar"
+                    <img src="php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar"
                         style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
                     <?php else: ?>
-                    <img src="../php/avatares/avatar1.png" alt="Avatar padrão"
+                    <img src="php/avatares/avatar1.png" alt="Avatar padrão"
                         style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
                     <?php endif; ?>
                     <span>Olá,
@@ -83,7 +83,7 @@ if (!isset($_SESSION['usuario'])) {
 
         <aside class="barra-lateral">
         <h2 class="titulo-dashboard">
-            <img src="../images/dashboard_icon.png" alt="Ícone do Dashboard">
+            <img src="images/dashboard_icon.png" alt="Ícone do Dashboard">
             Dashboard
         </h2>
 
@@ -128,11 +128,11 @@ if (!isset($_SESSION['usuario'])) {
     <!--rodapé-->
     <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
         <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="../images/trash.png">
+            src="images/trash.png">
         <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
-    <script src="../js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

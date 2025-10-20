@@ -25,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <title>Página de cadastro do usuário do site TrashTracker</title>
     <meta name="description" content="Página de cadastro do usuário do site TrashTracker, usado para criação de conta para novos usuários para visualização do dashboard e liberação do forúm">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="css/forum.css">
 
     <!-- Media query -->
     <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="cadastro.css" />
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  <!-- cabeçalho -->
     <header class="header-admin">
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+            <img id="lata-lixo" src="images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
@@ -130,11 +130,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Rodapé -->
 <footer>
-    <img src="../images/trash.png" alt="Logo">
+    <img src="images/trash.png" alt="Logo">
     <h2>TrashTracker - Todos os direitos reservados ℗</h2>
 </footer>
 
-<script src="../js/cadastro.js"></script>
+<script src="js/cadastro.js"></script>
 
 </body>
 </html>

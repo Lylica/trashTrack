@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/forum.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de login do usuário cadastrado do site TrashTracker</title>
     <meta name="description" content="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Cabeçalho -->
   <header>
       <a id="link-logo" href="index.php">
-          <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+          <img id="lata-lixo" src="images/logo.png" alt="Logo">
       </a>
       <div class="header-title">
           <h1>TrashTracker</h1>
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Rodapé -->
     <footer>
-        <img src="../images/trash.png" alt="Logo">
+        <img src="images/trash.png" alt="Logo">
         <h2>TrashTracker - Todos os direitos reservados ℗</h2>
     </footer>
 </body>

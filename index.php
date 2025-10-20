@@ -18,7 +18,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal, inicial e padrão do site TrashTracker</title>
     <meta name="description" contento="Página principal do site TrashTracker, onde estão linkadas todas as outras páginas de acesso geral ou de administrador, sendo duas tendo necessidade de login">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,7 +51,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <!-- cabeçalho -->
     <header class="header-admin">
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+            <img id="lata-lixo" src="images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
@@ -86,25 +86,25 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <?php endif; ?>
             <a href="dashboard.php"><button class="btn-dashboard">Dashboard</button></a>
         </div>
-        <img id="dashboard-img" src="../images/logo.png" alt="logo">
+        <img id="dashboard-img" src="images/logo.png" alt="logo">
     </section>
 
     <!-- seção de destaques -->
     <section id="section-lixeiras">
         <div class="content-box sobre">
-            <img class="lixo" src="../images/4-semfundo.png" alt="Sobre">
+            <img class="lixo" src="images/4-semfundo.png" alt="Sobre">
             <h2 id="sobre">SOBRE</h2>
             <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
                 dos colaboradores do projeto!</p>
         </div>
         <div class="content-box porque">
-        <img class="lixo" src="../images/1-semfundo.png" alt="Porque">
+        <img class="lixo" src="images/1-semfundo.png" alt="Porque">
             <h2 id="porque">PORQUE?</h2>
             <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
                 com foco nos nossos diferenciais e com dados reais!</p>
         </div>
         <div class="content-box dashboard-box">
-            <img class="lixo" src="../images/2-semfundo.png" alt="Dashboard">
+            <img class="lixo" src="images/2-semfundo.png" alt="Dashboard">
             <h2 id="dashboard">DASHBOARD</h2>
             <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
                 mais perto de você, aonde quer que você esteja!</p>
@@ -151,12 +151,12 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 
     <!-- rodapé -->
     <footer class="footer">
-        <img src="../images/trash.png">
+        <img src="images/trash.png">
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
     <!-- JS -->
-   <script src="../js/index.js"></script>
+   <script src="js/index.js"></script>
 </body>
 
 </html>
