@@ -100,7 +100,7 @@ header img {
 /* ======== LOGIN ======== */
 .login-container {
     background-color: rgb(220, 218, 190);
-    padding: 40px;
+    padding: 40px 60px;
     border-radius: 12px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     width: 320px;
@@ -108,6 +108,10 @@ header img {
     margin: 50px auto; /* centraliza horizontalmente e dá distância do header */
     text-align: center;
     transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .login-container:hover {
@@ -115,7 +119,7 @@ header img {
 }
 
 .login-container h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: #414833;
     font-weight: 700;
     font-size: 1.8em;
@@ -136,7 +140,7 @@ header img {
 
 .input-group input {
     width: 100%;
-    padding: 0.6rem;
+    padding: 10px 12px;
     border: 1px solid #414833;
     border-radius: 8px;
     outline: none;
@@ -144,6 +148,7 @@ header img {
     color: #191919;
     font-size: 1rem;
     transition: border-color 0.2s;
+    align-items: center;
 }
 
 .input-group input:focus {
