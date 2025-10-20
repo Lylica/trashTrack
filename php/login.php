@@ -24,26 +24,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <link rel="stylesheet" href="../css/login.css">
-  <title>Login - TrashTracker</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login - TrashTracker</title>
 
-  <link rel="stylesheet" href="../css/forum.css">
-  <title>Página de login do usuário cadastrado do site TrashTracker</title>
-  <meta name="description" contento="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">  
+    <link rel="stylesheet" href="../css/forum.css">
+    <title>Página de login do usuário cadastrado do site TrashTracker</title>
+    <meta name="description"
+        contento="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-B7BYK41L1B');
     </script>
 </head>
+
 <body>
+<<<<<<< HEAD
   <!-- Cabeçalho -->
   <header>
       <a id="link-logo" href="index.php">
@@ -69,32 +76,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <?php endif; ?>
       </div>
   </header>
+=======
+    <!-- Cabeçalho -->
+    <header>
+        <a id="link-logo" href="index.php">
+            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
+        </a>
+        <div class="header-title">
+            <h1>TrashTracker</h1>
+        </div>
+        <div class="nav">
+            <a href="index.php">INÍCIO</a>
+            <a href="sobre.php">SOBRE</a>
+            <a href="porque.php">PORQUE NÓS?</a>
+            <a href="dashboard.php">DASHBOARD</a>
+            <a href="forum.php">FORÚM</a>
+        </div>
+        <div class="header-user">
+            <?php if(isset($_SESSION['usuario'])): ?>
+            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            <span>Olá,
+                <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
+            </span>
+            <a href="logout.php"><button>Sair</button></a>
+            <?php else: ?>
+            <a href="login.php"><button>Login</button></a>
+            <?php endif; ?>
+        </div>
+    </header>
+>>>>>>> 73c7f2f41b46a2d856464aedb464b27a4e976e06
 
-  <!-- Login -->
-  <div class="login-container">
-      <h2>Login</h2>
-      <?php if(!empty($erro)) echo "<p class='erro-login'>$erro</p>"; ?>
-      <form method="POST">
-          <div class="input-group">
-              <label>Usuário</label>
-              <input type="text" name="usuario" required>
-          </div>
-          <div class="input-group">
-              <label>Senha</label>
-              <input type="password" name="senha" required>
-          </div>
-          <button type="submit">Entrar</button>
-      </form>
-      <div class="extra-actions">
-          <p>Não tem conta?</p>
-          <a href="cadastro.php" class="btn-cadastro">Cadastrar</a>
-      </div>
-  </div>
+    <!-- Login -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <?php if(!empty($erro)) echo "<p class='erro-login'>$erro</p>"; ?>
+        <form method="POST">
+            <div class="input-group">
+                <label>Usuário</label>
+                <input type="text" name="usuario" required>
+            </div>
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" name="senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="extra-actions">
+            <p>Não tem conta?</p>
+            <a href="cadastro.php" class="btn-cadastro">Cadastrar</a>
+        </div>
+    </div>
 
-  <!-- Rodapé -->
-  <footer>
-      <img src="../images/trash.png" alt="Logo">
-      <h2>TrashTracker - Todos os direitos reservados ℗</h2>
-  </footer>
+    <!-- Rodapé -->
+    <footer>
+        <img src="../images/trash.png" alt="Logo">
+        <h2>TrashTracker - Todos os direitos reservados ℗</h2>
+    </footer>
 </body>
+
 </html>
