@@ -70,15 +70,14 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 
     <!-- seção de destaques -->
     <section id="section-lixeiras">
-        <h1 id="destaques">Destaques</h1>
         <div class="content-box sobre">
             <img class="lixo" src="../images/4-semfundo.png" alt="Sobre">
             <h2 id="sobre">SOBRE</h2>
             <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
                 dos colaboradores do projeto!</p>
         </div>
-        <div class="lixo">
-            <img src="../images/1-semfundo.png" alt="Porque">
+        <div class="content-box porque">
+        <img class="lixo" src="../images/1-semfundo.png" alt="Porque">
             <h2 id="porque">PORQUE?</h2>
             <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
                 com foco nos nossos diferenciais e com dados reais!</p>

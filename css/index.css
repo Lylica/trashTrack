@@ -6,6 +6,13 @@ body {
     margin: 0;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
 /* ======== CABEÇALHO ======== */
 header {
     background-color: rgb(220, 218, 190);
@@ -104,15 +111,15 @@ header img {
 
 #introdução {
     font-family: Inter;
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
 /* Botões principais */
 .btn-login, .btn-dashboard {
-    background-color: #44633F;
-    color: #F5F0DC;
+    background-color: #DCDABE;
+    color: #582F0E;
     border: none;
     border-radius: 10px;
     padding: 12px 20px;
@@ -135,45 +142,72 @@ header img {
 
 /* ======== SEÇÃO DE DESTAQUES ======== */
 #section-lixeiras {
-    background-color: rgb(101, 109, 74);
-    text-align: center;
-    padding: 60px 20px;
-    color: rgb(194, 197, 170);
+  background-color: rgb(101, 109, 74);
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center; /* centraliza o conjunto */
+  gap: 60px;               /* espaço entre colunas */
+  flex-wrap: nowrap;       /* NÃO deixa as colunas quebrarem para outra linha */
+  box-sizing: border-box;
+  overflow-x: auto;        /* caso a tela seja muito estreita permite scroll horizontal */
 }
 
-#destaques {
-    font-family: Inter;
-    font-size: 36px;
-    margin-bottom: 40px;
+/* cada coluna: imagem no topo (centralizada), título e texto alinhados à esquerda */
+#section-lixeiras .content-box,
+#section-lixeiras .lixo {
+  width: 320px;                /* largura fixa para as 3 colunas */
+  min-width: 280px;            /* evita colunas muito pequenas em telas menores */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;     /* texto alinhado à esquerda */
+  box-sizing: border-box;
+  padding: 8px 0;
 }
 
-.content-box, .lixo {
-    display: inline-block;
-    vertical-align: top;
-    width: 280px;
-    background-color: rgb(101, 109, 74);
-    padding: 20px;
-    margin: 10px;
-    transition: transform 0.3s ease;
-    font-family: 'Inter', sans-serif;
+/* imagem centralizada apenas dentro da coluna */
+#section-lixeiras .content-box img,
+#section-lixeiras .lixo img {
+  width: 140px;
+  height: auto;
+  display: block;
+  align-self: center;     /* centraliza só a imagem */
+  margin: 0 0 18px 0;
+  border-radius: 0;
+  object-fit: contain;
 }
+
+/* título e descrição */
+#section-lixeiras h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+#section-lixeiras .descrição {
+  margin: 0;
+  text-align: justify;
+  line-height: 1.6;
+  color: #F5F0DC;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 
 .content-box:hover, .lixo:hover {
     transform: translateY(-5px);
 }
 
-.lixo img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    align-items: center;
-    margin-bottom: 10px;
+#sobre{
+    color: #582F0E;
 }
 
-.descrição {
-    color: #5B6147;
-    font-size: 15px;
+#porque{
+    color: #A68A64;
 }
+
+#dashboard{
+    color: #DCDABE;
+}
+
 
 /* ======== DEPOIMENTOS ======== */
 
@@ -315,4 +349,27 @@ header img {
 /* deixa o carrossel mais suave */
 #carrossel-depoimentos * {
     user-select: none;
+}
+
+@media (max-width: 1100px) {
+  #section-lixeiras {
+    flex-wrap: wrap;          /* agora pode quebrar em 2 linhas se necessário */
+    justify-content: center;
+    gap: 40px;
+  }
+  #section-lixeiras .content-box,
+  #section-lixeiras .lixo {
+    width: calc(50% - 30px);
+    min-width: unset;
+  }
+}
+
+@media (max-width: 640px) {
+  #section-lixeiras .content-box,
+  #section-lixeiras .lixo {
+    width: 100%;
+    align-items: center;    /* em mobile centraliza título e descrição também */
+    text-align: center;
+  }
+  #section-lixeiras .descrição { text-align: center; }
 }
