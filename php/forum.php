@@ -14,13 +14,23 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórum - TrashTracker</title>
+    <title></title>
+    <meta name="description" content="">
     <link rel="stylesheet" href="../css/forum.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- Media query -->
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="forum.css" />
+    
+    <!-- Meta Tags das redes sociais -->
+    <meta property="og:title" content="Página do dashboard de administrador do site TrashTracker">
+    <meta property="og:description" content="Página do dashboard de administrador do site TrashTracker, utilizado para visualização do dashboard e de rotas inteligentes de coleta para administradores">
+    <meta property="og:image" content="images/icone.png">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/dashboardAdmin.php">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />

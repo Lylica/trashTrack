@@ -14,7 +14,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página do dashboard de administrador do site TrashTracker</title>
-    <meta name="description" contento="Página do dashboard de administrador do site TrashTracker, utilizado para visualização do dashboard e de rotas inteligentes de coleta para administradores">
+    <meta name="description" content="Página do dashboard de administrador do site TrashTracker, utilizado para visualização do dashboard e de rotas inteligentes de coleta para administradores">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/dashboardAdmin.css">
@@ -24,9 +24,18 @@ if (!isset($_SESSION['usuario'])) {
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
         
+    <!-- Media query -->
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="dashboardAdmin.css" />
+    
+    <!-- Meta Tags das redes sociais -->
+    <meta property="og:title" content="Página do dashboard de administrador do site TrashTracker">
+    <meta property="og:description" content="Página do dashboard de administrador do site TrashTracker, utilizado para visualização do dashboard e de rotas inteligentes de coleta para administradores">
+    <meta property="og:image" content="images/icone.png">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/dashboardAdmin.php">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    
+
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>

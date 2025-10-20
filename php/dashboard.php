@@ -16,14 +16,23 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de visualização do dashboard do site TrashTracker</title>
-    <meta name="description" contento="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
+    <meta name="description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/forum.css">
 
+    <!-- Media query -->
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="dashboard.css" />
+    
+    <!-- Meta Tags das redes sociais -->
+    <meta property="og:title" content="Página de visualização do dashboard do site TrashTracker">
+    <meta property="og:description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
+    <meta property="og:image" content="images/icone.png">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/dashboard.php">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    
+
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>

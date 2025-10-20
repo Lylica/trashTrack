@@ -33,8 +33,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <link rel="stylesheet" href="../css/forum.css">
     <title>Página de login do usuário cadastrado do site TrashTracker</title>
-    <meta name="description"
-        contento="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">
+    <meta name="description" content="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">
+
+    <!-- Media query -->
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="login.css" />
+    
+    <!-- Meta Tags das redes sociais -->
+    <meta property="og:title" content="Página de login do usuário cadastrado do site TrashTracker">
+    <meta property="og:description" content="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">
+    <meta property="og:image" content="images/icone.png">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/login.php">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />

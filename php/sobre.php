@@ -16,6 +16,15 @@ session_start();
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
 
+    <!-- Media query -->
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="sobre.css" />
+    
+    <!-- Meta Tags das redes sociais -->
+    <meta property="og:title" content="Página de informações 'sobre' do site TrashTracker">
+    <meta property="og:description" content="Página de informações 'sobre?' do site TrashTracker, usado para disponibilização das informações acerca das motivações e mostrar um pouco sobre os colaboradores">
+    <meta property="og:image" content="images/icone.png">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/sobre.php">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 

@@ -16,9 +16,18 @@ session_start();
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
 
+    <!-- Media query -->
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="porque.css" />
+    
+    <!-- Meta Tags das redes sociais -->
+    <meta property="og:title" content="Página de informações 'porque nós?' do site TrashTracker">
+    <meta property="og:description" content="Página de informações 'porque nós?' do site TrashTracker, usado para disponibilização das informações acerca dos diferenciais e alguns retornos visiveis">
+    <meta property="og:image" content="images/icone.png">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/porque.php">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    
+
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>
