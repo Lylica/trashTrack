@@ -9,36 +9,44 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porque nós? - TrashTracker</title>
     <link rel="stylesheet" href="../css/porque.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
     <!-- cabeçalho -->
     <header class="header-admin">
-        <a href="index.php">
-            <img src="../images/trash.png" alt="Logo" class="logo">
+        <!--Logo volta pro inicio-->
+        <a id="link-logo" href="index.php">
+            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
-            <h1>TrashTracker</h1>
+            <h1 id="trashtracker">TrashTracker</h1>
         </div>
-        <nav class="header-nav">
-            <a href="index.php">INÍCIO</a>
-            <a href="sobre.php">SOBRE</a>
-            <a href="porque.php">PORQUE NÓS?</a>
-            <a href="dashboard.php">DASHBOARD</a>
-            <a href="forum.php">FORÚM</a>
-        </nav>
+        <div class="nav">
+            <a class="menu-bar" href="index.php">INÍCIO</a>
+            <a class="menu-bar" href="sobre.php">SOBRE</a>
+            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+            <a class="menu-bar" href="forum.php">FORÚM</a>
+        </div>
         <div class="header-user">
-            <?php if(!empty($_SESSION['usuario'])): ?>
-            <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar'] ?? 'avatar1.png'); ?>"
-                alt="Avatar" class="avatar">
+            <?php if(isset($_SESSION['usuario'])): ?>
+            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
+            <a href="logout.php"><button>Sair</button></a>
             <?php else: ?>
-            <a href="login.php"><button>Login</button></a>
+            <a href="login.php"><button id="btn-login-header">Login</button></a>
             <?php endif; ?>
         </div>
     </header>
+
 
     <!-- primeira seção -->
     <section class="section-main">

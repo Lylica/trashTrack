@@ -28,7 +28,6 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 <body>
     <!-- cabeçalho -->
     <header class="header-admin">
-        <!--Logo volta pro inicio-->
         <a id="link-logo" href="index.php">
             <img id="lata-lixo" src="../images/logo.png" alt="Logo">
         </a>
@@ -68,81 +67,75 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         <img id="dashboard-img" src="../images/logo.png" alt="logo">
     </section>
 
-    <!--rascunho corpo do site-->
+    <!-- seção de destaques -->
     <section id="section-lixeiras">
         <h1 id="destaques">Destaques</h1>
-        <!-- conteúdo principal -->
-        <section id="section-lixeiras">
-            <div class="content-box sobre">
-                <img class="lixo" src="../images/4-semfundo.png" alt="Sobre">
-                <h2 id="sobre">SOBRE</h2>
-                <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
-                    dos colaboradores do projeto!</p>
-            </div>
+        <div class="content-box sobre">
+            <img class="lixo" src="../images/4-semfundo.png" alt="Sobre">
+            <h2 id="sobre">SOBRE</h2>
+            <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
+                dos colaboradores do projeto!</p>
+        </div>
+        <div class="lixo">
+            <img src="../images/1-semfundo.png" alt="Porque">
+            <h2 id="porque">PORQUE?</h2>
+            <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
+                com foco nos nossos diferenciais e com dados reais!</p>
+        </div>
+        <div class="content-box dashboard-box">
+            <img class="lixo" src="../images/2-semfundo.png" alt="Dashboard">
+            <h2 id="dashboard">DASHBOARD</h2>
+            <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
+                mais perto de você, aonde quer que você esteja!</p>
+        </div>
+    </section>
 
-            <!-- porque -->
-            <div class="lixo">
-                <img src="../images/1-semfundo.png" alt="Porque">
-                <h2 id="porque">PORQUE?</h2>
-                <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
-                    com foco nos nossos diferenciais e com dados reais!</p>
-            </div>
-
-            <!--dashboard-->
-            <div class="content-box dashboard-box">
-                <img class="lixo" src="../images/2-semfundo.png" alt="Dashboard">
-                <h2 id="dashboard">DASHBOARD</h2>
-                <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
-                    mais perto de você, aonde quer que você esteja!</p>
-            </div>
-        </section>
-
-        <!--depoimentos-->
+    <!-- carrossel de depoimentos -->
+    <section id="carrossel-wrapper">
         <section id="carrossel-depoimentos">
             <?php
-    $sql = "SELECT f.*, u.avatar FROM forum f 
-            LEFT JOIN usuarios u ON f.autor = u.usuario
-            ORDER BY f.data_criacao DESC";
-    $result = $conn->query($sql);
+            $sql = "SELECT f.*, u.avatar FROM forum f 
+                    LEFT JOIN usuarios u ON f.autor = u.usuario
+                    ORDER BY f.data_criacao DESC";
+            $result = $conn->query($sql);
 
-    if ($result->num_rows > 0):
-        while($row = $result->fetch_assoc()):
-            $avatar = $row['avatar'] ?? 'avatar1.png';
-    ?>
+            if ($result->num_rows > 0):
+                while($row = $result->fetch_assoc()):
+                    $avatar = $row['avatar'] ?? 'avatar1.png';
+            ?>
             <div class="div-depoimentos">
-                <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
-                <div class="post-content">
+                <div class="post-text-wrapper">
                     <p>
                         <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
                     </p>
+                </div>
+                <div class="post-user">
+                    <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
                     <cite>
-                        <?php echo htmlspecialchars($row['autor']); ?> -
+                        <?php echo htmlspecialchars($row['autor']); ?> - 
                         <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
                     </cite>
                 </div>
             </div>
             <?php
-        endwhile;
-    else:
-        echo "<p class='no-posts'>Ainda não há comentários.</p>";
-    endif;
-    ?>
-
+                endwhile;
+            else:
+                echo "<p class='no-posts'>Ainda não há comentários.</p>";
+            endif;
+            ?>
         </section>
-        <!-- botão 'Ver todos' -->
-        <div class="btn-ver-todos">
-            <a href="forum.php">Ver todos</a>
-        </div>
-
     </section>
 
-    <!--rodapé-->
+   
+
+    <!-- rodapé -->
     <footer class="footer">
         <img src="../images/trash.png">
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
-         <script src="../js/index.js"></script>
+    <!-- JS -->
+   <script src="../js/index.js"></script>
 </body>
 
 </html>

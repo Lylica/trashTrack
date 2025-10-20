@@ -1,75 +1,139 @@
+/* ======== GERAL ======== */
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F5F0DC; /* igual dashboard */
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(101, 109, 74); /* igual fórum */
+    color: rgb(194, 197, 170);
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+    background-color: rgb(220, 218, 190);
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
-  .login-container {
-    background-color: #DCDABE;
+    padding: 6px 20px;
+    gap: 12px;
+}
+
+header img {
+    height: 60px;
+    width: 60px;
+}
+
+.header-title h1 {
+    font-family: Inter, sans-serif;
+    color: rgb(65, 72, 51);
+    margin: 0;
+}
+
+.nav {
+    margin-left: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+.nav a {
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(65,72,51);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(101, 109, 74);
+}
+
+.header-user {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+.header-user button {
+    background-color: #44633F;
+    color: #F5F0DC;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-user button:hover {
+    background-color: #5A7A52;
+}
+
+.header-user span {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+/* ======== LOGIN ======== */
+.login-container {
+    background-color: rgb(220, 218, 190);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     width: 320px;
-    text-align: center;
-    color: #3F4B3B;
     max-width: 400px;
+    margin: 50px auto; /* centraliza horizontalmente e dá distância do header */
+    text-align: center;
     transition: box-shadow 0.3s ease;
-  }
+}
 
-  .login-container:hover {
+.login-container:hover {
     box-shadow: 4px 4px 15px rgba(0,0,0,0.15);
-  }
-  
-  .login-container h2 {
+}
+
+.login-container h2 {
     margin-bottom: 30px;
     color: #414833;
     font-weight: 700;
     font-size: 1.8em;
-  }
-  
-  .subtitle {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    color: #3F4B3B;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     margin-bottom: 1rem;
     text-align: left;
-  }
-  
-  .input-group label {
+}
+
+.input-group label {
     display: block;
     font-size: 0.9rem;
     margin-bottom: 0.4rem;
-    color: #3F4B3B;
+    color: #414833;
     font-weight: 500;
-  }
-  
-  .input-group input {
+}
+
+.input-group input {
     width: 100%;
     padding: 0.6rem;
-    border: 1px solid #3F4B3B;
+    border: 1px solid #414833;
     border-radius: 8px;
     outline: none;
-    background-color: #F5F0DC;
+    background-color: rgb(194, 197, 170);
     color: #191919;
     font-size: 1rem;
     transition: border-color 0.2s;
-  }
+}
 
-  .input-group input:focus {
+.input-group input:focus {
     border-color: #656D4A;
     box-shadow: 0 0 5px rgba(101, 109, 74, 0.5);
-    outline: none;
-  }
-  
-  button {
+}
+
+button {
     width: 100%;
     padding: 0.7rem;
     border: none;
@@ -79,29 +143,22 @@ body {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #656D4A;
     box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-    transform: translateY(0);
-  }
-  
-  .info {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    color: #3F4B3B;
-  }
-  
-  .extra-actions {
+}
+
+.extra-actions {
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #3F4B3B;
-  }
-  
-  .btn-cadastro {
+    color: #414833;
+}
+
+.btn-cadastro {
     display: inline-block;
     margin-top: 0.5rem;
     padding: 0.6rem 1rem;
@@ -110,9 +167,41 @@ body {
     color: #F5F0DC;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.2s;
-  }
-  
-  .btn-cadastro:hover {
+    transition: background-color 0.2s;
+}
+
+.btn-cadastro:hover {
     background-color: #656D4A;
-  }
+}
+
+p.erro-login {
+    color: red;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    background-color: rgb(220, 218, 190);
+    height: 80px;
+    width: 100%;
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
+
+footer h2 {
+    font-family:'Inter', sans-serif;
+    color: rgb(65, 72, 51);
+    margin: 0;
+    font-size: 16px;
+}

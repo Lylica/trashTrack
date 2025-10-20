@@ -1,4 +1,4 @@
-/* Cabeçalho */
+/* ======== CABEÇALHO ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
@@ -6,13 +6,14 @@ header {
     padding: 6px 20px;
     gap: 12px;
 }
+
 header img {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 .header-title h1 {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     color: rgb(65, 72, 51);
     margin: 0;
 }
@@ -24,7 +25,7 @@ header img {
 }
 
 .nav a {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 22px;
     font-weight: bold;
     color: rgb(65,72,51);
@@ -36,24 +37,8 @@ header img {
     color: rgb(101, 109, 74);
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaço entre o ícone e o texto da logo */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #414833; /* Verde escuro para o texto */
-}
-
-.logo-container img {
-    height: 40px;
-    background-color: #c2c5aa; /* Fundo circular para o ícone */
-    border-radius: 50%;
-    padding: 5px;
-}
-
-header-user {
+/* Usuário no canto direito */
+.header-user {
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -82,59 +67,25 @@ header-user {
     background-color: #5A7A52;
 }
 
+.header-user span {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
 
-
-
-/* Seção topo */
-.section-top {
+/* ======== CORPO DO FÓRUM ======== */
+body {
     background-color: rgb(101, 109, 74);
-    color: rgb(194,197,170);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.section-top h1 {
+    color: rgb(194, 197, 170);
+    font-family: 'Inter', sans-serif;
     margin: 0;
-    font-family: Inter;
-}
-
-.section-top p {
-    font-family: Inter;
-    font-size: 20px;
-}
-
-/* Botão adicionar */
-.btn-add-wrapper {
-    text-align: center;
-    background-color: #DCDABE;
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px solid #aeb49a;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 500px;
-    margin-bottom: 20px;
-}
-
-.btn-add-wrapper,
-.container-posts {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-}
-
-#btn-form {
-    background-color: #44633F;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
 }
 
 /* Formulário */
+.form-section {
+    background-color: rgb(101, 109, 74);
+    padding: 20px 0;
+}
+
 .form-section form {
     display: none; /* inicia escondido */
     background: rgb(220, 218, 190);
@@ -147,20 +98,58 @@ header-user {
     gap: 12px;
 }
 
-.form-section{
-    background-color: rgb(101, 109, 74);
+#title, #autor, #conteudo {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9fa390;
+    border-radius: 5px;
+    background-color: #C2C5AA;
+    font-size: 16px;
 }
 
+/* Textos do formulário */
+.form-section h2,
+.form-section label,
+.form-section input,
 .form-section textarea {
-    resize: none;
-    height: 200px;
+    color: #000; /* preto */
 }
 
-/* Posts */
+
+
+
+
+#conteudo {
+    height: 150px;
+    resize: vertical;
+}
+
+#btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #414833;
+    color: #e8eadf;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-enviar:hover {
+    background-color: #2b2f26;
+}
+
+/* ======== POSTS ======== */
 .container-posts {
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0 20px;
 }
 
 .post-card {
@@ -177,8 +166,9 @@ header-user {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-top: 5px;
+    object-fit: cover;
     border: 2px solid #555;
+    margin-top: 5px;
 }
 
 .post-content h3 {
@@ -188,121 +178,55 @@ header-user {
 
 .post-content p {
     margin: 0 0 8px 0;
-    color: #333;
+    color: #000000;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+.post-text-wrapper p {
+    color: #000; /* preto */
 }
 
 .post-content small {
-    color: #555;
+    color: #000000;
     font-size: 0.8rem;
 }
 
-.no-posts {
-    color: #F5F0DC;
-    text-align: center;
-    font-family: Inter;
-    margin-top: 20px;
-}
-
-.campo-inserir{
-    font-family: 'Inter', sans-serif;
-}
-
-h2{
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: bold;
-    color: #363d31; 
-    font-family: 'Inter', sans-serif;
-}
-
-.campo-inserir{
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #363d31;
-}
-
-#title{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #9fa390;
-    border-radius: 5px;
-    background-color: #C2C5AA;
-    font-size: 16px;
-}
-
-#autor{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #9fa390;
-    border-radius: 5px;
-    background-color: #C2C5AA;
-    font-size: 16px;
-}
-
-#conteudo{
-    box-sizing: border-box;
-    width: 100%;
-    height: 150px;
-    padding: 12px;
-    border: 1px solid #9fa390;
-    border-radius: 5px;
-    background-color: #C2C5AA;
-    font-size: 16px;
-    resize: vertical;
-}
-
-#btn-enviar{
-    width: 100%;
-    padding: 15px;
-    background-color: #414833;
-    color: #e8eadf;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#btn-enviar:hover{
-    background-color: #2b2f26;
-}
-
-/* ======== DEPOIMENTOS ======== */
-/* wrapper que vai ser a “janela” */
+/* ======== CARROSSEL DE DEPOIMENTOS ======== */
 #carrossel-wrapper {
     overflow: hidden;
     width: 100%;
     margin-top: 60px;
 }
 
-/* container interno que vai rolar */
 #carrossel-depoimentos {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
-    white-space: nowrap;
     padding: 20px 0;
     transition: transform 0.1s linear;
+}
+
+#carrossel-depoimentos::after {
+    content: '';
+    flex: 0 0 20px; /* espaço extra no final */
 }
 
 .div-depoimentos {
     flex: 0 0 auto;
     width: 280px;
-    height: 250px;
+    min-height: 250px;
     background-color: rgb(220, 218, 190);
     border-radius: 16px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     justify-content: space-between;
     box-sizing: border-box;
     white-space: normal;
+    text-align: center;
 }
 
 .div-depoimentos img {
@@ -314,26 +238,52 @@ h2{
     margin-bottom: 10px;
 }
 
-.post-content {
+.post-text-wrapper {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.post-content p {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 8px;
-    max-height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow-y: auto;
+    max-height: 150px;
+    padding-right: 6px;
     text-align: justify;
 }
 
-.post-content cite {
-    font-size: 12px;
-    color: #555;
+.post-text-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.post-text-wrapper::-webkit-scrollbar-track {
+    background: #dcdabe;
+    border-radius: 10px;
+}
+
+.post-text-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.post-text-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.post-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #555;
+    margin-bottom: 5px;
+}
+
+.post-user cite {
+    font-size: 13px;
+    color: #000000;
+    text-align: center;
 }
 
 /* Botão ver todos */
@@ -355,10 +305,11 @@ h2{
     background-color: #5A7A52;
 }
 
-.footer{
-    background-color: rgb(220, 218, 190); 
-    height: 80px; 
-    width: auto; 
+/* ======== RODAPÉ ======== */
+.footer {
+    background-color: rgb(220, 218, 190);
+    height: 80px;
+    width: auto;
     padding: 5px 40px;
     display: flex;
     align-items: center;
@@ -367,13 +318,18 @@ h2{
 }
 
 .footer img {
-    height: 24px; /* Ajuste de tamanho */
+    height: 24px;
     width: 24px;
 }
 
 .footer h2 {
-    font-family:'Inter', sans-serif; 
-    color: rgb(65, 72, 51); 
+    font-family:'Inter', sans-serif;
+    color: rgb(65, 72, 51);
     margin: 0;
     font-size: 16px;
+}
+
+/* suaviza seleção do carrossel */
+#carrossel-depoimentos * {
+    user-select: none;
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -6,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $email   = $_POST['email'];
     $senha   = md5($_POST['senha']);
-    $avatar  = $_POST['avatar'] ?? 'avatar1.png'; // se não escolher, pega o padrão
+    $avatar  = $_POST['avatar'] ?? 'avatar1.png'; // padrão
 
     $sql = "INSERT INTO usuarios (nome, usuario, email, senha, avatar) 
             VALUES ('$nome','$usuario','$email','$senha','$avatar')";
@@ -20,28 +21,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!-- HTML -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro - trashTrack</title>
-    <link rel="stylesheet" href="../css/forum.css">
+    <title>Cadastro - TrashTracker</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+    
+    
 </head>
-
 <body>
-    <!-- cabeçalho -->
-    <header>
-        <!--Logo volta pro inicio-->
-        <a id="link-logo" href="index2.php">
-            <img id="lata-lixo" src="../images/trash.png" alt="Logo">
+
+
+ <!-- cabeçalho -->
+    <header class="header-admin">
+        <a id="link-logo" href="index.php">
+            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>
         <div class="nav">
-            <a class="menu-bar" href="index2.php">INÍCIO</a>
+            <a class="menu-bar" href="index.php">INÍCIO</a>
             <a class="menu-bar" href="sobre.php">SOBRE</a>
             <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
             <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
@@ -60,59 +61,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </header>
 
-    <!--Cadastro-->
-    <div class="cadastro-container">
-        <h2>Cadastro</h2>
-        <?php if(!empty($erro)) echo "<p class='erro'>$erro</p>"; ?>
-        <form method="POST">
-            <div class="input-group">
-                <label>Nome Completo</label>
-                <input type="text" name="nome" required>
+<!-- Cadastro -->
+<div class="login-container">
+    <h2>Cadastro</h2>
+    <?php if(!empty($erro)) echo "<p class='erro-login'>$erro</p>"; ?>
+    <form method="POST">
+        <div class="input-group">
+            <label>Nome Completo</label>
+            <input type="text" name="nome" required>
+        </div>
+
+        <div class="input-group">
+            <label>Usuário</label>
+            <input type="text" name="usuario" required>
+        </div>
+
+        <div class="input-group">
+            <label>E-mail</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" name="senha" required>
+        </div>
+
+        <div class="input-group">
+            <label>Escolha seu avatar</label>
+            <div class="avatar-carousel">
+                <button type="button" class="arrow left">&#10094;</button>
+                <img id="avatarDisplay" src="avatares/avatar1.png" alt="Avatar" class="avatar">
+                <button type="button" class="arrow right">&#10095;</button>
             </div>
+            <input type="hidden" name="avatar" id="avatarInput" value="avatar1.png">
+        </div>
 
-            <div class="input-group">
-                <label>Usuário</label>
-                <input type="text" name="usuario" required>
-            </div>
+        <button type="submit">Cadastrar</button>
 
-            <div class="input-group">
-                <label>E-mail</label>
-                <input type="email" name="email" required>
-            </div>
+         <div class="extra-actions">
+          <p>Já possui uma conta?</p>
+          <a href="login.php" class="btn-cadastro">Login</a>
+      </div>
+  </div>
+    </form>
+</div>
 
-            <div class="input-group">
-                <label>Senha</label>
-                <input type="password" name="senha" required>
-            </div>
+<!-- Rodapé -->
+<footer>
+    <img src="../images/trash.png" alt="Logo">
+    <h2>TrashTracker - Todos os direitos reservados ℗</h2>
+</footer>
 
-            <div class="input-group">
-                <label>Escolha seu avatar</label>
-                <div class="avatar-carousel">
-                    <button type="button" class="arrow left">&#10094;</button>
-                    <img id="avatarDisplay" src="avatares/avatar1.png" alt="Avatar" class="avatar">
-                    <button type="button" class="arrow right">&#10095;</button>
-                </div>
-                <input type="hidden" name="avatar" id="avatarInput" value="avatar1.png">
-            </div>
-
-            <button type="submit">Cadastrar</button>
-            <div class="extra-actions">
-                <p>Já possui uma conta?</p>
-                <a href="login.php" class="btn-login">Login</a>
-            </div>
-        </form>
-    </div>
-
-    <!--rodapé-->
-    <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
-        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="../images/trash.png">
-        <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
-    </footer>
-
-    <!-- JS separado -->
-    <script src="cadastro.js"></script>
+<script src="../js/cadastro.js"></script>
 
 </body>
-
 </html>

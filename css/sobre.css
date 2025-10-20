@@ -1,4 +1,4 @@
-/* Cabeçalho */
+/* ======== CABEÇALHO ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
@@ -8,8 +8,8 @@ header {
 }
 
 header img {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 .header-title h1 {
@@ -18,6 +18,26 @@ header img {
     margin: 0;
 }
 
+.nav {
+    margin-left: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+.nav a {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(65,72,51);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(101, 109, 74);
+}
+
+/* Usuário no canto direito */
 .header-user {
     margin-left: auto;
     display: flex;
@@ -49,40 +69,6 @@ header img {
 
 .header-user span{
     font-family: 'Inter', sans-serif;
-}
-
-.nav {
-    margin-left: 2%;
-    display: flex;
-    gap: 10px;
-}
-
-.nav a {
-    font-family: 'Inter', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    color: rgb(65,72,51);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: rgb(101, 109, 74);
-}
-
-.user-area {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.user-area img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #555;
 }
 
 /* Seção principal */

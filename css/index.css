@@ -1,3 +1,11 @@
+
+body {
+    background-color: rgb(101, 109, 74);
+    color: rgb(194, 197, 170);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
 /* ======== CABEÇALHO ======== */
 header {
     background-color: rgb(220, 218, 190);
@@ -13,7 +21,7 @@ header img {
 }
 
 .header-title h1 {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     color: rgb(65, 72, 51);
     margin: 0;
 }
@@ -25,7 +33,7 @@ header img {
 }
 
 .nav a {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 22px;
     font-weight: bold;
     color: rgb(65,72,51);
@@ -67,8 +75,9 @@ header img {
     background-color: #5A7A52;
 }
 
-.header-user span{
+.header-user span {
     font-family: 'Inter', sans-serif;
+    color: #000;
 }
 
 /* ======== PRIMEIRA SEÇÃO ======== */
@@ -101,8 +110,7 @@ header img {
 }
 
 /* Botões principais */
-.btn-login,
-.btn-dashboard {
+.btn-login, .btn-dashboard {
     background-color: #44633F;
     color: #F5F0DC;
     border: none;
@@ -114,8 +122,7 @@ header img {
     transition: 0.3s;
 }
 
-.btn-login:hover,
-.btn-dashboard:hover {
+.btn-login:hover, .btn-dashboard:hover {
     background-color: #5A7A52;
 }
 
@@ -140,8 +147,7 @@ header img {
     margin-bottom: 40px;
 }
 
-.content-box,
-.lixo {
+.content-box, .lixo {
     display: inline-block;
     vertical-align: top;
     width: 280px;
@@ -152,8 +158,7 @@ header img {
     font-family: 'Inter', sans-serif;
 }
 
-.content-box:hover,
-.lixo:hover {
+.content-box:hover, .lixo:hover {
     transform: translateY(-5px);
 }
 
@@ -171,6 +176,7 @@ header img {
 }
 
 /* ======== DEPOIMENTOS ======== */
+
 /* wrapper que vai ser a “janela” */
 #carrossel-wrapper {
     overflow: hidden;
@@ -178,61 +184,89 @@ header img {
     margin-top: 60px;
 }
 
-/* container interno que vai rolar */
 #carrossel-depoimentos {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
-    white-space: nowrap;
+    align-items: flex-start;
     padding: 20px 0;
     transition: transform 0.1s linear;
 }
 
+/* adiciona espaço no final para a última div não ficar cortada */
+#carrossel-depoimentos::after {
+    content: '';
+    flex: 0 0 20px;
+}
+
+/* cada depoimento */
 .div-depoimentos {
     flex: 0 0 auto;
     width: 280px;
-    height: 250px;
+    min-height: 250px;
     background-color: rgb(220, 218, 190);
     border-radius: 16px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     justify-content: space-between;
     box-sizing: border-box;
     white-space: normal;
+    text-align: center;
 }
 
-.div-depoimentos img {
-    width: 60px;
-    height: 60px;
+/* foto do usuário menor igual ao fórum */
+.div-depoimentos img,
+.post-user img {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #555;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.post-content {
+/* texto justificado e com rolagem vertical */
+.post-text-wrapper {
     flex: 1;
+    overflow-y: auto;
+    max-height: 150px;
+    padding-right: 6px;
+    text-align: justify;
+    color: #000; /* texto preto */
+     font-family: 'Inter', sans-serif;
+}
+
+.post-text-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.post-text-wrapper::-webkit-scrollbar-track {
+    background: #dcdabe;
+    border-radius: 10px;
+}
+
+.post-text-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.post-text-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* usuário abaixo do texto */
+.post-user {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.post-content p {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 8px;
-    max-height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-}
-
-.post-content cite {
-    font-size: 12px;
-    color: #555;
+.post-user cite {
+    font-size: 13px;
+    color: #000000;
+    text-align: center;
 }
 
 /* Botão ver todos */
@@ -255,10 +289,10 @@ header img {
 }
 
 /* ======== RODAPÉ ======== */
-.footer{
-    background-color: rgb(220, 218, 190); 
-    height: 80px; 
-    width: auto; 
+.footer {
+    background-color: rgb(220, 218, 190);
+    height: 80px;
+    width: auto;
     padding: 5px 40px;
     display: flex;
     align-items: center;
@@ -267,13 +301,13 @@ header img {
 }
 
 .footer img {
-    height: 24px; /* Ajuste de tamanho */
+    height: 24px;
     width: 24px;
 }
 
 .footer h2 {
-    font-family:'Inter', sans-serif; 
-    color: rgb(65, 72, 51); 
+    font-family:'Inter', sans-serif;
+    color: rgb(65, 72, 51);
     margin: 0;
     font-size: 16px;
 }

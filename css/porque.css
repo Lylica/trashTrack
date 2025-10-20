@@ -1,4 +1,4 @@
-/* Cabeçalho */
+/* ======== CABEÇALHO ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
@@ -8,8 +8,8 @@ header {
 }
 
 header img {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 .header-title h1 {
@@ -18,34 +18,59 @@ header img {
     margin: 0;
 }
 
-.header-nav {
+.nav {
     margin-left: 2%;
     display: flex;
     gap: 10px;
 }
 
-.header-nav a {
+.nav a {
     font-family: Inter;
     font-size: 22px;
     font-weight: bold;
     color: rgb(65,72,51);
     text-decoration: none;
+    transition: 0.3s;
 }
 
-.user-area {
+.nav a:hover {
+    color: rgb(101, 109, 74);
+}
+
+/* Usuário no canto direito */
+.header-user {
     margin-left: auto;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.user-area img {
+.header-user img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #555;
 }
+
+.header-user button {
+    background-color: #44633F;
+    color: #F5F0DC;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-user button:hover {
+    background-color: #5A7A52;
+}
+
+.header-user span{
+    font-family: 'Inter', sans-serif;
+}
+
 
 /* Primeira seção */
 .section-main {
