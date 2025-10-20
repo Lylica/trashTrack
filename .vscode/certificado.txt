@@ -1,3 +1,4 @@
+==================PRIMEIRO CERTIFICADO=======================
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Enter email address (used for urgent renewal and security notices)
@@ -34,6 +35,53 @@ Certbot has set up a scheduled task to automatically renew this certificate in t
 Deploying certificate
 Successfully deployed certificate for srv1074333.hstgr.cloud to /etc/apache2/sites-available/000-default-le-ssl.conf
 Congratulations! You have successfully enabled HTTPS on https://srv1074333.hstgr.cloud
+
+
+==================SEGUNDO CERTIFICADO=======================
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+root@srv1074333:/etc/apache2/sites-enabled# sudo certbot --apache -d srv1074333.hstgr.cloud -d www.srv1074333.hstgr.cloud
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+You have an existing certificate that contains a portion of the domains you
+requested (ref: /etc/letsencrypt/renewal/srv1074333.hstgr.cloud.conf)
+
+It contains these names: srv1074333.hstgr.cloud
+
+You requested these names for the new certificate: srv1074333.hstgr.cloud,
+www.srv1074333.hstgr.cloud.
+
+Do you want to expand and replace this existing certificate with the new
+certificate?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(E)xpand/(C)ancel: E
+Renewing an existing certificate for srv1074333.hstgr.cloud and www.srv1074333.hstgr.cloud
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/srv1074333.hstgr.cloud/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/srv1074333.hstgr.cloud/privkey.pem
+This certificate expires on 2026-01-18.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for srv1074333.hstgr.cloud to /etc/apache2/sites-enabled/000-default-le-ssl.conf
+
+We were unable to find a vhost with a ServerName or Address of www.srv1074333.hstgr.cloud.
+Which virtual host would you like to choose?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: 000-default-le-ssl.conf        | srv1074333.hstgr.clou | HTTPS | Enabled
+2: 000-default.conf               |                       |       | Enabled
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Successfully deployed certificate for www.srv1074333.hstgr.cloud to /etc/apache2/sites-enabled/000-default-le-ssl.conf
+Added an HTTP->HTTPS rewrite in addition to other RewriteRules; you may wish to check for overall consistency.
+Your existing certificate has been successfully renewed, and the new certificate has been installed.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 If you like Certbot, please consider supporting our work by:

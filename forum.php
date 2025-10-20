@@ -14,8 +14,8 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <meta name="description" content="">
+    <title>Página de visualização e uso do forúm do site TrashTracker</title>
+    <meta name="description" content="Página de visualização e uso do forúm do site TrashTracker, serve para que a população se comunique, postando críticas, sugestões e depoimentos entre si">
     <link rel="stylesheet" href="css/forum.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@ if (!isset($_SESSION['usuario'])) {
     <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="forum.css" />
     
     <!-- Meta Tags das redes sociais -->
-    <meta property="og:title" content="Página do dashboard de administrador do site TrashTracker">
-    <meta property="og:description" content="Página do dashboard de administrador do site TrashTracker, utilizado para visualização do dashboard e de rotas inteligentes de coleta para administradores">
+    <meta property="og:title" content="Página de visualização e uso do forúm do site TrashTracker">
+    <meta property="og:description" content="Página de visualização e uso do forúm do site TrashTracker, serve para que a população se comunique, postando críticas, sugestões e depoimentos entre si">
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/dashboardAdmin.php">
 

@@ -83,7 +83,7 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao, u
 <head>
     <meta charset="UTF-8">
     <title>Página de acesso de administrador do site TrashTracker</title>
-    <meta name="description" content="Página de acesso administrador do site TrashTracker, utilizado para visualização e gerenciamento de lixeiras, usuários e depoimentos por meio dos administradores">
+    <meta name="description" content="Página de acesso administrador do site TrashTracker, usado para visualização e gerenciamento de lixeiras, usuários e depoimentos por meio dos administradores">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Media query -->
@@ -91,7 +91,7 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao, u
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de acesso de administrador do site TrashTracker">
-    <meta property="og:description" content="Página de acesso administrador do site TrashTracker, utilizado para visualização e gerenciamento de lixeiras, usuários e depoimentos por meio dos administradores">
+    <meta property="og:description" content="Página de acesso administrador do site TrashTracker, usado para visualização e gerenciamento de lixeiras, usuários e depoimentos por meio dos administradores">
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/admin.php">
 
