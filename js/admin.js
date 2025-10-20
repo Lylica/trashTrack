@@ -1,6 +1,16 @@
- function mostrarSecao(secao) {
-      document.querySelectorAll('.secao-admin').forEach(div => div.style.display = 'none');
-      document.getElementById(secao).style.display = 'block';
+ 
+
+
+  
+    function mostrarSecao(secao) {
+      const secoes = document.querySelectorAll('.secao-admin');
+      secoes.forEach(s => s.classList.remove('active'));
+      document.getElementById(secao).classList.add('active');
+    }
+
+    function toggleNovaLixeira() {
+      const form = document.getElementById('form-nova-lixeira');
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
     }
 
     function editarUsuario(id, nome, usuario, email, tipo){
@@ -10,26 +20,13 @@
       document.getElementById('edit-usuario').value = usuario;
       document.getElementById('edit-email').value = email;
       document.getElementById('edit-tipo').value = tipo;
-      window.scrollTo(0,document.body.scrollHeight);
+      // rolar para o formulário
+      document.getElementById('form-editar').scrollIntoView({behavior: "smooth"});
     }
 
-    function toggleNovaLixeira(){
-      const form = document.getElementById('form-nova-lixeira');
-      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    function verDepoimentos(usuario){
+      mostrarSecao('depoimentos');
+      const linhas = document.querySelectorAll('#tabela-depoimentos tr.dep-row');
+      linhas.forEach(l => l.style.display = l.dataset.usuario === usuario ? '' : 'none');
     }
-
-    function verDashboard(id){
-      alert('Abrir dashboard da lixeira ID: ' + id);
-    }
-
-    function verDepoimentos(usuario) {
-      mostrarSecao('depoimentos'); // Abre a seção
-      const linhas = document.querySelectorAll('#tabela-depoimentos .dep-row');
-      linhas.forEach(linha => {
-        if (linha.getAttribute('data-usuario') === usuario) {
-          linha.style.display = '';
-        } else {
-          linha.style.display = 'none';
-        }
-      });
-    }
+ 
