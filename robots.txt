@@ -1,7 +1,7 @@
 User-agent: *
  
 # Páginas Públicas/Essenciais (Permitir tudo por padrao)
-Allow: /
+Allow: /trashTrack/
  
 # Pastas de Recursos (CSS, JS, Imagens)
 Allow: /js/
@@ -30,4 +30,4 @@ Disallow: /processa_post.php
  
  
 # Link do Sitemap (MUITO IMPORTANTE!)
-Sitemap: https://srv1074333.hstgr.cloud/sitemap.xml
+Sitemap: https://srv1074333.hstgr.cloud/trashTrack/sitemap.xml
