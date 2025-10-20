@@ -78,13 +78,14 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao FR
 
 <head>
   <meta charset="UTF-8">
-  <title>Painel Administrativo</title>
+  <title>Página de gerenciamento administrativo do site TrashTracker</title>
+  <meta name="description" contento="Página de gerenciamento administrativo do site TrashTracker, usado para visualização e gerenciamento avançados dos dados coletados pelos administradores">
   <link rel="stylesheet" href="../css/admin.css">
 </head>
 
 <body>
   <h2>Bem-vindo,
-    <?php echo htmlspecialchars($_SESSION['usuario']); ?> (Admin)
+    <?php echo htmlspecialchars($_SESSION['usuario']); ?> a página de administrador
   </h2>
   <a href="logout.php">Sair</a>
 

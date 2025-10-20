@@ -16,7 +16,8 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trashTrack - Dashboard</title>
+    <title>Página de visualização do dashboard do site TrashTracker</title>
+    <meta name="description" contento="Página dashboard padrão do site TrashTracker, utilizado para visualização dos níveis das lixeiras e de rotas inteligentes de coleta para os administradores">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/forum.css">

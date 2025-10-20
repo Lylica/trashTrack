@@ -15,35 +15,14 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trashTrack - Dashboard</title>
+    <title>Página de visualização do dashboard do site TrashTracker</title>
+    <meta name="description" contento="Página dashboard do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras, além rotas inteligentes para os administradores">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/forum.css">
 </head>
 
 <body>
-    <aside class="barra-lateral">
-        <h2 class="titulo-dashboard">
-            <img src="../images/dashboard_icon.png" alt="Ícone do Dashboard">
-            Dashboard
-        </h2>
-
-        <div class="config-grafico">
-            <h3>Selecionar Dia</h3>
-            <select id="selecionar-dia">
-                <option disabled selected>Carregando dias...</option>
-            </select>
-
-            <h3>Tipo de Gráfico</h3>
-            <div class="btn-group">
-                <button data-tipo="bar" class="active">Bar</button>
-                <button data-tipo="step">Step</button>
-            </div>
-
-            <button id="btnCSV">Exportar CSV</button>
-        </div>
-    </aside>
-
     <main class="conteudo">
 
         <!-- cabeçalho -->
@@ -80,6 +59,29 @@ if (!isset($_SESSION['usuario'])) {
 
             </div>
         </header>
+
+        <aside class="barra-lateral">
+        <h2 class="titulo-dashboard">
+            <img src="../images/dashboard_icon.png" alt="Ícone do Dashboard">
+            Dashboard
+        </h2>
+
+        <div class="config-grafico">
+            <h3>Selecionar Dia</h3>
+            <select id="selecionar-dia">
+                <option disabled selected>Carregando dias...</option>
+            </select>
+
+            <h3>Tipo de Gráfico</h3>
+            <div class="btn-group">
+                <button data-tipo="bar" class="active">Bar</button>
+                <button data-tipo="step">Step</button>
+            </div>
+
+            <button id="btnCSV">Exportar CSV</button>
+        </div>
+    </aside>
+
 
         <h2 id="data-titulo">Nível da Lixeira</h2>
 

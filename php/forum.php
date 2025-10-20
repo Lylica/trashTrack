@@ -13,7 +13,8 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórum - TrashTracker</title>
+    <title>Página de visualização do forúm do site TrashTracker</title>
+    <meta name="description" contento="Página forúm do site TrashTracker, utilizado para interação entre a comunidade, com depoimentos, sugestões e críticas. Aberto a qualquer usuário cadastrado">
     <link rel="stylesheet" href="../css/forum.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
