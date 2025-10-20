@@ -63,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <?php if(isset($_SESSION['usuario'])): ?>
           <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
           <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-          <a href="logout.php"><button>Sair</button></a>
+          <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
           <?php else: ?>
-          <a href="login.php"><button>Login</button></a>
+          <a href="login.php"><button id="btn-login-header">Login</button></a>
           <?php endif; ?>
       </div>
   </header>
