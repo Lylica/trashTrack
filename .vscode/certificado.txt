@@ -1,0 +1,42 @@
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Enter email address (used for urgent renewal and security notices)
+ (Enter 'c' to cancel): aylla.aoliveira@gmail.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.5-February-24-2025.pdf. You must
+agree in order to register with the ACME server. Do you agree?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: 
+(Y)es/(N)o: Y 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing, once your first certificate is successfully issued, to
+share your email address with the Electronic Frontier Foundation, a founding
+partner of the Let's Encrypt project and the non-profit organization that
+develops Certbot? We'd like to send you email about our work encrypting the web,
+EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: Y
+Account registered.
+Please enter the domain name(s) you would like on your certificate (comma and/or
+space separated) (Enter 'c' to cancel): srv1074333.hstgr.cloud
+Requesting a certificate for srv1074333.hstgr.cloud
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/srv1074333.hstgr.cloud/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/srv1074333.hstgr.cloud/privkey.pem
+This certificate expires on 2026-01-17.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for srv1074333.hstgr.cloud to /etc/apache2/sites-available/000-default-le-ssl.conf
+Congratulations! You have successfully enabled HTTPS on https://srv1074333.hstgr.cloud
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
