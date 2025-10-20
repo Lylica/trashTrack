@@ -29,9 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="../css/login.css">
-    <title>Login - TrashTracker</title>
-
     <link rel="stylesheet" href="../css/forum.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de login do usuário cadastrado do site TrashTracker</title>
     <meta name="description" content="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">
 
