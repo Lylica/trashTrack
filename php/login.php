@@ -34,6 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <title>Página de login do usuário cadastrado do site TrashTracker</title>
   <meta name="description" contento="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">  
 
+    <!-- Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B7BYK41L1B');
+    </script>
 </head>
 <body>
   <!-- Cabeçalho -->

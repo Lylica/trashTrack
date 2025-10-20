@@ -203,6 +203,14 @@ form button[type="submit"] {
 form button[type="submit"]:hover { background-color:#5A7A52; }
 </style>
 
+  <!-- Google Analytics-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B7BYK41L1B');
+  </script>
 
 </head>
 <body>

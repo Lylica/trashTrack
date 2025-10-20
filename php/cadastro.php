@@ -25,16 +25,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-
-    <title>Cadastro - TrashTracker</title>
     <link rel="stylesheet" href="../css/cadastro.css">
-    
-    
-
     <title>Página de cadastro do usuário do site TrashTracker</title>
     <meta name="description" contento="Página de cadastro do usuário do site TrashTracker, usado para criação de conta para novos usuários para visualização do dashboard e liberação do forúm">
     <link rel="stylesheet" href="../css/forum.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B7BYK41L1B');
+    </script>
 </head>
 <body>
 
