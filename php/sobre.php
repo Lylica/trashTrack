@@ -7,7 +7,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - TrashTracker</title>
+    <title>Página de informações "sobre" do site TrashTracker</title>
+    <meta name="description" contento="Página de informações 'sobre?' do site TrashTracker, usado para disponibilização das informações acerca das motivações e mostrar um pouco sobre os colaboradores">
     <link rel="stylesheet" href="../css/sobre.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

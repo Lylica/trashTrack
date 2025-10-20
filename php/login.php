@@ -26,8 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <link rel="stylesheet" href="../css/login.css">
   <title>Login - TrashTracker</title>
+=======
+  <link rel="stylesheet" href="../css/forum.css">
+  <title>Página de login do usuário cadastrado do site TrashTracker</title>
+  <meta name="description" contento="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários cadastrados para visualização do dashboard e liberação do forúm">  
+>>>>>>> 835093fb27fc8cad885502d87306cde6adb38411
 </head>
 <body>
   <!-- Cabeçalho -->

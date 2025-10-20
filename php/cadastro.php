@@ -25,10 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title>Cadastro - TrashTracker</title>
     <link rel="stylesheet" href="../css/cadastro.css">
     
     
+=======
+    <title>Página de cadastro do usuário do site TrashTracker</title>
+    <meta name="description" contento="Página de cadastro do usuário do site TrashTracker, usado para criação de conta para novos usuários para visualização do dashboard e liberação do forúm">
+    <link rel="stylesheet" href="../css/forum.css">
+>>>>>>> 835093fb27fc8cad885502d87306cde6adb38411
 </head>
 <body>
 

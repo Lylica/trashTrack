@@ -1,0 +1,33 @@
+User-agent: *
+ 
+# Páginas Públicas/Essenciais (Permitir tudo por padrao)
+Allow: /trashTrack/
+ 
+# Pastas de Recursos (CSS, JS, Imagens)
+Allow: /js/
+Allow: /images/
+Allow: /css/
+ 
+# BLOQUEIOS DE SEGURANÇA E ÁREAS RESTRITAS
+ 
+# 1. Bloqueios de Banco de Dados e Configuração
+# db.php contém dados sensíveis de conexao.
+# O arquivo SQL do backup deve ser sempre bloqueado.
+Disallow: /db.php
+Disallow: /*.sql$ 
+ 
+# 2. Bloqueios de Acesso Restrito/Administracao
+# Essas paginas só devem ser acessadas por usuarios logados.
+Disallow: /admin.php
+Disallow: /dashboard.php
+Disallow: /dashboardAdmin.php
+ 
+# 3. Bloqueios de Processamento e Acao
+# Estas paginas nao tem conteudo publico para o Google indexar (apenas comandos).
+Disallow: /login.php
+Disallow: /logout.php
+Disallow: /processa_post.php
+ 
+ 
+# Link do Sitemap (MUITO IMPORTANTE!)
+Sitemap: https://srv1074333.hstgr.cloud/trashTrack/sitemap.xml
