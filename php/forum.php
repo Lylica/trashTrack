@@ -15,41 +15,48 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum - TrashTracker</title>
     <link rel="stylesheet" href="../css/forum.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- cabeçalho -->
-    <header>
-        <a href="index.php">
-            <img src="../images/trash.png" alt="Logo">
-        </a>
-        <div class="header-title">
-            <h1>TrashTracker</h1>
-        </div>
-        <nav class="header-nav">
-            <a href="index.php">INÍCIO</a>
-            <a href="sobre.php">SOBRE</a>
-            <a href="porque.php">PORQUE NÓS?</a>
-            <a href="dashboard.php">DASHBOARD</a>
-            <a href="forum.php">FORÚM</a>
-        </nav>
+    <header class="header-admin">
+            <a href="index.php" id=link-logo>
+            <img id="lata-lixo" src="../images/trash.png" alt="Logo">
+            </a>
+            <div class="header-title">
+                <h1 id="trashtracker">TrashTracker</h1>
+            </div>
+                <div class="nav">
+                    <a class="menu-bar" href="index.php">INÍCIO</a>
+                    <a class="menu-bar" href="sobre.php">SOBRE</a>
+                    <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+                    <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+                    <a class="menu-bar" href="forum.php">FORÚM</a>
+                </div>
+        
+
         <div class="header-user">
             <?php if(!empty($_SESSION['avatar'])): ?>
             <img src="../php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
-            <?php else: ?>
-            <img src="../php/avatares/avatar1.png" alt="Avatar padrão">
-            <?php endif; ?>
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
-            <a href="logout.php"><button>Sair</button></a>
+            <a href="logout.php" class="btn-logout">Sair</a>
+            <?php else: ?>
+            <a href="logout.php"><button class="btn-sair-header">Sair</button></a>
+            <?php endif; ?>    
         </div>
     </header>
 
     <!-- seção principal -->
     <section class="section-top">
-        <h1>FÓRUM</h1>
-        <p>Boas-vindas ao forúm, aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
+        <h1 id="forum">Fórum</h1>
+        <p id="intro-forum">Boas-vindas ao forúm, aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
             da comunidade TrashTracker. Sinta-se a vontade para compartilhar conosco a sua ideia ou opinião!</p>
     </section>
 
@@ -61,64 +68,64 @@ if (!isset($_SESSION['usuario'])) {
     <!-- formulário de postagem -->
     <section class="form-section">
         <form method="post" action="processa_post.php">
-            <label for="title">Título da postagem</label>
+            <h2>POST FORÚM</h2>
+            <label for="title" class="campo-inserir">Título da postagem</label>
             <input type="text" id="title" name="title" required>
 
-            <label for="autor">Postagem feita por:</label>
+            <label for="autor" class="campo-inserir">Postagem feita por:</label>
             <input type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($_SESSION['usuario']); ?>"
                 readonly>
 
-            <label for="conteudo">Conteúdo</label>
+            <label for="conteudo" class="campo-inserir">Conteúdo</label>
             <textarea id="conteudo" name="conteudo" required></textarea>
 
-            <input type="submit" value="Enviar">
+            <input id="btn-enviar" type="submit" value="Enviar">
         </form>
     </section>
 
-    <!-- lista de posts -->
-    <main class="container-posts">
-        <?php
-        include 'db.php';
-        $sql = "SELECT f.*, u.avatar FROM forum f 
-                LEFT JOIN usuarios u ON f.autor = u.usuario
-                ORDER BY f.data_criacao DESC";
-        $result = $conn->query($sql);
+   <section id="carrossel-depoimentos">
+            <?php
+    $sql = "SELECT f.*, u.avatar FROM forum f 
+            LEFT JOIN usuarios u ON f.autor = u.usuario
+            ORDER BY f.data_criacao DESC";
+    $result = $conn->query($sql);
 
-        if ($result && $result->num_rows > 0):
-            while ($row = $result->fetch_assoc()):
-                $avatar = !empty($row['avatar']) ? $row['avatar'] : 'avatar1.png';
-        ?>
-        <article class="post-card">
-            <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
-            <div class="post-content">
-                <h3>
-                    <?php echo htmlspecialchars($row['titulo']); ?>
-                </h3>
-                <p>
-                    <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
-                </p>
-                <small>
-                    <?php echo htmlspecialchars($row['autor']); ?> —
-                    <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
-                </small>
+    if ($result->num_rows > 0):
+        while($row = $result->fetch_assoc()):
+            $avatar = $row['avatar'] ?? 'avatar1.png';
+    ?>
+            <div class="div-depoimentos">
+                <img src="avatares/<?php echo htmlspecialchars($avatar); ?>" alt="Avatar">
+                <div class="post-content">
+                    <p>
+                        <?php echo nl2br(htmlspecialchars($row['conteudo'])); ?>
+                    </p>
+                    <cite>
+                        <?php echo htmlspecialchars($row['autor']); ?> -
+                        <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
+                    </cite>
+                </div>
             </div>
-        </article>
-        <?php
-            endwhile;
-        else:
-            echo "<p class='no-posts'>Ainda não há comentários.</p>";
-        endif;
-        ?>
-    </main>
+            <?php
+        endwhile;
+    else:
+        echo "<p class='no-posts'>Ainda não há comentários.</p>";
+    endif;
+    ?>
 
+        </section>
+        <!-- botão 'Ver todos' -->
+        <div class="btn-ver-todos">
+            <a href="forum.php">Ver todos</a>
+        </div>
+
+    </section>
     <!--rodapé-->
-    <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
-        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="../images/trash.png">
-        <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
+    <footer class="footer">
+        <img src="../images/trash.png">
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
     <script src="../js/forum.js"></script>
 </body>
-
 </html>

@@ -17,7 +17,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
-    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,10 +27,10 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 
 <body>
     <!-- cabeçalho -->
-    <header>
+    <header class="header-admin">
         <!--Logo volta pro inicio-->
         <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="../images/trash.png" alt="Logo">
+            <img id="lata-lixo" src="../images/logo.png" alt="Logo">
         </a>
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
@@ -65,7 +65,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <?php endif; ?>
             <a href="dashboard.php"><button class="btn-dashboard">Dashboard</button></a>
         </div>
-        <img id="dashboard-img" src="../images/dashboard.png" alt="Dashboard">
+        <img id="dashboard-img" src="../images/logo.png" alt="logo">
     </section>
 
     <!--rascunho corpo do site-->
@@ -102,8 +102,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <?php
     $sql = "SELECT f.*, u.avatar FROM forum f 
             LEFT JOIN usuarios u ON f.autor = u.usuario
-            ORDER BY f.data_criacao DESC 
-            LIMIT 3";
+            ORDER BY f.data_criacao DESC";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0):
@@ -138,13 +137,12 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     </section>
 
     <!--rodapé-->
-    <footer>
-        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="../images/trash.png">
-        <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
+    <footer class="footer">
+        <img src="../images/trash.png">
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
-
+         <script src="../js/index.js"></script>
 </body>
 
 </html>
