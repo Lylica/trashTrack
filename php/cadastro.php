@@ -30,7 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="description" contento="Página de cadastro do usuário do site TrashTracker, usado para criação de conta para novos usuários para visualização do dashboard e liberação do forúm">
     <link rel="stylesheet" href="../css/forum.css">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

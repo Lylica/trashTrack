@@ -82,7 +82,9 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao, u
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Admin TrashTracker</title>
+    <title>Página de acesso de administrador do site TrashTracker</title>
+    <meta name="description" contento="Página de acesso administrador do site TrashTracker, utilizado para visualização e gerenciamento de lixeiras, usuários e depoimentos por meio dos administradores">
+    
   <style>
 body {
     background-color: rgb(101, 109, 74);
@@ -202,6 +204,8 @@ form button[type="submit"] {
 }
 form button[type="submit"]:hover { background-color:#5A7A52; }
 </style>
+  <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
   <!-- Google Analytics-->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>

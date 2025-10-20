@@ -22,6 +22,9 @@ if (!isset($_SESSION['usuario'])) {
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>
