@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="logo.webp">
-            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+            <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
         </picture>
 
         <div class="header-title">
@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="button" class="arrow left">&#10094;</button>
                 <picture>
                     <source type="image/webp" srcset="avatar1.webp">
-                    <img id="avatarDisplay" src="avatares/avatar1.webp" alt="avatar" class="avatar">
+                    <img id="avatarDisplay" src="avatares/avatar1.jpg" alt="avatar" class="avatar">
                 </picture>
                 <button type="button" class="arrow right">&#10095;</button>
             </div>
@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <footer>
     <picture>
         <source type="image/webp" srcset="trash.webp">
-        <img id="lata-lixo" src="images/trash.webp" alt="Logo">
+        <img id="lata-lixo" src="images/trash.jpg" alt="Logo">
     </picture>
     <h2>TrashTracker - Todos os direitos reservados ℗</h2>
 </footer>

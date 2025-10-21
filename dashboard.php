@@ -53,7 +53,7 @@ if (!isset($_SESSION['usuario'])) {
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="logo.webp">
-            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+            <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
         </picture>
 
             <div>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['usuario'])) {
                     <?php else: ?>
                     <picture>
                         <source type="image/webp" srcset="avatar1.webp">
-                        <img id="avatarDisplay" src="avatares/avatar1.webp" alt="Avatar padrão" class="avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+                        <img id="avatarDisplay" src="avatares/avatar1.jpg" alt="Avatar padrão" class="avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
                     </picture>
                     <?php endif; ?>
                     <span>Olá,
@@ -90,7 +90,7 @@ if (!isset($_SESSION['usuario'])) {
         <h2 class="titulo-dashboard">
         <picture>
             <source type="image/webp" srcset="dashboard_icon.webp">
-            <img src="images/dashboard_icon.webp" alt="Ícone do Dashboard">
+            <img src="images/dashboard_icon.jpg" alt="Ícone do Dashboard">
         </picture>
             Dashboard
         </h2>
@@ -137,7 +137,7 @@ if (!isset($_SESSION['usuario'])) {
     <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
         <picture>
             <source type="image/webp" srcset="trash.webp">
-            <img id="lata-lixo" src="images/trash.webp" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+            <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
         </picture>
         <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>

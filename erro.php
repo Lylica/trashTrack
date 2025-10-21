@@ -41,7 +41,7 @@
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="logo.webp">
-            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+            <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
         </picture>
 
         <div class="header-title">
