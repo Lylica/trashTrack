@@ -41,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta property="og:title" content="Página de login do usuário cadastrado do site TrashTracker">
     <meta property="og:description" content="ágina de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários com conta para visualização do dashboard e liberação do forúm">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud>
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>

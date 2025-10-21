@@ -30,7 +30,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta property="og:title" content="Página de visualização e uso do forúm do site TrashTracker">
     <meta property="og:description" content="Página de visualização e uso do forúm do site TrashTracker, serve para que a população se comunique, postando críticas, sugestões e depoimentos entre si">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud>
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
