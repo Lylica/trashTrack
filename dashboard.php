@@ -44,7 +44,7 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body>
-    <main class="conteudo">
+    <div class="conteudo">
 
         <!-- cabeçalho -->
         <header class="header-admin">
@@ -70,7 +70,7 @@ if (!isset($_SESSION['usuario'])) {
                 <span>Olá,
                     <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
                 </span>
-                <a href="logout.php"><button>Sair</button></a>
+                <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
                 <?php else: ?>
                 <a href="login.php"><button id="btn-login-header">Login</button></a>
                 <?php endif; ?>
@@ -134,6 +134,8 @@ if (!isset($_SESSION['usuario'])) {
         </footer>
 
         <script src="js/dashboard.js"></script>
+    </div>
 </body>
+
 
 </html>
