@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de erro 404 personalizada do site TrashTracker</title>
-    <meta name="description" content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
-    <link rel="stylesheet" href="css/erro.css">
+    <meta name="description"
+        content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,11 +15,12 @@
         rel="stylesheet">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/erro.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/index.css" />
 
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de erro 404 personalizada do site TrashTracker">
-    <meta property="og:description" content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
+    <meta property="og:description"
+        content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
@@ -36,8 +38,9 @@
 </head>
 
 <body>
+    <!-- cabeçalho -->
     <header class="header-admin">
-        
+
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logo.webp">
@@ -54,17 +57,31 @@
             <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
             <a class="menu-bar" href="forum.php">FORÚM</a>
         </div>
-        <div class="header-user">
-            <?php if(isset($_SESSION['usuario'])): ?>
-            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
-            <span>Olá,
-            </span>
-            <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
-            <?php else: ?>
-            <a href="login.php"><button id="btn-login-header">Login</button></a>
-            <?php endif; ?>
-        </div>
     </header>
+
+    <div>
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="images/404.webp">
+            <img src="images/404.jpg" alt="erro"
+                style="width: 300px; height: 300px; margin-left: 40%; margin-top: 100px;">
+        </picture>
+        <h3 style="text-align: center;">ERROR 404 - lixeira vazia</h3>
+        <a style="font-family: Inter, sans-serif; font-size: 22px;color: rgb(194, 197, 170); text-decoration: none;"
+            href="index.php">
+            <p style="text-align: center; margin-bottom: 100px; font-family: Inter; font-size: 18px;">Volte ao início para poder ter acesso ao login/cadastro</p>
+        </a>
+    </div>
+
+
+    <!-- rodapé -->
+    <footer class="footer">
+        <picture>
+            <source type="image/webp" srcset="images/trash.webp">
+            <img id="lata-lixo" src="images/trash.jpg" alt="Logo"
+                style="height: 30px; width: 30px; margin-top: auto; margin-right: 10px; margin-left: auto;">
+        </picture>
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>]
+    </footer>
 </body>
 
 </html>
