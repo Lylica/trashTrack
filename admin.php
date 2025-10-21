@@ -381,7 +381,7 @@ footer.footer h2 {
     </div>
     <div class="nav">
         <a class="menu-bar" href="index.php">INÍCIO</a>
-        <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+        <a class="menu-bar" href="dashboardAdmin.php">DASHBOARD</a>
         <a class="menu-bar" href="forum.php">FORÚM</a>
     </div>
     <div class="header-user">
