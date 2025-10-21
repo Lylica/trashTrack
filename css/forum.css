@@ -1,4 +1,18 @@
-/* ======== CABEÇALHO ======== */
+/* ======== RESET ======== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(101, 109, 74);
+    color: rgb(194, 197, 170);
+    line-height: 1.5;
+}
+
+/* ======== HEADER COMPACTO ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
@@ -13,7 +27,7 @@ header img {
 }
 
 .header-title h1 {
-    font-family: Inter, sans-serif;
+    font-family: Inter;
     color: rgb(65, 72, 51);
     margin: 0;
 }
@@ -25,7 +39,7 @@ header img {
 }
 
 .nav a {
-    font-family: Inter, sans-serif;
+    font-family: Inter;
     font-size: 22px;
     font-weight: bold;
     color: rgb(65,72,51);
@@ -53,90 +67,125 @@ header img {
     border: 2px solid #555;
 }
 
-.header-user button {
+#btn-sair-header{
     background-color: #44633F;
-    color: #F5F0DC;
+    color: #DCDABE;
     border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
     cursor: pointer;
+    margin-right: 10px;
     transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+#btn-login-header{
+    background-color: #582F0E;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
 
 .header-user button:hover {
     background-color: #5A7A52;
 }
 
-.header-user span {
+.header-user span{
     font-family: 'Inter', sans-serif;
     color: #000;
 }
 
-/* ======== CORPO DO FÓRUM ======== */
-body {
-    background-color: rgb(101, 109, 74);
-    color: rgb(194, 197, 170);
-    font-family: 'Inter', sans-serif;
-    margin: 0;
+/* ======== RESPONSIVO ======== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .header-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .header-user {
+        justify-content: center;
+    }
 }
 
+@media (max-width: 640px) {
+    header img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .header-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+
+    .header-user button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ======== SEÇÃO PRINCIPAL ======== */
 .section-main {
-    background-color: rgb(101, 109, 74);
-    padding: 60px;
-    color: rgb(194, 197, 170);
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .section-main h1 {
-    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
     color: #C2C5AA;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 3.5em;
+    margin-bottom: 10px;
 }
 
-.section-main p{
-    font-family: 'Inter', sans-serif;
-    color: #F5F0DC;
+.section-main p {
+    font-size: 1.1rem;
     text-align: justify;
-    font-size: 1em;
-    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Formulário */
-.form-section {
-    background-color: rgb(101, 109, 74);
-    padding: 20px 0;
-}
-
+/* ======== FORMULÁRIO ======== */
 .form-section form {
-    display: none; /* inicia escondido */
-    background: rgb(220, 218, 190);
+    background-color: rgb(220,218,190);
     padding: 20px;
     border-radius: 20px;
     width: 500px;
-    margin: 0 auto 20px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    color: #414833;
 }
 
 #title, #autor, #conteudo {
-    box-sizing: border-box;
     width: 100%;
     padding: 12px;
-    border: 1px solid #9fa390;
     border-radius: 5px;
+    border: 1px solid #9fa390;
     background-color: #C2C5AA;
     font-size: 16px;
-}
-
-/* Textos do formulário */
-.form-section h2,
-.form-section label,
-.form-section input,
-.form-section textarea {
-    color: #000; /* preto */
 }
 
 #conteudo {
@@ -145,72 +194,18 @@ body {
 }
 
 #btn-enviar {
-    width: 100%;
-    padding: 15px;
-    background-color: #414833;
-    color: #e8eadf;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 12px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    border: none;
+    background-color: #414833;
+    color: #e8eadf;
+    transition: 0.3s;
 }
 
 #btn-enviar:hover {
     background-color: #2b2f26;
-}
-
-/* ======== POSTS ======== */
-.container-posts {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 20px;
-}
-
-.post-card {
-    display: flex;
-    gap: 15px;
-    background: rgb(220,218,190);
-    border-radius: 12px;
-    padding: 20px;
-    align-items: flex-start;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.post-card img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #555;
-    margin-top: 5px;
-}
-
-.post-content h3 {
-    margin: 0 0 6px 0;
-    color: #414833;
-}
-
-.post-content p {
-    margin: 0 0 8px 0;
-    color: #000000;
-    max-height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-}
-
-.post-text-wrapper p {
-    color: #000; /* preto */
-}
-
-.post-content small {
-    color: #000000;
-    font-size: 0.8rem;
 }
 
 /* ======== CARROSSEL DE DEPOIMENTOS ======== */
@@ -224,13 +219,14 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
+    align-items: flex-start;
     padding: 20px 0;
     transition: transform 0.1s linear;
 }
 
 #carrossel-depoimentos::after {
     content: '';
-    flex: 0 0 20px; /* espaço extra no final */
+    flex: 0 0 20px;
 }
 
 .div-depoimentos {
@@ -244,17 +240,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    white-space: normal;
     text-align: center;
 }
 
-.div-depoimentos img {
-    width: 60px;
-    height: 60px;
+.div-depoimentos img,
+.post-user img {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #555;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .post-text-wrapper {
@@ -263,6 +259,8 @@ body {
     max-height: 150px;
     padding-right: 6px;
     text-align: justify;
+    color: #000;
+    font-family: 'Inter', sans-serif;
 }
 
 .post-text-wrapper::-webkit-scrollbar {
@@ -290,25 +288,10 @@ body {
     margin-top: 10px;
 }
 
-.post-user img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #555;
-    margin-bottom: 5px;
-}
-
 .post-user cite {
     font-size: 13px;
-    color: #000000;
+    color: #000;
     text-align: center;
-}
-
-/* Botão ver todos */
-.btn-ver-todos {
-    margin-top: 30px;
-    font-family: 'Inter', sans-serif;
 }
 
 .btn-ver-todos a {
@@ -323,16 +306,14 @@ body {
 .btn-ver-todos a:hover {
     background-color: #5A7A52;
 }
-
 /* ======== RODAPÉ ======== */
 .footer {
     background-color: rgb(220, 218, 190);
-    height: 80px;
-    width: auto;
-    padding: 5px 40px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -342,13 +323,74 @@ body {
 }
 
 .footer h2 {
-    font-family:'Inter', sans-serif;
-    color: rgb(65, 72, 51);
-    margin: 0;
     font-size: 16px;
+    color: rgb(65,72,51);
 }
 
-/* suaviza seleção do carrossel */
-#carrossel-depoimentos * {
-    user-select: none;
+/* ======== RESPONSIVO ======== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .header-user {
+        justify-content: center;
+    }
+
+    .form-section form {
+        width: 90%;
+    }
+
+    .post-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .post-content {
+        width: 100%;
+    }
+
+    #titulo-corpo-pagina {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .header-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+
+    .header-user button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    #conteudo {
+        height: 120px;
+    }
+
+    .div-depoimentos {
+        flex: 0 0 90%;
+    }
 }

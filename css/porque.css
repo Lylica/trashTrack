@@ -1,4 +1,10 @@
-/* ======== CABEÇALHO ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======== HEADER COMPACTO ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
@@ -87,6 +93,50 @@ header img {
 
 .header-user span{
     font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .header-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .header-user {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    header img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .header-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+
+    .header-user button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
 }
 
 

@@ -14,48 +14,35 @@ body {
     overflow-x: hidden;
 }
 
-/* ======== HEADER ======== */
+/* ======== HEADER COMPACTO ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
-    flex-wrap: wrap; /* permite empilhar no mobile */
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    gap: 10px;
-    width: 100%;
+    padding: 6px 20px;
+    gap: 12px;
 }
 
 header img {
     height: 60px;
     width: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.header-title {
-    flex: 1 1 auto;
-    text-align: center;
 }
 
 .header-title h1 {
-    margin: 0;
-    font-size: 1.5rem;
+    font-family: Inter;
     color: rgb(65, 72, 51);
-    word-wrap: break-word;
+    margin: 0;
 }
 
 .nav {
+    margin-left: 2%;
     display: flex;
-    flex-wrap: wrap; /* permite quebrar linhas */
-    justify-content: center;
     gap: 10px;
-    flex: 1 1 100%;
-    margin-top: 5px;
 }
 
 .nav a {
-    font-size: 1.1rem;
+    font-family: Inter;
+    font-size: 22px;
     font-weight: bold;
     color: rgb(65,72,51);
     text-decoration: none;
@@ -66,13 +53,12 @@ header img {
     color: rgb(101, 109, 74);
 }
 
+/* Usuário no canto direito */
 .header-user {
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap; /* permite quebrar no mobile */
-    justify-content: center;
-    margin-top: 5px;
 }
 
 .header-user img {
@@ -83,15 +69,31 @@ header img {
     border: 2px solid #555;
 }
 
-.header-user button {
+#btn-sair-header{
     background-color: #44633F;
     color: #DCDABE;
     border: none;
     border-radius: 10px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 12px 20px;
+    font-size: 1em;
     cursor: pointer;
+    margin-right: 10px;
     transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+#btn-login-header{
+    background-color: #582F0E;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
 }
 
@@ -99,10 +101,55 @@ header img {
     background-color: #5A7A52;
 }
 
-.header-user span {
+.header-user span{
     font-family: 'Inter', sans-serif;
     color: #000;
 }
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .header-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .header-user {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    header img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .header-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+
+    .header-user button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
 /* ======== PRIMEIRA SEÇÃO ======== */
 .corpo-do-site {
     display: flex;
