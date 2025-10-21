@@ -106,12 +106,12 @@ header img {
     width: 320px;
     max-width: 400px;
     margin: 50px auto; /* centraliza horizontalmente e dá distância do header */
-    text-align: center;
     transition: box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    color: grey;
 }
 
 .login-container:hover {
@@ -125,36 +125,30 @@ header img {
     font-size: 1.8em;
 }
 
-.input-group {
-    margin-bottom: 1rem;
-    text-align: left;
-}
 
-.input-group label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-    color: #414833;
-    font-weight: 500;
+input[type="text"],
+input[type="password"] {
+  width: 100%;              /* ocupa toda a largura disponível */
+  max-width: 350px;         /* limite máximo */
+  height: 40px;             /* altura maior */
+  padding: 8px 12px;        /* espaçamento interno */
+  border: 1px solid #777;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;   /* garante que o padding conte dentro da largura */
 }
-
-.input-group input {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #414833;
-    border-radius: 8px;
-    outline: none;
-    background-color: rgb(194, 197, 170);
-    color: #191919;
-    font-size: 1rem;
-    transition: border-color 0.2s;
-    align-items: center;
-}
-
 .input-group input:focus {
     border-color: #656D4A;
     box-shadow: 0 0 5px rgba(101, 109, 74, 0.5);
 }
+
+.login-container .input-group:last-of-type {
+  margin-bottom: 22px;
+}
+
+.login-container label { margin-bottom: 10px; }
+.login-container input { margin-bottom: 18px; }
+.login-container { gap: 22px; }
 
 button {
     width: 100%;

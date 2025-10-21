@@ -80,6 +80,29 @@ body {
     margin: 0;
 }
 
+.section-main {
+    background-color: rgb(101, 109, 74);
+    padding: 60px;
+    color: rgb(194, 197, 170);
+}
+
+.section-main h1 {
+    font-family: 'Inter', sans-serif;
+    color: #C2C5AA;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3.5em;
+}
+
+.section-main p{
+    font-family: 'Inter', sans-serif;
+    color: #F5F0DC;
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 500;
+}
+
 /* Formulário */
 .form-section {
     background-color: rgb(101, 109, 74);
@@ -115,10 +138,6 @@ body {
 .form-section textarea {
     color: #000; /* preto */
 }
-
-
-
-
 
 #conteudo {
     height: 150px;

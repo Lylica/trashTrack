@@ -75,10 +75,9 @@ if (!isset($_SESSION['usuario'])) {
     </header>
 
     <!-- seção principal -->
-    <section class="section-top">
-        <h1 id="forum">Fórum</h1>
-        <p id="intro-forum">
-            Boas-vindas ao fórum! Aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
+    <section class="section-main">
+        <h1>Fórum</h1>
+            <p>Boas-vindas ao fórum! Aqui você pode escrever e ler sobre sugestões, reclamações e muitos outros comentários
             da comunidade TrashTracker. Sinta-se à vontade para compartilhar a sua ideia ou opinião!
         </p>
     </section>
