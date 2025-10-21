@@ -116,10 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>Escolha seu avatar</label>
             <div class="avatar-carousel">
                 <button type="button" class="arrow left">&#10094;</button>
-                <picture>
-                    <source type="image/webp" srcset="avatares/avatar1.webp">
                     <img id="avatarDisplay" src="avatares/avatar1.jpg" alt="avatar" class="avatar">
-                </picture>
                 <button type="button" class="arrow right">&#10095;</button>
             </div>
             <input type="hidden" name="avatar" id="avatarInput" value="avatar1.png">

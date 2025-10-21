@@ -73,10 +73,7 @@ if (!isset($_SESSION['usuario'])) {
                     <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar"
                         style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
                     <?php else: ?>
-                    <picture>
-                        <source type="image/webp" srcset="avatares/avatar1.webp">
                         <img id="avatarDisplay" src="avatares/avatar1.jpg" alt="Avatar padrão" class="avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
-                    </picture>
                     <?php endif; ?>
                     <span>Olá,
                         <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
