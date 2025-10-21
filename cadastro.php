@@ -57,9 +57,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
  <!-- cabeçalho -->
     <header class="header-admin">
-        <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="images/logo.png" alt="Logo">
-        </a>
+        
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
+
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>
@@ -112,7 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>Escolha seu avatar</label>
             <div class="avatar-carousel">
                 <button type="button" class="arrow left">&#10094;</button>
-                <img id="avatarDisplay" src="avatares/avatar1.png" alt="Avatar" class="avatar">
+                <picture>
+                    <source type="image/webp" srcset="avatar1.webp">
+                    <img id="avatarDisplay" src="avatares/avatar1.webp" alt="avatar" class="avatar">
+                </picture>
                 <button type="button" class="arrow right">&#10095;</button>
             </div>
             <input type="hidden" name="avatar" id="avatarInput" value="avatar1.png">
@@ -130,7 +137,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Rodapé -->
 <footer>
-    <img src="images/trash.png" alt="Logo">
+    <picture>
+        <source type="image/webp" srcset="trash.webp">
+        <img id="lata-lixo" src="images/trash.webp" alt="Logo">
+    </picture>
     <h2>TrashTracker - Todos os direitos reservados ℗</h2>
 </footer>
 

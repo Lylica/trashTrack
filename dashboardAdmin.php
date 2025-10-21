@@ -49,9 +49,13 @@ if (!isset($_SESSION['usuario'])) {
 <body>
      <!-- cabeçalho -->
     <header class="header-admin">
-        <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="images/logo.png" alt="Logo">
-        </a>
+
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
+        
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>
@@ -78,7 +82,10 @@ if (!isset($_SESSION['usuario'])) {
     <main class="dashboard-main">
         <aside class="barra-lateral">
             <h2 class="titulo-dashboard">
-                <img src="images/dashboard_icon.png" alt="Ícone">
+            <picture>
+                <source type="image/webp" srcset="avatar1.webp">
+                <img src="images/dashboard_icon.webp" alt="Ícone do Dashboard">
+            </picture>
                 Dashboard
             </h2>
 
@@ -131,12 +138,18 @@ if (!isset($_SESSION['usuario'])) {
     </div>
 
     <div class="mapa-rotas-container info-bloco">
-        <img src="images/maps.jpg" alt="Mapa da Rota" class="mapa-rotas">
+        <picture>
+            <source type="image/webp" srcset="maps.webp">
+            <img src="images/maps.webp" alt="Mapa da Rota" class="mapa-rotas">
+        </picture>
     </div>
 </div>
 
     <footer class="footer">
-        <img src="images/trash.png" alt="Logo">
+        <picture>
+            <source type="image/webp" srcset="trash.webp">
+            <img id="lata-lixo" src="images/trash.webp" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+        </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗</h2>
     </footer>
 

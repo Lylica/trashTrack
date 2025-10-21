@@ -41,10 +41,13 @@ session_start();
 <body>
        <!-- cabeçalho -->
     <header class="header-admin">
-        <!--Logo volta pro inicio-->
-        <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="images/logo.png" alt="Logo">
-        </a>
+
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
+        
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>
@@ -117,14 +120,19 @@ session_start();
         <div class="colaboradores-container">
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Aylla Alves</h2>
                 </div>    
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
-                        <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                        src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                         <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
@@ -132,83 +140,113 @@ session_start();
         <!--Colaborador 2-->
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Bianca Vidal</h2>
                 </div>    
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/bividal/">
-                    <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                    src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                     <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 3-->
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Clara Rondello</h2>
                 </div>     
                     <p class="bio">Estudante de engenharia mecatrônica do segundo semestre.</p>
                     <a href="https://www.linkedin.com/in/clara-rondello/">
-                    <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                    src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                     <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 4-->
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Letícia Lopes</h2>
                 </div>    
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
-                    <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                    src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                     <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 5-->
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Murilo Cortez</h2>
                 </div>
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
-                    <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                    src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                     <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 6-->
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Pedro Dias</h2>
                 </div>
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/phsdias/">
-                    <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                    src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                     <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
         <!--Colaborador 7-->
             <div class="colaborador-card">
                 <div class="nome-container">
-                    <img src="images/trash.png">
+                    <picture>
+                        <source type="image/webp" srcset="trash.webp">
+                        <img src="images/trash.webp" alt="Logo">
+                    </picture>
                     <h2>Yasmin Souza</h2>
                 </div>    
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
-                    <img style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-                    src="images/linkedin.png">
+                        <picture>
+                            <source type="image/webp" srcset="linkedin.webp">
+                            <img id="lata-lixo" src="images/linkedin.webp" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
                     <span class="linkedin-link">Linkedin</span>
                     </a>
             </div>
@@ -217,7 +255,10 @@ session_start();
 
     <!--rodapé-->
     <footer class="footer">
-        <img src="images/trash.png">
+        <picture>
+            <source type="image/webp" srcset="trash.webp">
+            <img id="lata-lixo" src="images/trash.webp" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+        </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 

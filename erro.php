@@ -37,9 +37,13 @@
 
 <body>
     <header class="header-admin">
-        <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="images/logo.png" alt="Logo">
-        </a>
+        
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
+
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>

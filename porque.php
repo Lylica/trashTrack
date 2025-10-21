@@ -41,10 +41,13 @@ session_start();
 <body>
     <!-- cabeçalho -->
     <header class="header-admin">
-        <!--Logo volta pro inicio-->
-        <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="images/logo.png" alt="Logo">
-        </a>
+        
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
+
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>
@@ -143,7 +146,10 @@ session_start();
 
     <!--rodapé-->
     <footer class="footer">
-        <img src="images/trash.png">
+        <picture>
+            <source type="image/webp" srcset="trash.webp">
+            <img id="lata-lixo" src="images/trash.webp" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+        </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 

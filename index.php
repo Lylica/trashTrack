@@ -50,9 +50,13 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 <body>
     <!-- cabeçalho -->
     <header class="header-admin">
-        <a id="link-logo" href="index.php">
-            <img id="lata-lixo" src="images/logo.png" alt="Logo">
-        </a>
+        
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
+
         <div class="header-title">
             <h1 id="trashtracker">TrashTracker</h1>
         </div>
@@ -86,25 +90,40 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <?php endif; ?>
             <a href="dashboard.php"><button class="btn-dashboard">Dashboard</button></a>
         </div>
-        <img id="dashboard-img" src="images/logo.png" alt="logo">
+        <picture>
+            <source type="image/webp" srcset="logo.webp">
+            <img id="dashboard-img" src="images/logo.webp" alt="Logo">
+        </picture>
     </section>
 
     <!-- seção de destaques -->
     <section id="section-lixeiras">
+        <!-- sobre -->
         <div class="content-box sobre">
-            <img class="lixo" src="images/4-semfundo.png" alt="Sobre">
+            <picture>
+                <source type="image/webp" srcset="4-semfundo.webp">
+                <img class="lixo" src="images/4-semfundo.webp" alt="Sobre">
+            </picture>
             <h2 id="sobre">SOBRE</h2>
             <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
                 dos colaboradores do projeto!</p>
         </div>
+        <!-- porque -->
         <div class="content-box porque">
-        <img class="lixo" src="images/1-semfundo.png" alt="Porque">
+            <picture>
+                <source type="image/webp" srcset="1-semfundo.webp">
+                <img class="lixo" src="images/1-semfundo.webp" alt="Porque">
+            </picture>
             <h2 id="porque">PORQUE?</h2>
             <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
                 com foco nos nossos diferenciais e com dados reais!</p>
         </div>
+        <!-- dashboard -->
         <div class="content-box dashboard-box">
-            <img class="lixo" src="images/2-semfundo.png" alt="Dashboard">
+            <picture>
+                <source type="image/webp" srcset="2-semfundo.webp">
+                <img class="lixo" src="images/2-semfundo.webp" alt="Dashboard">
+            </picture>
             <h2 id="dashboard">DASHBOARD</h2>
             <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
                 mais perto de você, aonde quer que você esteja!</p>
@@ -151,7 +170,10 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 
     <!-- rodapé -->
     <footer class="footer">
-        <img src="images/trash.png">
+        <picture>
+            <source type="image/webp" srcset="trash.webp">
+            <img id="lata-lixo" src="images/trash.webp" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+        </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 

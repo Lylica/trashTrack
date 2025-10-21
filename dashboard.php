@@ -49,9 +49,12 @@ if (!isset($_SESSION['usuario'])) {
         <!-- cabeçalho -->
         <header
             style="background-color: rgb(220, 218, 190); height: auto; width: auto; padding: 6px; display: flex; align-items: center;">
-            <a href="index.php">
-                <img style="height: 40px; width: 40px; margin-right: 10px;" src="images/trash.png">
-            </a>
+            
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
+            <source type="image/webp" srcset="logo.webp">
+            <img id="lata-lixo" src="images/logo.webp" alt="Logo">
+        </picture>
 
             <div>
                 <h1 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker</h1>
@@ -67,11 +70,13 @@ if (!isset($_SESSION['usuario'])) {
             <div style="margin-left: auto; display: flex; align-items: center; gap: 10px;">
                 <div style="display:flex; align-items:center; gap:10px; margin-right:10px;">
                     <?php if(!empty($_SESSION['avatar'])): ?>
-                    <img src="php/avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar"
+                    <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar"
                         style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
                     <?php else: ?>
-                    <img src="php/avatares/avatar1.png" alt="Avatar padrão"
-                        style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+                    <picture>
+                        <source type="image/webp" srcset="avatar1.webp">
+                        <img id="avatarDisplay" src="avatares/avatar1.webp" alt="Avatar padrão" class="avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid #555;">
+                    </picture>
                     <?php endif; ?>
                     <span>Olá,
                         <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
@@ -83,7 +88,10 @@ if (!isset($_SESSION['usuario'])) {
 
         <aside class="barra-lateral">
         <h2 class="titulo-dashboard">
-            <img src="images/dashboard_icon.png" alt="Ícone do Dashboard">
+        <picture>
+            <source type="image/webp" srcset="dashboard_icon.webp">
+            <img src="images/dashboard_icon.webp" alt="Ícone do Dashboard">
+        </picture>
             Dashboard
         </h2>
 
@@ -127,8 +135,10 @@ if (!isset($_SESSION['usuario'])) {
 
     <!--rodapé-->
     <footer style="background-color: rgb(220, 218, 190); height: 80px; width: auto; padding: 5px;">
-        <img style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;"
-            src="images/trash.png">
+        <picture>
+            <source type="image/webp" srcset="trash.webp">
+            <img id="lata-lixo" src="images/trash.webp" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+        </picture>
         <h2 style="font-family: Inter; color: rgb(65, 72, 51)">TrashTracker - Todos os direitos reservados ℗ </h2>
     </footer>
 
