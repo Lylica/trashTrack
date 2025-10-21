@@ -61,8 +61,7 @@ if (!isset($_SESSION['usuario'])) {
         </div>
         <div class="nav">
             <a class="menu-bar" href="index.php">INÍCIO</a>
-            <a class="menu-bar" href="sobre.php">SOBRE</a>
-            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+           
             <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
             <a class="menu-bar" href="forum.php">FORÚM</a>
         </div>
