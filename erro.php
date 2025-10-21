@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de erro 404 personalizada do site TrashTracker</title>
     <meta name="description" content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/erro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,7 +14,7 @@
         rel="stylesheet">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="erro.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/erro.css" />
 
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de erro 404 personalizada do site TrashTracker">

@@ -24,7 +24,7 @@ if (!isset($_SESSION['usuario'])) {
         rel="stylesheet">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="forum.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/forum.css" />
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de visualização e uso do forúm do site TrashTracker">

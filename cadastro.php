@@ -29,10 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Página de cadastro do usuário do site TrashTracker</title>
     <meta name="description" content="Página de cadastro do usuário do site TrashTracker, usado para criação de conta para novos usuários para visualização do dashboard e liberação do forúm">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/forum.css">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="cadastro.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/cadastro.css" />
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de cadastro do usuário do site TrashTracker">

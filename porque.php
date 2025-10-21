@@ -17,7 +17,7 @@ session_start();
     rel="stylesheet">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="porque.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/porque.css" />
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de informações 'porque nós?' do site TrashTracker">

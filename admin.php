@@ -85,9 +85,10 @@ $depoimentos = $conn->query("SELECT f.id, f.autor, f.conteudo, f.data_criacao, u
     <title>Página de acesso de administrador do site TrashTracker</title>
     <meta name="description" content="Página de acesso administrador do site TrashTracker, usado para visualização e gerenciamento de lixeiras, usuários e depoimentos por meio dos administradores">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin.css">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="admin.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/admin.css" />
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de acesso de administrador do site TrashTracker">

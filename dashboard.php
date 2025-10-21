@@ -16,19 +16,17 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de visualização do dashboard do site TrashTracker</title>
-    <meta name="description"
-        content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
+    <meta name="description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="dashboard.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/dashboard.css" />
 
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de visualização do dashboard do site TrashTracker">
-    <meta property="og:description"
-        content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
+    <meta property="og:description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
@@ -130,8 +128,7 @@ if (!isset($_SESSION['usuario'])) {
         <footer class="footer">
             <picture>
                 <source type="image/webp" srcset="images/trash.webp">
-                <img id="lata-lixo" src="images/trash.jpg" alt="Logo"
-                    style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                <img id="lata-lixo" src="images/trash.jpg" alt="Logo">
             </picture>
             <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
         </footer>

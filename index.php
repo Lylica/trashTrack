@@ -26,7 +26,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         rel="stylesheet">
     
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="index.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/index.css" />
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página principal, inicial e padrão do site TrashTracker">

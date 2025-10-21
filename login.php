@@ -29,13 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/forum.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de login do usuário cadastrado do site TrashTracker</title>
     <meta name="description" content="Página de login do usuário cadastrado do site TrashTracker, usado para login de conta de usuários com conta para visualização do dashboard e liberação do forúm">
 
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="login.css" />
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/login.css" />
     
     <!-- Meta Tags das redes sociais -->
     <meta property="og:title" content="Página de login do usuário cadastrado do site TrashTracker">
