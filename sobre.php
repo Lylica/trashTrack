@@ -23,7 +23,7 @@ session_start();
     <meta property="og:title" content="Página de informações 'sobre' do site TrashTracker">
     <meta property="og:description" content="Página de informações 'sobre' do site TrashTracker, usado para disponibilização das informações acerca das motivações e mostrar um pouco sobre os colaboradores">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/sobre.php">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />

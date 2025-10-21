@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta property="og:title" content="Página de cadastro do usuário do site TrashTracker">
     <meta property="og:description" content="Página de cadastro do usuário do site TrashTracker, usado para criação de conta para novos usuários para visualização do dashboard e liberação do forúm">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/cadastro.php">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />

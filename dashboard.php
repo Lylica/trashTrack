@@ -28,7 +28,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta property="og:title" content="Página de visualização do dashboard do site TrashTracker">
     <meta property="og:description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/dashboard.php">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />

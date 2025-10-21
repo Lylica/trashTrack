@@ -32,7 +32,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <meta property="og:title" content="Página principal, inicial e padrão do site TrashTracker">
     <meta property="og:description" content="Página principal do site TrashTracker, onde estão linkadas todas as outras páginas de acesso geral ou de administrador, sendo duas tendo necessidade de login">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/index.php">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />

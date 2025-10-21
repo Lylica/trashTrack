@@ -20,7 +20,7 @@
     <meta property="og:title" content="Página de erro 404 personalizada do site TrashTracker">
     <meta property="og:description" content="Página de erro 404 personalizada do site TrashTracker, utilizada para casos em que há erro de digitação, de busca ou de carregamento da página buscada">
     <meta property="og:image" content="images/icone.png">
-    <meta property="og:url" content="https://srv1074333.hstgr.cloud/trashTrack/erro.php">
+    <meta property="og:url" content="https://srv1074333.hstgr.cloud>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
