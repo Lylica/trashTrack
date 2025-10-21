@@ -51,7 +51,7 @@ if (!isset($_SESSION['usuario'])) {
         
         <!-- logo -->
         <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="logo.webp">
+            <source type="image/webp" srcset="images/logo.webp">
             <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
         </picture>
 
@@ -147,7 +147,7 @@ if (!isset($_SESSION['usuario'])) {
     <!-- rodapé -->
     <footer class="footer">
         <picture>
-            <source type="image/webp" srcset="trash.webp">
+            <source type="image/webp" srcset="images/trash.webp">
             <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
         </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>

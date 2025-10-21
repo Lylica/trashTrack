@@ -40,7 +40,7 @@
         
         <!-- logo -->
         <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="logo.webp">
+            <source type="image/webp" srcset="images/logo.webp">
             <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
         </picture>
 

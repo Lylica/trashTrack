@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="avatar-carousel">
                 <button type="button" class="arrow left">&#10094;</button>
                 <picture>
-                    <source type="image/webp" srcset="avatar1.webp">
+                    <source type="image/webp" srcset="avatares/avatar1.webp">
                     <img id="avatarDisplay" src="avatares/avatar1.jpg" alt="avatar" class="avatar">
                 </picture>
                 <button type="button" class="arrow right">&#10095;</button>
@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- Rodapé -->
 <footer>
     <picture>
-        <source type="image/webp" srcset="trash.webp">
+        <source type="image/webp" srcset="images/trash.webp">
         <img id="lata-lixo" src="images/trash.jpg" alt="Logo">
     </picture>
     <h2>TrashTracker - Todos os direitos reservados ℗</h2>

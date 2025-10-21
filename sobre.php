@@ -44,7 +44,7 @@ session_start();
 
         <!-- logo -->
         <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="logo.webp">
+            <source type="image/webp" srcset="images/logo.webp">
             <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
         </picture>
         
@@ -121,7 +121,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Aylla Alves</h2>
@@ -130,7 +130,7 @@ session_start();
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                         <span class="linkedin-link">Linkedin</span>
@@ -141,7 +141,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Bianca Vidal</h2>
@@ -150,7 +150,7 @@ session_start();
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/bividal/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     <span class="linkedin-link">Linkedin</span>
@@ -160,7 +160,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Clara Rondello</h2>
@@ -168,7 +168,7 @@ session_start();
                     <p class="bio">Estudante de engenharia mecatrônica do segundo semestre.</p>
                     <a href="https://www.linkedin.com/in/clara-rondello/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     <span class="linkedin-link">Linkedin</span>
@@ -178,7 +178,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Letícia Lopes</h2>
@@ -187,7 +187,7 @@ session_start();
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     <span class="linkedin-link">Linkedin</span>
@@ -197,7 +197,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Murilo Cortez</h2>
@@ -206,7 +206,7 @@ session_start();
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     <span class="linkedin-link">Linkedin</span>
@@ -216,7 +216,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Pedro Dias</h2>
@@ -225,7 +225,7 @@ session_start();
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/phsdias/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     <span class="linkedin-link">Linkedin</span>
@@ -235,7 +235,7 @@ session_start();
             <div class="colaborador-card">
                 <div class="nome-container">
                     <picture>
-                        <source type="image/webp" srcset="trash.webp">
+                        <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Yasmin Souza</h2>
@@ -244,7 +244,7 @@ session_start();
                     semestre.</p>
                     <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
                         <picture>
-                            <source type="image/webp" srcset="linkedin.webp">
+                            <source type="image/webp" srcset="images/linkedin.webp">
                             <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     <span class="linkedin-link">Linkedin</span>
@@ -256,7 +256,7 @@ session_start();
     <!--rodapé-->
     <footer class="footer">
         <picture>
-            <source type="image/webp" srcset="trash.webp">
+            <source type="image/webp" srcset="images/trash.webp">
             <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
         </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
