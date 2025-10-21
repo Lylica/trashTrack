@@ -117,7 +117,7 @@ header img {
 
 /* ======== BARRA LATERAL ======== */
 .barra-lateral {
-  background-color: #44633F;
+  background-color: rgb(101, 109, 74);
   border-radius: 10px;
   width: 260px;
   padding: 20px;
@@ -217,7 +217,7 @@ header img {
   bottom: 0;
   width: 100%;
   height: 0%;
-  background: #44633F;
+  background: rgb(101, 109, 74);
   transition: height 0.4s ease;
 }
 
