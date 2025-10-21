@@ -1,47 +1,61 @@
+/* ======== RESET E GERAL ======== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
+    font-family: 'Inter', sans-serif;
     background-color: rgb(101, 109, 74);
     color: rgb(194, 197, 170);
-    font-family: 'Inter', sans-serif;
-    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    overflow-x: hidden;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  text-align: justify;
-  line-height: 1.6;
-  letter-spacing: 0.3px;
-}
-
-/* ======== CABEÇALHO ======== */
+/* ======== HEADER ======== */
 header {
     background-color: rgb(220, 218, 190);
     display: flex;
+    flex-wrap: wrap; /* permite empilhar no mobile */
     align-items: center;
-    padding: 6px 20px;
-    gap: 12px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 10px;
+    width: 100%;
 }
 
 header img {
     height: 60px;
     width: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.header-title {
+    flex: 1 1 auto;
+    text-align: center;
 }
 
 .header-title h1 {
-    font-family: Inter, sans-serif;
-    color: rgb(65, 72, 51);
     margin: 0;
+    font-size: 1.5rem;
+    color: rgb(65, 72, 51);
+    word-wrap: break-word;
 }
 
 .nav {
-    margin-left: 2%;
     display: flex;
+    flex-wrap: wrap; /* permite quebrar linhas */
+    justify-content: center;
     gap: 10px;
+    flex: 1 1 100%;
+    margin-top: 5px;
 }
 
 .nav a {
-    font-family: Inter, sans-serif;
-    font-size: 22px;
+    font-size: 1.1rem;
     font-weight: bold;
     color: rgb(65,72,51);
     text-decoration: none;
@@ -52,12 +66,13 @@ header img {
     color: rgb(101, 109, 74);
 }
 
-/* Usuário no canto direito */
 .header-user {
-    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap; /* permite quebrar no mobile */
+    justify-content: center;
+    margin-top: 5px;
 }
 
 .header-user img {
@@ -68,31 +83,15 @@ header img {
     border: 2px solid #555;
 }
 
-#btn-sair-header{
+.header-user button {
     background-color: #44633F;
     color: #DCDABE;
     border: none;
     border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 1em;
+    padding: 8px 12px;
+    font-size: 0.9rem;
     cursor: pointer;
-    margin-right: 10px;
     transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-}
-
-#btn-login-header{
-    background-color: #582F0E;
-    color: #DCDABE;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: 0.3s;
-    font-family: 'Inter', sans-serif;
     font-weight: 800;
 }
 
@@ -104,11 +103,8 @@ header img {
     font-family: 'Inter', sans-serif;
     color: #000;
 }
-
 /* ======== PRIMEIRA SEÇÃO ======== */
 .corpo-do-site {
-    background-color: rgb(101, 109, 74);
-    color: rgb(194, 197, 170);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,46 +117,38 @@ header img {
 }
 
 #titulo-corpo-pagina {
-    font-family: Inter;
     font-size: 3.5em;
     color: #C2C5AA;
     margin-bottom: 10px;
 }
 
 #introdução {
-    font-family: Inter;
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
 /* Botões principais */
-.btn-dashboard {
-    background-color: #DCDABE;
-    color: #582F0E;
+.btn-dashboard,
+.btn-login {
     border: none;
     border-radius: 10px;
     padding: 12px 20px;
     font-size: 1em;
     cursor: pointer;
-    margin-right: 10px;
     transition: 0.3s;
     font-family: 'Inter', sans-serif;
     font-weight: 800;
 }
 
-.btn-login{
+.btn-dashboard {
+    background-color: #DCDABE;
+    color: #582F0E;
+}
+
+.btn-login {
     background-color: #582F0E;
     color: #DCDABE;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
 }
 
 .btn-dashboard:hover {
@@ -168,7 +156,7 @@ header img {
     color: #DCDABE;
 }
 
-.btn-login:hover{
+.btn-login:hover {
     background-color: #DCDABE;
     color: #582F0E;
 }
@@ -182,76 +170,56 @@ header img {
 
 /* ======== SEÇÃO DE DESTAQUES ======== */
 #section-lixeiras {
-  background-color: rgb(101, 109, 74);
-  padding: 60px 40px;
-  display: flex;
-  justify-content: center; /* centraliza o conjunto */
-  gap: 60px;               /* espaço entre colunas */
-  flex-wrap: nowrap;       /* NÃO deixa as colunas quebrarem para outra linha */
-  box-sizing: border-box;
-  overflow-x: auto;        /* caso a tela seja muito estreita permite scroll horizontal */
+    background-color: rgb(101, 109, 74);
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
-/* cada coluna: imagem no topo (centralizada), título e texto alinhados à esquerda */
 #section-lixeiras .content-box,
 #section-lixeiras .lixo {
-  width: 320px;                /* largura fixa para as 3 colunas */
-  min-width: 280px;            /* evita colunas muito pequenas em telas menores */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;     /* texto alinhado à esquerda */
-  box-sizing: border-box;
-  padding: 8px 0;
+    width: 320px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
 }
 
-/* imagem centralizada apenas dentro da coluna */
 #section-lixeiras .content-box img,
 #section-lixeiras .lixo img {
-  width: 140px;
-  height: auto;
-  display: block;
-  align-self: center;     /* centraliza só a imagem */
-  margin: 0 0 18px 0;
-  border-radius: 0;
-  object-fit: contain;
+    width: 140px;
+    height: auto;
+    display: block;
+    align-self: center;
+    margin-bottom: 18px;
+    object-fit: contain;
 }
 
-/* título e descrição */
 #section-lixeiras h2 {
-  margin: 0 0 12px 0;
-  font-size: 1.5em;
-  font-weight: 800;
+    margin: 0 0 12px 0;
+    font-size: 1.5em;
+    font-weight: 800;
 }
+
 #section-lixeiras .descrição {
-  margin: 0;
-  text-align: justify;
-  line-height: 1.6;
-  color: #F5F0DC;
-  font-size: 1em;
-  font-weight: 600;
+    margin: 0;
+    text-align: justify;
+    line-height: 1.6;
+    color: #F5F0DC;
+    font-size: 1em;
+    font-weight: 600;
 }
 
-
-.content-box:hover, .lixo:hover {
+.content-box:hover,
+.lixo:hover {
     transform: translateY(-5px);
 }
 
-#sobre{
-    color: #582F0E;
-}
-
-#porque{
-    color: #A68A64;
-}
-
-#dashboard{
-    color: #DCDABE;
-}
-
-
-/* ======== DEPOIMENTOS ======== */
-
-/* wrapper que vai ser a “janela” */
+/* ======== CARROSSEL DE DEPOIMENTOS ======== */
 #carrossel-wrapper {
     overflow: hidden;
     width: 100%;
@@ -267,13 +235,11 @@ header img {
     transition: transform 0.1s linear;
 }
 
-/* adiciona espaço no final para a última div não ficar cortada */
 #carrossel-depoimentos::after {
     content: '';
     flex: 0 0 20px;
 }
 
-/* cada depoimento */
 .div-depoimentos {
     flex: 0 0 auto;
     width: 280px;
@@ -285,11 +251,9 @@ header img {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    white-space: normal;
     text-align: center;
 }
 
-/* foto do usuário menor igual ao fórum */
 .div-depoimentos img,
 .post-user img {
     width: 30px;
@@ -300,15 +264,14 @@ header img {
     margin-bottom: 5px;
 }
 
-/* texto justificado e com rolagem vertical */
 .post-text-wrapper {
     flex: 1;
     overflow-y: auto;
     max-height: 150px;
     padding-right: 6px;
     text-align: justify;
-    color: #000; /* texto preto */
-     font-family: 'Inter', sans-serif;
+    color: #000;
+    font-family: 'Inter', sans-serif;
 }
 
 .post-text-wrapper::-webkit-scrollbar {
@@ -329,7 +292,6 @@ header img {
     background-color: #555;
 }
 
-/* usuário abaixo do texto */
 .post-user {
     display: flex;
     flex-direction: column;
@@ -339,14 +301,8 @@ header img {
 
 .post-user cite {
     font-size: 13px;
-    color: #000000;
+    color: #000;
     text-align: center;
-}
-
-/* Botão ver todos */
-.btn-ver-todos {
-    margin-top: 30px;
-    font-family: 'Inter', sans-serif;
 }
 
 .btn-ver-todos a {
@@ -365,12 +321,11 @@ header img {
 /* ======== RODAPÉ ======== */
 .footer {
     background-color: rgb(220, 218, 190);
-    height: 80px;
-    width: auto;
-    padding: 5px 40px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -380,36 +335,88 @@ header img {
 }
 
 .footer h2 {
-    font-family:'Inter', sans-serif;
     color: rgb(65, 72, 51);
     margin: 0;
     font-size: 16px;
 }
 
-/* deixa o carrossel mais suave */
-#carrossel-depoimentos * {
-    user-select: none;
+/* ======== RESPONSIVO ======== */
+@media (max-width: 1100px) {
+    #section-lixeiras {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #section-lixeiras .content-box,
+    #section-lixeiras .lixo {
+        width: calc(50% - 30px);
+        min-width: unset;
+    }
 }
 
-@media (max-width: 1100px) {
-  #section-lixeiras {
-    flex-wrap: wrap;          /* agora pode quebrar em 2 linhas se necessário */
-    justify-content: center;
-    gap: 40px;
-  }
-  #section-lixeiras .content-box,
-  #section-lixeiras .lixo {
-    width: calc(50% - 30px);
-    min-width: unset;
-  }
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .header-user {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .corpo-do-site {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    #dashboard-img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 640px) {
-  #section-lixeiras .content-box,
-  #section-lixeiras .lixo {
-    width: 100%;
-    align-items: center;    /* em mobile centraliza título e descrição também */
-    text-align: center;
-  }
-  #section-lixeiras .descrição { text-align: center; }
+    header img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .header-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+
+    .header-user button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    #section-lixeiras .content-box,
+    #section-lixeiras .lixo {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #section-lixeiras .descrição {
+        text-align: center;
+    }
 }
