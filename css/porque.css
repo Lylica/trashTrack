@@ -99,16 +99,21 @@ header img {
 
 .section-main h1 {
     font-family: 'Inter', sans-serif;
-    color: rgb(194, 197, 170);
+    color: #C2C5AA;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3.5em;
 }
 
-.section-main p {
+.section-main p{
     font-family: 'Inter', sans-serif;
     color: #F5F0DC;
-    font-weight: 500;
-    font-size: 20px;
     text-align: justify;
+    font-size: 1em;
+    font-weight: 500;
 }
+
 
 /* Diferenciais título */
 .section-title {
