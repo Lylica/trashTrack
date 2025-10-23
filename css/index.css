@@ -370,21 +370,48 @@ header img {
     background-color: rgb(220, 218, 190);
     padding: 10px 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 60px;
     flex-wrap: wrap;
-    gap: 15px;
+    font-family: 'Inter', sans-serif;
 }
 
-.footer img {
-    height: 24px;
-    width: 24px;
+.footer picture {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer #lata-lixo {
+    height: 40px;
+    width: 40px;
 }
 
 .footer h2 {
     color: rgb(65, 72, 51);
-    margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
+     margin-top: 10px;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.footer h3 {
+     color: rgb(65, 72, 51);
+     font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer a {
+    text-decoration: underline;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 /* ======== RESPONSIVO ======== */
@@ -465,5 +492,17 @@ header img {
 
     #section-lixeiras .descrição {
         text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer div {
+        margin-top: 20px;
     }
 }

@@ -186,28 +186,52 @@ button:hover, .btn-cadastro:hover {
 }
 
 /* ======== RODAPÉ ======== */
-footer {
+.footer {
     background-color: rgb(220, 218, 190);
-    height: 80px;
-    width: 100%;
-    padding: 5px 40px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer picture {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    margin-top: 50px;
+    gap: 10px;
 }
 
-footer img {
-    height: 30px;
-    width: 30px;
+.footer #lata-lixo {
+    height: 40px;
+    width: 40px;
 }
 
-footer h2 {
-    font-family:'Inter', sans-serif;
+.footer h2 {
     color: rgb(65, 72, 51);
-    margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
+     margin-top: 10px;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.footer h3 {
+     color: rgb(65, 72, 51);
+     font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer a {
+    text-decoration: underline;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 /* ======== ERRO ======== */

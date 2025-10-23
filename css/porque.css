@@ -335,27 +335,55 @@ header img {
     margin-bottom: auto; 
 }
 
+/* ======== RODAPÉ ======== */
 .footer {
-  background-color: rgb(220, 218, 190);
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+    background-color: rgb(220, 218, 190);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
 }
 
-.footer img {
-  height: 30px;
-  width: 30px;
+.footer picture {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer #lata-lixo {
+    height: 40px;
+    width: 40px;
 }
 
 .footer h2 {
-  color: rgb(65, 72, 51);
-  margin: 0;
-  font-size: 15px;
-  text-align: center;
+    color: rgb(65, 72, 51);
+    font-size: 14px;
+    font-weight: 400;
+     margin-top: 10px;
 }
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.footer h3 {
+     color: rgb(65, 72, 51);
+     font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer a {
+    text-decoration: underline;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
 
 
 #section-dados h1{
