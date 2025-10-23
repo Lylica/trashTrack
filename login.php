@@ -56,35 +56,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <!-- Cabeçalho -->
-  <header>
-
+  <!-- cabeçalho -->
+    <header class="header-admin">
+        
         <!-- logo -->
         <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="images/logo.webp">
-            <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
+            <source type="image/webp" srcset="images/logoTT.webp">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
         </picture>
 
-      <div class="header-title">
-          <h1>TrashTracker</h1>
-      </div>
-      <div class="nav">
-          <a href="index.php">INÍCIO</a>
-          <a href="sobre.php">SOBRE</a>
-          <a href="porque.php">PORQUE NÓS?</a>
-          <a href="dashboard.php">DASHBOARD</a>
-          <a href="forum.php">FORÚM</a>
-      </div>
-      <div class="header-user">
-          <?php if(isset($_SESSION['usuario'])): ?>
-          <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
-          <span>Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-          <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
-          <?php else: ?>
-          <a href="login.php"><button id="btn-login-header">Login</button></a>
-          <?php endif; ?>
-      </div>
-  </header>
+        <div class="header-title">
+        </div>
+        <div class="nav">
+            <a class="menu-bar" href="index.php">INÍCIO</a>
+            <a class="menu-bar" href="sobre.php">SOBRE</a>
+            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
+            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
+            <a class="menu-bar" href="forum.php">FORÚM</a>
+        </div>
+        <div class="header-user">
+            <?php if(isset($_SESSION['usuario'])): ?>
+            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            <span>Olá,
+                <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
+            </span>
+            <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
+            <?php else: ?>
+            <a href="login.php"><button id="btn-login-header">Login</button></a>
+            <?php endif; ?>
+        </div>
+    </header>
 
     <!-- Login -->
     <div class="login-container">
@@ -107,14 +108,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
-    <!-- Rodapé -->
-    <footer>
+    <!-- rodapé -->
+    <footer class="footer">
         <picture>
             <source type="image/webp" srcset="images/trash.webp">
             <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
         </picture>
-        <h2>TrashTracker - Todos os direitos reservados ℗</h2>
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
+        <!--Contato-->
+        <div>
+            <h3 style="color: black;">Contate-nos</h3>
+            <p style="color: black;">Número <br>
+                Email <br>
+                Instagram 
+            </p>
+        </div>
+        <!--Integrantes-->
+        <div> 
+            <h3 style="color: black;">Integrantes</h3>
+            <p style="color: black;"> 
+                <a href="index.php">INÍCIO</a> <br>
+                <a href="sobre.php">SOBRE</a> <br>
+                <a href="porque.php">PORQUE NÓS?</a> <br>
+                <a href="dashboard.php">DASHBOARD</a> <br>
+                <a href="forum.php">FORÚM</a>
+            </p>
+        </div>
+        <!--Repositório-->
+        <div>
+            <h3 style="color: black;">Repositório</h3>
+                <a href="https://github.com/Lylica/trashTrack"> Acesse o repositório do projeto</a> 
+        </div>
     </footer>
+
 </body>
 
 </html>

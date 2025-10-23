@@ -44,12 +44,11 @@ session_start();
         
         <!-- logo -->
         <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="images/logo.webp">
-            <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
+            <source type="image/webp" srcset="images/logoTT.webp">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
         </picture>
 
         <div class="header-title">
-            <h1 id="trashtracker">TrashTracker</h1>
         </div>
         <div class="nav">
             <a class="menu-bar" href="index.php">INÍCIO</a>
@@ -70,7 +69,6 @@ session_start();
             <?php endif; ?>
         </div>
     </header>
-
 
     <!-- primeira seção -->
     <section class="section-main">
@@ -144,13 +142,37 @@ session_start();
         </div>
     </section>
 
-    <!--rodapé-->
+    <!-- rodapé -->
     <footer class="footer">
         <picture>
             <source type="image/webp" srcset="images/trash.webp">
             <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
         </picture>
         <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
+        <!--Contato-->
+        <div>
+            <h3 style="color: black;">Contate-nos</h3>
+            <p style="color: black;">Número <br>
+                Email <br>
+                Instagram 
+            </p>
+        </div>
+        <!--Integrantes-->
+        <div> 
+            <h3 style="color: black;">Integrantes</h3>
+            <p style="color: black;"> 
+                <a href="index.php">INÍCIO</a> <br>
+                <a href="sobre.php">SOBRE</a> <br>
+                <a href="porque.php">PORQUE NÓS?</a> <br>
+                <a href="dashboard.php">DASHBOARD</a> <br>
+                <a href="forum.php">FORÚM</a>
+            </p>
+        </div>
+        <!--Repositório-->
+        <div>
+            <h3 style="color: black;">Repositório</h3>
+                <a href="https://github.com/Lylica/trashTrack"> Acesse o repositório do projeto</a> 
+        </div>
     </footer>
 
 </body>
