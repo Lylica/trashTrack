@@ -114,8 +114,8 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         <!-- sobre -->
         <div class="content-box sobre">
             <picture>
-                <source type="image/webp" srcset="images/lixeira.webp">
-                <img class="lixeiraa" src="images/lixeira.jpg" alt="Sobre">
+                <source type="image/webp" srcset="images/lixeira-index.webp">
+                <img class="lixeiraa" src="images/lixeira-index.webp" alt="Sobre">
             </picture>
             <h2 id="sobre">SOBRE</h2>
             <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
