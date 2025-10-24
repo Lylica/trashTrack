@@ -48,15 +48,30 @@ session_start();
             <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
         </picture>
 
-        <div class="header-title">
-        </div>
+        <!-- páginas -->
         <div class="nav">
-            <a class="menu-bar" href="index.php">INÍCIO</a>
-            <a class="menu-bar" href="sobre.php">SOBRE</a>
-            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
-            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
-            <a class="menu-bar" href="forum.php">FORÚM</a>
+                <!-- início -->
+                <a href="index.php">
+                    <button class="botao-header">INÍCIO</button>
+                </a>
+                <!-- sobre -->
+                <a href="sobre.php">
+                    <button class="botao-header">SOBRE</button>
+                </a>
+                <!-- porque nós? -->
+                <a href="porque.php">
+                    <button class="botao-header">PORQUE NÓS?</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboard.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forum.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
         </div>
+
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
@@ -84,34 +99,6 @@ session_start();
         </div>
     </section>
 
-    <!-- motivações-->
-    <section id="section-motivações" >
-        <h1>Motivações</h1>
-        <!--motivações 1-->
-        <div class="motivacao-item menos-lixo">
-            <div class="motivacao-texto">
-            <h3>Menos lixo nas ruas</h3>
-            <p>Diminuir o lixo nas ruas é uma das
-                nossas motivações para a criação desse projeto!</p>
-            </div>    
-        </div>
-        <!--motivações 2-->
-        <div class="motivacao-item menos-tempo">
-            <div class="motivacao-texto">
-            <h3>Menos tempo perdido</h3>
-            <p>Tempo perdido procurando uma lixeira
-                vazia para descartar seu lixo? Viemos para acabar com isso!</p>
-            </div>
-        </div>
-        <!--motivações 3-->
-        <div class="motivacao-item participacao">
-            <div class="motivacao-texto">
-            <h3>Mais participação da população</h3>
-            <p>Ouvir as sugestões e críticas da população para melhorar cada vez mais é um dos nossos princípios!</p>
-            </div>
-        </div>    
-    </section>
-
     <!--colaboradores-->
     <section id="colaboradores-section">
         <h1 style="font-family: Inter; color: rgb(194, 197, 170)">Colaboradores</h1>
@@ -119,14 +106,22 @@ session_start();
         <div class="colaboradores-container">
             <div class="colaborador-card">
                 <div class="nome-container">
+                    <!-- logo -->
                     <picture>
                         <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Aylla Alves</h2>
                 </div>    
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-aylla">
+                    </picture>
+                    <!-- bio -->
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -139,14 +134,22 @@ session_start();
         <!--Colaborador 2-->
             <div class="colaborador-card">
                 <div class="nome-container">
+                    <!-- logo -->
                     <picture>
                         <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Bianca Vidal</h2>
                 </div>    
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-bianca">
+                    </picture>
+                    <!-- bio -->
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/bividal/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -158,13 +161,21 @@ session_start();
         <!--Colaborador 3-->
             <div class="colaborador-card">
                 <div class="nome-container">
+                    <!-- logo -->
                     <picture>
                         <source type="image/webp" srcset="images/trash.webp">
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Clara Rondello</h2>
-                </div>     
+                </div>
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-clara">
+                    </picture>
+                    <!-- bio --> 
                     <p class="bio">Estudante de engenharia mecatrônica do segundo semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/clara-rondello/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -181,9 +192,16 @@ session_start();
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Letícia Lopes</h2>
-                </div>    
+                </div>
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-le-lopes">
+                    </picture>
+                    <!-- bio --> 
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -201,8 +219,15 @@ session_start();
                     </picture>
                     <h2>Murilo Cortez</h2>
                 </div>
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-murilo">
+                    </picture>
+                    <!-- bio --> 
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -220,8 +245,15 @@ session_start();
                     </picture>
                     <h2>Pedro Dias</h2>
                 </div>
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-dias">
+                    </picture>
+                    <!-- bio --> 
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/phsdias/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -238,9 +270,16 @@ session_start();
                         <img src="images/trash.jpg" alt="Logo">
                     </picture>
                     <h2>Yasmin Souza</h2>
-                </div>    
+                </div> 
+                    <!-- foto -->
+                    <picture>
+                        <source type="image/webp" srcset="images/icone.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-yasmin">
+                    </picture>
+                    <!-- bio -->    
                     <p class="bio">Estudante de engenharia da computação do segundo
                     semestre.</p>
+                    <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
                         <picture>
                             <source type="image/webp" srcset="images/linkedin.webp">
@@ -262,14 +301,11 @@ session_start();
         <!--Contato-->
         <div>
             <h3 style="color: black;">Contate-nos</h3>
-            <p style="color: black;">Número <br>
-                Email <br>
-                Instagram 
-            </p>
+                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
         </div>
         <!--Integrantes-->
         <div> 
-            <h3 style="color: black;">Integrantes</h3>
+            <h3 style="color: black;">Páginas</h3>
             <p style="color: black;"> 
                 <a href="index.php">INÍCIO</a> <br>
                 <a href="sobre.php">SOBRE</a> <br>

@@ -55,32 +55,31 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
 
-        
+        <!-- páginas -->
         <div class="nav">
+                <!-- início -->
                 <a href="index.php">
                     <button class="botao-header">INÍCIO</button>
                 </a>
-            <div>
+                <!-- sobre -->
                 <a href="sobre.php">
                     <button class="botao-header">SOBRE</button>
                 </a>
-            </div>
-            <div>
+                <!-- porque nós? -->
                 <a href="porque.php">
                     <button class="botao-header">PORQUE NÓS?</button>
                 </a>
-            </div>
-            <div>
+                <!-- dashboard -->
                 <a href="dashboard.php">
                     <button class="botao-header">DASHBOARD</button>
                 </a>
-            </div>
-            <div>
+                <!-- forúm -->
                 <a href="forum.php">
                     <button class="botao-header">FORÚM</button>
                 </a>
-            </div>
         </div>
+
+        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
@@ -155,14 +154,11 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         <!--Contato-->
         <div>
             <h3 style="color: black;">Contate-nos</h3>
-            <p style="color: black;">Número <br>
-                Email <br>
-                Instagram 
-            </p>
+                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
         </div>
         <!--Integrantes-->
         <div> 
-            <h3 style="color: black;">Integrantes</h3>
+            <h3 style="color: black;">Páginas</h3>
             <p style="color: black;"> 
                 <a href="index.php">INÍCIO</a> <br>
                 <a href="sobre.php">SOBRE</a> <br>
