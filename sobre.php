@@ -39,13 +39,13 @@ session_start();
 </head>
 
 <body>
-       <!-- cabeçalho -->
+    <!-- cabeçalho -->
     <header class="header-admin">
-        
+
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logoTT.webp">
-            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
 
         <!-- páginas -->
@@ -72,6 +72,7 @@ session_start();
                 </a>
         </div>
 
+        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">

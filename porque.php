@@ -41,22 +41,38 @@ session_start();
 <body>
     <!-- cabeçalho -->
     <header class="header-admin">
-        
+
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logoTT.webp">
-            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
 
-        <div class="header-title">
-        </div>
+        <!-- páginas -->
         <div class="nav">
-            <a class="menu-bar" href="index.php">INÍCIO</a>
-            <a class="menu-bar" href="sobre.php">SOBRE</a>
-            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
-            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
-            <a class="menu-bar" href="forum.php">FORÚM</a>
+                <!-- início -->
+                <a href="index.php">
+                    <button class="botao-header">INÍCIO</button>
+                </a>
+                <!-- sobre -->
+                <a href="sobre.php">
+                    <button class="botao-header">SOBRE</button>
+                </a>
+                <!-- porque nós? -->
+                <a href="porque.php">
+                    <button class="botao-header">PORQUE NÓS?</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboard.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forum.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
         </div>
+
+        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
@@ -80,35 +96,80 @@ session_start();
         </div>
     </section>
 
-    <!--diferenciais-->
+    <!-- caixa diferenciais-->
     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; ">
         <h1 id="diferenciais">Diferenciais</h1>
         <div class="cards-container">
-            <!--diferencial 1-->
+            <!--diferenciais-->
             <div class="card">
                 <div class="card-texto">
-                    <h3>
-                    Acesso ao nível de lixo</h3>
-                    <p >
-                    Acesso a % de lixo de qualquer lixeira próxima a você, independente de onde você esteja!</p>
-                 </div>
-                 <div class="card-imagem-textura"></div>
-             </div>
-            <!--diferencial 2-->
-            <div class="card">
-                <div class="card-texto">
-                <h3>Dados estratégicos</h3>
-                <p> Dados estratégicos para que empresas e órgãos governamentais tenham mais produtividade na coleta!</p>
+                    <h3 style="text-align: center;">TÓPICO</h3>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
+                    
+                    <h3 style="text-align: center;">NÓS</h3>
+                    <!-- diferencial 1 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 2 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 3 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 4 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                
+                    <!-- concorrentes -->
+                    <h3 style="text-align: center;">CONCORRENTES</h3>
+                    <!-- diferencial 1 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/X.webp">
+                            <img id="lata-lixo" src="images/X.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 2 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/X.webp">
+                            <img id="lata-lixo" src="images/X.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 3 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/X.webp">
+                            <img id="lata-lixo" src="images/X.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 4 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/X.webp">
+                            <img id="lata-lixo" src="images/X.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
                 </div>
-                <div class="card-imagem-textura"></div>
-            </div>
-            <!--diferencial 3-->
-            <div class="card">
-                <div class="card-texto">
-                <h3>Forúm</h3>
-                <p>No forúm você pode deixar sugestões de melhorias, feedbacks e interagir com a comunidade!</p>
-                </div>
-                <div class="card-imagem-textura"></div>
             </div>
     </section>
 
@@ -119,24 +180,38 @@ session_start();
             <!--dado 1-->
             <div class="dado-item co2">
                 <div class="dado-texto">
-                    <h3>MENOS CO2 DISSIPADO</h3>
-                    <p>
-                    Cerca de 1 tonelada de CO2 a menos no meio ambiente!</p>
+                    <details>
+                    <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">MENOS CO2 DISSIPADO</summary>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Nosso impacto ambiental é real e mensurável. Com o TrashTracker, 
+                        estimamos uma redução de aproximadamente 1 tonelada de CO₂ a menos no meio ambiente por mês por caminhão. 
+                        Isso significa um ar mais limpo para todos e um passo significativo para cidades mais verdes e sustentáveis, 
+                        combatendo ativamente as mudanças climáticas.</p>
+                    </details>
                 </div>
             </div>
             <!--dado 2-->
             <div class="dado-item combustivel">
                 <div class="dado-texto">
-                    <h3>MAIS ECONOMIA DE COMBUSTÍVEL</h3>
-                    <p>
-                    Cerca de 375 litros de combustível economizados por mês! </p>
+                    <details>
+                    <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">MAIS ECONOMIA DE COMBUSTÍVEL</summary>
+                    <p style="margin-top: 15px; color: #C2C5AA;">A eficiência do TrashTracker se traduz diretamente em economia. 
+                        Ao otimizar as rotas de coleta, evitamos viagens desnecessárias, 
+                        resultando em uma poupança estimada de cerca de 375 litros de combustível por mês por caminhão. 
+                        Essa economia é um alívio para o orçamento municipal e um testemunho da inteligência aplicada à gestão de resíduos.</p>
+                    </details>
                 </div>
             </div>
             <!--dado 3-->
             <div class="dado-item rotas">
                 <div class="dado-texto">
-                    <h3>ROTAS MENORES</h3>
-                    <p>Cerca de 936 quilometros a menos nas rotas da coleta!</p>
+                    <details>
+                    <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">ROTAS MENORES</summary>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Chega de rotas longas e improdutivas! Com o monitoramento inteligente, 
+                        nossos caminhões percorrem caminhos significativamente mais curtos. 
+                        Calculamos que isso representa aproximadamente 936 quilômetros a menos nas rotas de coleta por mês por caminhão. 
+                        Menos quilômetros rodados significam menos desgaste veicular, mais tempo para outras tarefas e, claro, 
+                        um impacto positivo direto no meio ambiente.</p>
+                    </details>
                 </div>    
             </div>
         </div>
@@ -152,14 +227,11 @@ session_start();
         <!--Contato-->
         <div>
             <h3 style="color: black;">Contate-nos</h3>
-            <p style="color: black;">Número <br>
-                Email <br>
-                Instagram 
-            </p>
+                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
         </div>
         <!--Integrantes-->
         <div> 
-            <h3 style="color: black;">Integrantes</h3>
+            <h3 style="color: black;">Páginas</h3>
             <p style="color: black;"> 
                 <a href="index.php">INÍCIO</a> <br>
                 <a href="sobre.php">SOBRE</a> <br>
