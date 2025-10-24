@@ -145,7 +145,7 @@ session_start();
                     <div>
                         <picture>
                             <source type="image/webp" srcset="images/X.webp">
-                            <img id="lata-lixo" src="images/X.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                            <img id="lata-lixo" src="images/x.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     </div>
                     <!-- diferencial 2 -->
