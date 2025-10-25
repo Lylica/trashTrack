@@ -58,22 +58,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <!-- cabeçalho -->
     <header class="header-admin">
-        
+
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logoTT.webp">
-            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
 
-        <div class="header-title">
-        </div>
+        <!-- páginas -->
         <div class="nav">
-            <a class="menu-bar" href="index.php">INÍCIO</a>
-            <a class="menu-bar" href="sobre.php">SOBRE</a>
-            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
-            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
-            <a class="menu-bar" href="forum.php">FORÚM</a>
+                <!-- início -->
+                <a href="index.php">
+                    <button class="botao-header">INÍCIO</button>
+                </a>
+                <!-- sobre -->
+                <a href="sobre.php">
+                    <button class="botao-header">SOBRE</button>
+                </a>
+                <!-- porque nós? -->
+                <a href="porque.php">
+                    <button class="botao-header">PORQUE NÓS?</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboard.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forum.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
         </div>
+
+        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
@@ -118,14 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!--Contato-->
         <div>
             <h3 style="color: black;">Contate-nos</h3>
-            <p style="color: black;">Número <br>
-                Email <br>
-                Instagram 
-            </p>
+                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
         </div>
         <!--Integrantes-->
         <div> 
-            <h3 style="color: black;">Integrantes</h3>
+            <h3 style="color: black;">Páginas</h3>
             <p style="color: black;"> 
                 <a href="index.php">INÍCIO</a> <br>
                 <a href="sobre.php">SOBRE</a> <br>

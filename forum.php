@@ -32,22 +32,38 @@ if (!isset($_SESSION['usuario'])) {
 <body>
     <!-- cabeçalho -->
     <header class="header-admin">
-        
+
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logoTT.webp">
-            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.webp" alt="Logo">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
 
-        <div class="header-title">
-        </div>
+        <!-- páginas -->
         <div class="nav">
-            <a class="menu-bar" href="index.php">INÍCIO</a>
-            <a class="menu-bar" href="sobre.php">SOBRE</a>
-            <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
-            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
-            <a class="menu-bar" href="forum.php">FORÚM</a>
+                <!-- início -->
+                <a href="index.php">
+                    <button class="botao-header">INÍCIO</button>
+                </a>
+                <!-- sobre -->
+                <a href="sobre.php">
+                    <button class="botao-header">SOBRE</button>
+                </a>
+                <!-- porque nós? -->
+                <a href="porque.php">
+                    <button class="botao-header">PORQUE NÓS?</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboard.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forum.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
         </div>
+
+        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
@@ -61,7 +77,6 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </header>
 
-
     <!-- SEÇÃO PRINCIPAL -->
     <section class="section-main">
         <h1>Fórum</h1>
@@ -71,11 +86,27 @@ if (!isset($_SESSION['usuario'])) {
         </p>
     </section>
 
+    <style>
+        /* Remove o marcador (seta/triângulo) para a maioria dos navegadores */
+        summary {
+            list-style: none;
+        }
+
+    /* Remove o marcador para navegadores baseados em WebKit (Chrome, Safari, Edge) */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+
     <!-- FORMULÁRIO DE POSTAGEM -->
     <section class="form-section">
         <form method="post" action="processa_post.php">
-            <h2>POST FÓRUM</h2>
-
+            <!-- <h2>POST FÓRUM</h2> -->
+            <details>
+            <summary style="font-family: inter; font-weight: bold; color: #414533; text-align: center; margin-bottom: 10px;">DEIXE SEU COMENTÁRIO
+                <p style="font-weight: 500;">(clique aqui)</p>
+            </summary>
             <label for="title">Título da postagem</label>
             <input type="text" id="title" name="title" required>
 
@@ -86,6 +117,7 @@ if (!isset($_SESSION['usuario'])) {
             <textarea id="conteudo" name="conteudo" required></textarea>
 
             <input id="btn-enviar" type="submit" value="Enviar">
+            </details>
         </form>
     </section>
 
@@ -122,6 +154,7 @@ if (!isset($_SESSION['usuario'])) {
             ?>
         </section>
     </section>
+    
 
     <!-- rodapé -->
     <footer class="footer">
@@ -133,14 +166,11 @@ if (!isset($_SESSION['usuario'])) {
         <!--Contato-->
         <div>
             <h3 style="color: black;">Contate-nos</h3>
-            <p style="color: black;">Número <br>
-                Email <br>
-                Instagram 
-            </p>
+                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
         </div>
         <!--Integrantes-->
         <div> 
-            <h3 style="color: black;">Integrantes</h3>
+            <h3 style="color: black;">Páginas</h3>
             <p style="color: black;"> 
                 <a href="index.php">INÍCIO</a> <br>
                 <a href="sobre.php">SOBRE</a> <br>
@@ -156,7 +186,8 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </footer>
 
-    <!-- JS -->
+    <!-- JS 
     <script src="js/index.js"></script>
+    -->
 </body>
 </html>

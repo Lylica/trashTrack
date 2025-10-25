@@ -112,38 +112,43 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <!-- seção de destaques -->
     <section id="section-lixeiras">
         <!-- sobre -->
-        <div class="content-box sobre">
+    <a href="sobre.php" class="content-box"> 
+        <div>
             <picture>
                 <source type="image/webp" srcset="images/lixeira-index.webp">
                 <img class="lixeiraa" src="images/lixeira-index.webp" alt="Sobre">
             </picture>
             <h2 id="sobre">SOBRE</h2>
             <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
-                dos colaboradores do projeto!</p>
+                dos colaboradores do projeto!</p> 
         </div>
+    </a>
         <!-- porque -->
-        <div class="content-box porque">
+    <a href="porque.php" class="content-box">
+        <div> 
             <picture>
-                <source type="image/webp" srcset="images/lixeira.webp">
-                <img class="lixeiraa" src="images/lixeira.jpg" alt="Porque">
+                <source type="image/webp" srcset="images/lixeira-index.webp">
+                <img class="lixeiraa" src="images/lixeira-index.jpg" alt="Porque">
             </picture>
             <h2 id="porque">PORQUE?</h2>
             <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
             com foco nos nossos diferenciais e com dados reais!</p>
         </div>
-        
+    </a>  
         <!-- dashboard -->
+    <a href="dashboard.php" class="content-box">
         <div class="content-box dashboard-box">
             <picture>
-                <source type="image/webp" srcset="images/lixeira.webp">
-                <img class="lixeiraa" src="images/lixeira.jpg" alt="Dashboard">
+                <source type="image/webp" srcset="images/lixeira-index.webp">
+                <img class="lixeiraa" src="images/lixeira-index.jpg" alt="Dashboard">
             </picture>
             <h2 id="dashboard">DASHBOARD</h2>
             <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
             mais perto de você, aonde quer que você esteja!</p>
         </div>
+    </a>
     </section>
-
+    
     <!-- rodapé -->
     <footer class="footer">
         <picture>
