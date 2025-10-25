@@ -91,8 +91,18 @@ session_start();
         <div>
             <h1>Porque nós?</h1>
             <p>A TrashTracker é a melhor escolha quando se trata de monitoramento de lixo. Somos diferentes do mercado convencional,
-                porque temos como foco nós conectar com as empresas e prefeituras, mas também com o dia a dia da
-                população. Viemos para ajudar você a economizar tempo!</p>
+            porque temos como foco nós conectar com as empresas e prefeituras, mas também com o dia a dia da
+            população. Viemos para ajudar você a economizar tempo! <br> <br>
+            
+            Nossa solução é diferente porque pensa tanto em você cidadão, quanto nos órgãos governamentais. 
+            Nosso site tem dois tipos de visualização, a comum para <strong>você cidadão</strong> e outro para
+            <strong>você prefeitura/governo</strong>. Assim o cidadão pode ter acesso a lixeira vazia mais perto na palma da mão
+            e os órgãos governamentais a dados estratégicos. Além do nosso fórum aberto, que tem o intuito de receber sugestões,
+            críticas e depoimentos, tudo para trazer a melhor solução. <br> <br>
+
+            Abaixo você pode ler um pouco melhor sobre os nossos diferenciais e sobre alguns números que o projeto visa trazer, 
+            sempre pensando em sustentabilidade.
+            </p>
         </div>
     </section>
 
@@ -104,10 +114,9 @@ session_start();
             <div class="card">
                 <div class="card-texto">
                     <h3 style="text-align: center;">TÓPICO</h3>
-                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
-                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
-                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
-                    <p style="margin-top: 15px; color: #C2C5AA;">Diferencial 1</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Dashboard público</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Custo benefício</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Fórum aberto</p>
                     
                     <h3 style="text-align: center;">NÓS</h3>
                     <!-- diferencial 1 -->
@@ -125,13 +134,6 @@ session_start();
                         </picture>
                     </div>
                     <!-- diferencial 3 -->
-                    <div>
-                        <picture>
-                            <source type="image/webp" srcset="images/check.webp">
-                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    </div>
-                    <!-- diferencial 4 -->
                     <div>
                         <picture>
                             <source type="image/webp" srcset="images/check.webp">
@@ -162,13 +164,7 @@ session_start();
                             <img id="lata-lixo" src="images/x.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
                         </picture>
                     </div>
-                    <!-- diferencial 4 -->
-                    <div>
-                        <picture>
-                            <source type="image/webp" srcset="images/x.webp">
-                            <img id="lata-lixo" src="images/x.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    </div>
+
                 </div>
             </div>
     </section>
@@ -182,10 +178,9 @@ session_start();
                 <div class="dado-texto">
                     <details>
                     <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">MENOS CO2 DISSIPADO</summary>
-                    <p style="margin-top: 15px; color: #C2C5AA;">Nosso impacto ambiental é real e mensurável. Com o TrashTracker, 
-                        estimamos uma redução de aproximadamente 1 tonelada de CO₂ a menos no meio ambiente por mês por caminhão. 
-                        Isso significa um ar mais limpo para todos e um passo significativo para cidades mais verdes e sustentáveis, 
-                        combatendo ativamente as mudanças climáticas.</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Com o TrashTracker, 
+                    estimamos uma redução de cerca de 1 tonelada de CO₂ a menos gerada por mês por caminhão, 
+                    contribuindo para a menor geração de gases poluentes para o meio ambiente.</p>
                     </details>
                 </div>
             </div>
@@ -194,10 +189,10 @@ session_start();
                 <div class="dado-texto">
                     <details>
                     <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">MAIS ECONOMIA DE COMBUSTÍVEL</summary>
-                    <p style="margin-top: 15px; color: #C2C5AA;">A eficiência do TrashTracker se traduz diretamente em economia. 
-                        Ao otimizar as rotas de coleta, evitamos viagens desnecessárias, 
-                        resultando em uma poupança estimada de cerca de 375 litros de combustível por mês por caminhão. 
-                        Essa economia é um alívio para o orçamento municipal e um testemunho da inteligência aplicada à gestão de resíduos.</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;"> Com o nosso sistema inteligente de rotas, 
+                    poupamos cerca de 375 litros de combustível por mês por caminhão. 
+                    Além de representar um gasto a menos para a cidade, 
+                    essa economia também contribui para a redução da geração de gases poluentes.
                     </details>
                 </div>
             </div>
@@ -206,11 +201,9 @@ session_start();
                 <div class="dado-texto">
                     <details>
                     <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">ROTAS MENORES</summary>
-                    <p style="margin-top: 15px; color: #C2C5AA;">Chega de rotas longas e improdutivas! Com o monitoramento inteligente, 
-                        nossos caminhões percorrem caminhos significativamente mais curtos. 
-                        Calculamos que isso representa aproximadamente 936 quilômetros a menos nas rotas de coleta por mês por caminhão. 
-                        Menos quilômetros rodados significam menos desgaste veicular, mais tempo para outras tarefas e, claro, 
-                        um impacto positivo direto no meio ambiente.</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">O nosso sistema de rotas inteligentes contribui 
+                    para a otimização da coleta, focando em pontos específicos nos quais as lixeiras estão mais cheias, 
+                    e impacta diretamente na economia de combustível e na redução dessas emissões.</p>
                     </details>
                 </div>    
             </div>

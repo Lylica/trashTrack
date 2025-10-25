@@ -41,24 +41,16 @@ if (!isset($_SESSION['usuario'])) {
 
         <!-- páginas -->
         <div class="nav">
-                <!-- início -->
-                <a href="index.php">
-                    <button class="botao-header">INÍCIO</button>
-                </a>
-                <!-- sobre -->
-                <a href="sobre.php">
-                    <button class="botao-header">SOBRE</button>
-                </a>
-                <!-- porque nós? -->
-                <a href="porque.php">
-                    <button class="botao-header">PORQUE NÓS?</button>
+            <!-- forúm -->
+                <a href="admin.php">
+                    <button class="botao-header">MENU ADMIN</button>
                 </a>
                 <!-- dashboard -->
-                <a href="dashboard.php">
+                <a href="dashboardAdmin.php">
                     <button class="botao-header">DASHBOARD</button>
                 </a>
                 <!-- forúm -->
-                <a href="forum.php">
+                <a href="forumAdmin.php">
                     <button class="botao-header">FORÚM</button>
                 </a>
         </div>
@@ -81,9 +73,8 @@ if (!isset($_SESSION['usuario'])) {
     <section class="section-main">
         <h1>Fórum</h1>
         <p>
-            Boas-vindas ao fórum! Aqui você pode escrever e ler sobre sugestões, 
-            reclamações e comentários da comunidade TrashTracker. 
-            Sinta-se à vontade para compartilhar a sua ideia ou opinião!
+            Boas-vindas ao fórum! Aqui você pode escrever e ler sobre sugestões, reclamações e comentários
+            da comunidade TrashTracker. Sinta-se à vontade para compartilhar a sua ideia ou opinião!
         </p>
     </section>
 

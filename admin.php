@@ -304,14 +304,21 @@ form button:hover{background-color:#78451C; transform: scale(1.05);}
         <img id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
     </picture>
     
-    <div class="nav">
-        <a href="dashboard.php">
-            <button class="botao-header">DASHBOARD</button>
-        </a>
-        <a href="forum.php">
-            <button class="botao-header">FORÚM</button>
-        </a>
-    </div>
+    <!-- páginas -->
+        <div class="nav">
+            <!-- forúm -->
+                <a href="admin.php">
+                    <button class="botao-header">MENU ADMIN</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboardAdmin.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forumAdmin.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
+        </div>
 
     <div class="header-user">
         <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">

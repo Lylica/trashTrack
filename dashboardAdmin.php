@@ -47,36 +47,45 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body>
-     <!-- cabeçalho -->
+    <!-- cabeçalho -->
     <header class="header-admin">
 
         <!-- logo -->
         <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="images/logo.webp">
-            <img id="lata-lixo" src="images/logo.jpg" alt="Logo">
+            <source type="image/webp" srcset="images/logoTT.webp">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
-        
-        <div class="header-title">
-            <h1 id="trashtracker">TrashTracker</h1>
-        </div>
+
+        <!-- páginas -->
         <div class="nav">
-            <a class="menu-bar" href="index.php">INÍCIO</a>
-           
-            <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
-            <a class="menu-bar" href="forum.php">FORÚM</a>
+            <!-- forúm -->
+                <a href="admin.php">
+                    <button class="botao-header">MENU ADMIN</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboardAdmin.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forumAdmin.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
         </div>
+
+        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
             <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
-            <a href="logout.php"><button>Sair</button></a>
+            <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
             <?php else: ?>
             <a href="login.php"><button id="btn-login-header">Login</button></a>
             <?php endif; ?>
         </div>
     </header>
+
 
     <main class="dashboard-main">
         <aside class="barra-lateral">
@@ -144,13 +153,36 @@ if (!isset($_SESSION['usuario'])) {
     </div>
 </div>
 
+    <!-- rodapé -->
     <footer class="footer">
         <picture>
             <source type="image/webp" srcset="images/trash.webp">
             <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
         </picture>
-        <h2>TrashTracker - Todos os direitos reservados ℗</h2>
+        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
+        <!--Contato-->
+        <div>
+            <h3 style="color: black;">Contate-nos</h3>
+                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
+        </div>
+        <!--Integrantes-->
+        <div> 
+            <h3 style="color: black;">Páginas</h3>
+            <p style="color: black;"> 
+                <a href="index.php">INÍCIO</a> <br>
+                <a href="sobre.php">SOBRE</a> <br>
+                <a href="porque.php">PORQUE NÓS?</a> <br>
+                <a href="dashboard.php">DASHBOARD</a> <br>
+                <a href="forum.php">FORÚM</a>
+            </p>
+        </div>
+        <!--Repositório-->
+        <div>
+            <h3 style="color: black;">Repositório</h3>
+                <a href="https://github.com/Lylica/trashTrack"> Acesse o repositório do projeto</a> 
+        </div>
     </footer>
+
 
     <script src="js/dashboard.js"></script>
 </body>

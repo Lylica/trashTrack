@@ -90,19 +90,21 @@ session_start();
     <section class="section-main">
         <div>
             <h1 class="sobre-tt">Sobre o TrashTracker</h1>
-            <p>O TrashTracker
-                surgiu como uma projeto para que a população pudesse ter acesso ao nível das lixeiras próximas a suas
-                casas e acabou se tornando um projeto ainda maior. Nosso objetivo é de diminuir o tempo que se gasta
-                procurando uma lixeira com uma visualização simples e prática, além de diminuir a poluição e o gasto de
-                combustível. <br><br>
-                Queremos ser a mudança no seu dia a dia!
+            <p>O TrashTracker nasceu de um problema, lixeiras de bairro cheias, 
+            gerando a necessidade de sempre gastar tempo verificando as lixeiras até encontrar uma vazia. 
+            Nosso projeto tem o intuito de facilitar o dia a dia da população, 
+            deixando esse tipo de dado na palma da sua mão!
+            Nosso site possui diversas informações sobre o projeto como colaboradores, 
+            diferenciais, demonstração de dados e dashboard. 
+            Além de um fórum aberto para que a população possa deixar depoimentos, 
+            sugestões e críticas. <br> <br>
             </p>
         </div>
     </section>
 
     <!--colaboradores-->
     <section id="colaboradores-section">
-        <h1 style="font-family: Inter; color: rgb(194, 197, 170)">Colaboradores</h1>
+        <h1>Colaboradores</h1>
         <!--Colaborador 1-->
         <div class="colaboradores-container">
             <div class="colaborador-card">

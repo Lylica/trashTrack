@@ -27,7 +27,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/index.css" />
     
     <!-- Meta Tags das redes sociais -->
-    <meta property="og:title" content="Página principal, inicial e padrão do site TrashTracker">
+    <meta property="og:title" content="TrashTracker - Sua solução para o descarte incorreto de lixo">
     <meta property="og:description" content="Página principal do site TrashTracker, onde estão linkadas todas as outras páginas de acesso geral ou de administrador, sendo duas tendo necessidade de login">
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud">
@@ -97,7 +97,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     <section class="corpo-do-site">
         <div class="section-text">
             <h1 id="titulo-corpo-pagina">Trash Tracker</h1>
-            <p id="introdução">Sua solução para o descarte incorreto de lixo!</p>
+            <p id="introdução">Sua solução para o descarte incorreto de lixo doméstico!</p>
             <?php if(!isset($_SESSION['usuario'])): ?>
             <a href="login.php"><button class="btn-login">Login</button></a>
             <?php endif; ?>
