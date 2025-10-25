@@ -285,6 +285,11 @@ header img {
   transform: translateY(0);
 }
 
+.content-box h2{
+    text-decoration: none;
+    color: #DCDABE;
+}
+
 .descrição {
   position: absolute;
   bottom: 0;
