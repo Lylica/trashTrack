@@ -1,51 +1,51 @@
 <?php
 session_start();
-include 'db.php'; // Conexão com o banco
 
-// Redireciona apenas admins, só se 'tipo' estiver definido
-if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
-    header("Location: admin.php");
+// Redireciona se usuário não estiver logado
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
     exit;
 }
-
-// Usuários comuns logados continuam na página inicial
 ?>
+
+<!-- HTML -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrashTracker - Sua solução para o descarte incorreto de lixo</title>
-    <meta name="description" content="Página principal do site TrashTracker, onde estão linkadas todas as outras páginas de acesso geral ou de administrador, sendo duas tendo necessidade de login">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
+    <title>Página de visualização do dashboard do site TrashTracker</title>
+    <meta name="description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+
     <!-- Media query -->
-    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/index.css" />
-    
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 960px)" href="css/dashboard.css" />
+
     <!-- Meta Tags das redes sociais -->
-    <meta property="og:title" content="Página principal, inicial e padrão do site TrashTracker">
-    <meta property="og:description" content="Página principal do site TrashTracker, onde estão linkadas todas as outras páginas de acesso geral ou de administrador, sendo duas tendo necessidade de login">
+    <meta property="og:title" content="Página de visualização do dashboard do site TrashTracker">
+    <meta property="og:description" content="Página dashboard padrão do site TrashTracker, utilizado para visualização do dashboard que mostra o nível das lixeiras mais próximas ao usuário cadastrado">
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    
+
     <!-- Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7BYK41L1B"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-B7BYK41L1B');
     </script>
 </head>
 
 <body>
+    <div class="conteudo">
+
     <!-- cabeçalho -->
     <header class="header-admin">
 
@@ -93,56 +93,53 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         </div>
     </header>
 
-    <!-- primeira seção-->
-    <section class="corpo-do-site">
-        <div class="section-text">
-            <h1 id="titulo-corpo-pagina">Trash Tracker</h1>
-            <p id="introdução">Sua solução para o descarte incorreto de lixo!</p>
-            <?php if(!isset($_SESSION['usuario'])): ?>
-            <a href="login.php"><button class="btn-login">Login</button></a>
-            <?php endif; ?>
-            <a href="dashboard.php"><button class="btn-dashboard">Dashboard</button></a>
-        </div>
-        <picture>
-            <source type="image/webp" srcset="images/dashboard.webp">
-            <img id="dashboard-img" src="images/dashboard.jpg" alt="dashboard">
-        </picture>
-    </section>
 
-    <!-- seção de destaques -->
-    <section id="section-lixeiras">
-        <!-- sobre -->
-        <div class="content-box sobre">
-            <picture>
-                <source type="image/webp" srcset="images/lixeira.webp">
-                <img class="lixeiraa" src="images/lixeira.jpg" alt="Sobre">
-            </picture>
-            <h2 id="sobre">SOBRE</h2>
-            <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
-                dos colaboradores do projeto!</p>
-        </div>
-        <!-- porque -->
-        <div class="content-box porque">
-            <picture>
-                <source type="image/webp" srcset="images/lixeira.webp">
-                <img class="lixeiraa" src="images/lixeira.jpg" alt="Porque">
-            </picture>
-            <h2 id="porque">PORQUE?</h2>
-            <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
-            com foco nos nossos diferenciais e com dados reais!</p>
-        </div>
-        
-        <!-- dashboard -->
-        <div class="content-box dashboard-box">
-            <picture>
-                <source type="image/webp" srcset="images/lixeira.webp">
-                <img class="lixeiraa" src="images/lixeira.jpg" alt="Dashboard">
-            </picture>
-            <h2 id="dashboard">DASHBOARD</h2>
-            <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
-            mais perto de você, aonde quer que você esteja!</p>
-        </div>
-    </section>
+        <main class="dashboard-main">
+            <aside class="barra-lateral">
+                <h2 class="titulo-dashboard">
+                    <picture>
+                        <source type="image/webp" srcset="images/dashboard_icon.webp">
+                        <img src="images/dashboard_icon.jpg" alt="Ícone do Dashboard">
+                    </picture>
+                    Dashboard
+                </h2>
+
+                <div class="config-grafico">
+                    <h3>Selecionar Dia</h3>
+                    <select id="selecionar-dia">
+                        <option disabled selected>Carregando dias...</option>
+                    </select>
+
+                    <h3>Tipo de Gráfico</h3>
+                    <div class="btn-group">
+                        <button data-tipo="bar" class="active">Barra</button>
+                        <button data-tipo="step">Linhas</button>
+                    </div>
+
+                    <button id="btnCSV">Exportar dados</button>
+                </div>
+            </aside>
+
+            <section class="conteudo-dashboard">
+                <h2 id="data-titulo">Nível da Lixeira</h2>
+                <div class="container-graficos">
+                    <canvas id="chart"></canvas>
+
+                    <div id="lixeira-container">
+                        <div id="lixeira">
+                            <div id="nivel"></div>
+                        </div>
+                        <p id="percentual">0%</p>
+                    </div>
+                </div>
+
+                <div id="info-bloco" class="info-bloco">
+                    <p><strong>Última atualização:</strong> <span id="ultima-atualizacao">--:--</span></p>
+                    <p><strong>Nível atual:</strong> <span id="nivel-atual">0%</span></p>
+                    <p><strong>Status:</strong> <span id="status-lixeira">--</span></p>
+                </div>
+            </section>
+        </main>
 
     <!-- rodapé -->
     <footer class="footer">
@@ -174,8 +171,10 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         </div>
     </footer>
 
-    <!-- JS -->
-   <script src="js/index.js"></script>
+
+        <script src="js/dashboard.js"></script>
+    </div>
 </body>
+
 
 </html>
