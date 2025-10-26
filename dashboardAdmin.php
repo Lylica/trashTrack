@@ -109,7 +109,7 @@ if (!isset($_SESSION['usuario'])) {
                     <button data-tipo="step">Step</button>
                 </div>
 
-                <button id="btnCSV">Exportar CSV</button>
+                <button id="btnCSV">Exportar dados</button>
             </div>
         </aside>
 
