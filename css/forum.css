@@ -32,24 +32,31 @@ header img {
     margin: 0;
 }
 
-.nav {
-    margin-left: 2%;
-    display: flex;
-    gap: 10px;
+.nav {   
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
+  width: 1300px;
 }
 
-.nav a {
-    font-family: Inter;
-    font-size: 22px;
-    font-weight: bold;
-    color: rgb(65,72,51);
-    text-decoration: none;
-    transition: 0.3s;
+.botao-header {
+  background-color: #5A7A52;
+  color: #F5F0DC;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.botao-header:hover {
+  background-color: #44633F;
+  transform: scale(1.05);
 }
 
-.nav a:hover {
-    color: rgb(101, 109, 74);
-}
 
 /* Usuário no canto direito */
 .header-user {
@@ -210,18 +217,18 @@ header img {
 
 /* ======== CARROSSEL DE DEPOIMENTOS ======== */
 #carrossel-wrapper {
-    overflow: hidden;
-    width: 100%;
-    margin-top: 60px;
+  display: flex;
+  justify-content: center;   /* centraliza os cartões no viewport */
+  padding: 40px 20px;
+  background: transparent;
 }
 
 #carrossel-depoimentos {
-    display: flex;
-    gap: 20px;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    padding: 20px 0;
-    transition: transform 0.1s linear;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding: 10px 20px;
+  overflow-x: auto;
 }
 
 #carrossel-depoimentos::after {
@@ -230,17 +237,24 @@ header img {
 }
 
 .div-depoimentos {
-    flex: 0 0 auto;
-    width: 280px;
-    min-height: 250px;
-    background-color: rgb(220, 218, 190);
-    border-radius: 16px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    text-align: center;
+  flex: 0 0 auto;
+  width: 320px;                /* largura do cartão (ajuste se quiser maior/menor) */
+  min-height: 220px;
+  background-color: rgb(220, 218, 190); /* mesma cor do form */
+  border-radius: 20px;         /* cantos maiores como o form */
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  color: #222;                 /* texto legível */
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.div-depoimentos:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.16);
 }
 
 .div-depoimentos img,
@@ -254,44 +268,58 @@ header img {
 }
 
 .post-text-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 150px;
-    padding-right: 6px;
-    text-align: justify;
-    color: #000;
-    font-family: 'Inter', sans-serif;
+  flex: 1;
+  overflow: hidden;
+  max-height: 120px;
+  padding-right: 6px;
+  text-align: left;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
-.post-text-wrapper::-webkit-scrollbar {
-    width: 6px;
-}
-
-.post-text-wrapper::-webkit-scrollbar-track {
-    background: #dcdabe;
-    border-radius: 10px;
-}
-
-.post-text-wrapper::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-
-.post-text-wrapper::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+.post-text-wrapper p {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;     /* quantas linhas mostrar antes do corte */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-user {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  justify-content: flex-start;
+}
+
+.post-user img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0,0,0,0.08);
+  background: white;
 }
 
 .post-user cite {
-    font-size: 13px;
-    color: #000;
-    text-align: center;
+  font-size: 0.86rem;
+  color: #222;
+  font-style: normal;
+}
+
+.no-posts {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: rgb(220, 218, 190);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #222;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .btn-ver-todos a {
@@ -422,4 +450,10 @@ header img {
     .div-depoimentos {
         flex: 0 0 90%;
     }
+}
+
+@media (max-width: 900px) {
+  #carrossel-depoimentos { gap: 18px; padding: 12px; }
+  .div-depoimentos { width: 90%; min-height: 200px; }
+  .post-text-wrapper { max-height: 140px; -webkit-line-clamp: 10; }
 }

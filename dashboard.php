@@ -93,7 +93,6 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </header>
 
-
         <main class="dashboard-main">
             <aside class="barra-lateral">
                 <h2 class="titulo-dashboard">
