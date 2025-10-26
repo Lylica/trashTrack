@@ -32,23 +32,29 @@ header img {
     margin: 0;
 }
 
-.nav {
-    margin-left: 2%;
-    display: flex;
-    gap: 10px;
+.nav {   
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
+  width: 1300px;
 }
 
-.nav a {
-    font-family: Inter, sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    color: rgb(65,72,51);
-    text-decoration: none;
-    transition: 0.3s;
+.botao-header {
+  background-color: #5A7A52;
+  color: #F5F0DC;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-
-.nav a:hover {
-    color: rgb(101, 109, 74);
+.botao-header:hover {
+  background-color: #44633F;
+  transform: scale(1.05);
 }
 
 /* Usuário no canto direito */

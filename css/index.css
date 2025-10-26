@@ -290,30 +290,9 @@ header img {
     color: #DCDABE;
 }
 
-.descrição {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.4s ease;
-  z-index: 3;
-  border-radius: 0 0 16px 16px;
-}
-
-
 .content-box:hover::after {
   background: rgba(0, 0, 0, 0.6);
 }
-
-
-
 
 #section-lixeiras .content-box img,
 #section-lixeiras .lixo img {
@@ -325,33 +304,13 @@ header img {
     object-fit: contain;
 }
 
-
-
 .content-box:hover,
 .lixo:hover {
     transform: translateY(-5px);
 }
 
-/* ======== CARROSSEL DE DEPOIMENTOS ======== */
-#carrossel-wrapper {
-    overflow: hidden;
-    width: 100%;
-    margin-top: 60px;
-}
 
-#carrossel-depoimentos {
-    display: flex;
-    gap: 20px;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    padding: 20px 0;
-    transition: transform 0.1s linear;
-}
 
-#carrossel-depoimentos::after {
-    content: '';
-    flex: 0 0 20px;
-}
 
 .div-depoimentos {
     flex: 0 0 auto;
@@ -434,12 +393,11 @@ header img {
 /* ======== RODAPÉ ======== */
 .footer {
     background-color: rgb(220, 218, 190);
-    padding: 10px 20px;
+    padding: 20px 40px;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 40px 60px;
-    flex-wrap: wrap;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    gap: 10px;               /* espaço entre o ícone e o texto */
     font-family: 'Inter', sans-serif;
 }
 
@@ -450,15 +408,15 @@ header img {
 }
 
 .footer #lata-lixo {
-    height: 40px;
-    width: 40px;
+    height: 24px;
+    width: 24px;
 }
 
 .footer h2 {
     color: rgb(65, 72, 51);
     font-size: 14px;
     font-weight: 400;
-     margin-top: 10px;
+    margin: 0; /* remove margens extras */
 }
 
 .footer div {
@@ -475,7 +433,7 @@ header img {
 }
 
 .footer a {
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
 }
