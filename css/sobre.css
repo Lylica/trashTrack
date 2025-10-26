@@ -243,6 +243,10 @@ header img {
     padding: 60px 20px;
 }
 
+#colaboradores-section h1{
+    margin-left: 20px;
+}
+
 .colaboradores-container {
     display: flex;
     flex-wrap: wrap;

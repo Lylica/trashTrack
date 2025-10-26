@@ -293,6 +293,166 @@ form button:hover{background-color:#78451C; transform: scale(1.05);}
 }
 
 .avatar{width:50px;height:50px;border-radius:50%;border:2px solid #555;object-fit:cover;margin-right:10px;}
+
+/* ======== RODAPÉ ======== */
+.footer {
+    background-color: #DCDABE; 
+    padding: 50px 40px 20px 40px; /* Mais padding em cima, menos embaixo */
+    font-family: 'Inter', sans-serif;
+    /* Texto principal do rodapé será o bege claro */
+    color: #000; 
+}
+
+/* container interno com 4 colunas */
+.footer-inner {
+    display: grid;
+    /* Força 4 colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr); 
+    align-items: start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* colunas */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/* Logo no rodapé */
+.footer-logo {
+    width: 200px; /* Um pouco menor que no header */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-descricao {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000; /* Um tom um pouco mais escuro para a descrição */
+    max-width: 250px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* títulos */
+.footer-col h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* 18px */
+    font-weight: 700;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* listas */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* itens da lista */
+.footer-col li {
+    margin-bottom: 8px; /* Mais espaçamento */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* links */
+.footer-col a {
+    /* Cor do link agora é o bege, não mais o roxo */
+    color: #464646; 
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.footer-col a:hover {
+    /* Ao passar o mouse, fica branco e sublinhado */
+    color: #44633F; 
+    text-decoration: underline;
+    padding-left: 4px; /* Efeito sutil de movimento */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Estilo para a nova seção de redes sociais */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+.footer-socials a {
+    /* Se você usar ícones (como Font Awesome),
+    eles pegarão este estilo.
+    */
+    font-size: 24px; /* Aumenta o tamanho (bom para ícones) */
+    color: #464646;
+    transition: transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+.footer-socials a:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    color: #44633F;
+    text-decoration: none; /* Remove o sublinhado dos ícones */
+    padding-left: 0; /* Remove o padding-left dos links normais */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+/* Barra de Copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #5A7A52; /* Linha sutil de separação */
+    font-size: 13px;
+    color: #555; /* Cor sutil */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Ajuste fino na responsividade do rodapé */
+@media (max-width: 800px) {
+    .footer-inner {
+        /* O 'auto-fit' já deve cuidar disso, mas podemos forçar
+        para 2 colunas em telas médias antes de ir para 1.
+        */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+    }
+
+    .footer-col {
+        align-items: flex-start; /* Alinha no começo, não no centro */
+    }
+
+    .footer-logo {
+        width: 160px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-inner {
+        /* Em telas muito pequenas, força 1 coluna */
+        grid-template-columns: 1fr; 
+    }
+}
+
 </style>
 </head>
 <body>
@@ -333,29 +493,54 @@ form button:hover{background-color:#78451C; transform: scale(1.05);}
     <div class="admin-card" onclick="abrirModal('modal-depoimentos')"><h2>Depoimentos</h2><p>Visualizar e excluir posts do fórum</p></div>
 </section>
 
-<footer class="footer">
-    <picture>
-        <source type="image/webp" srcset="images/trash.webp">
-        <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-    </picture>
-    <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
-    <div>
-        <h3 style="color: black;">Contate-nos</h3>
-        <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
+<!-- rodapé -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <picture>
+                <source type="image/webp" srcset="images/logoTT.webp">
+                <img src="images/logoTT.jpg" alt="Logo TrashTracker" class="footer-logo">
+            </picture>
+            <p class="footer-descricao">Sua solução para o descarte incorreto de lixo doméstico!</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Páginas</h3>
+            <ul>
+                <li><a href="index.php">INÍCIO</a></li>
+                <li><a href="sobre.php">SOBRE</a></li>
+                <li><a href="porque.php">PORQUE NÓS?</a></li>
+                <li><a href="dashboard.php">DASHBOARD</a></li>
+                <li><a href="forum.php">FÓRUM</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <ul>
+                <li><a href="mailto:aylla.aoliveira@gmail.com">Email</a></li>
+                <li><a href="https://github.com/Lylica/trashTrack" target="_blank">Repositório do Projeto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Siga-nos</h3>
+            <div class="footer-socials">
+                <a href="#" target="_blank" aria-label="Link para o Instagram">
+                    Instagram
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Facebook">
+                    Facebook
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Twitter">
+                    Twitter
+                </a>
+            </div>
+        </div>
     </div>
-    <div> 
-        <h3 style="color: black;">Páginas</h3>
-        <p style="color: black;"> 
-            <a href="index.php">INÍCIO</a> <br>
-            <a href="sobre.php">SOBRE</a> <br>
-            <a href="porque.php">PORQUE NÓS?</a> <br>
-            <a href="dashboard.php">DASHBOARD</a> <br>
-            <a href="forum.php">FORÚM</a>
-        </p>
-    </div>
-    <div>
-        <h3 style="color: black;">Repositório</h3>
-        <a href="https://github.com/Lylica/trashTrack"> Acesse o repositório do projeto</a> 
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 TrashTracker. Todos os direitos reservados.</p>
     </div>
 </footer>
 

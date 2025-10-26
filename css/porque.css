@@ -228,6 +228,8 @@ header img {
     color: #000000;
 }
 
+
+
 .card-imagem-textura {
     height: 180px;
     background-color: #fff8e7;
@@ -235,6 +237,55 @@ header img {
     border-radius: 25px;
     margin-top: -30px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.5" fill="%23ff9900"/></svg>');
+}
+
+.tabela-comparativa {
+    display: grid;
+    /* Define 3 colunas: Tópico (flexível), Nós (auto), Concorrentes (auto) */
+    grid-template-columns: 1fr auto auto;
+    gap: 20px 15px;      /* 20px entre linhas, 15px entre colunas */
+    align-items: center; /* Alinha verticalmente texto e ícones */
+    text-align: left;    /* IMPORTANTE: Reseta o 'text-align: justify' do .card-texto */
+}
+
+.tabela-header {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem; 
+    font-weight: bold;
+    color: #C2C5AA;
+    margin-bottom: 10px; /* Espaço extra abaixo do cabeçalho */
+}
+
+/* Alinhamento dos cabeçalhos */
+.tabela-header:nth-child(1) { /* Tópico */
+    text-align: left;
+}
+.tabela-header:nth-child(2), /* Nós */
+.tabela-header:nth-child(3) { /* Concorrentes */
+    text-align: center;
+}
+
+/* Célula de texto (Dashboard, Custo, etc.) */
+.tabela-topico {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem; 
+    color: #C2C5AA;
+    text-align: left;
+}
+
+/* Células dos ícones (check e x) */
+.tabela-check,
+.tabela-x {
+    text-align: center; /* Centraliza a imagem na célula */
+}
+
+/* Estilo para as imagens (CHECK e X) */
+.tabela-check img,
+.tabela-x img {
+    width: 30px; 
+    height: 30px;
+    display: block; /* Remove espaços extras indesejados */
+    margin: 0 auto; /* Garante a centralização */
 }
 
 .cards-container{
