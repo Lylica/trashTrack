@@ -224,11 +224,16 @@ header img {
 }
 
 #carrossel-depoimentos {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-  padding: 10px 20px;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* três colunas fixas */
+  gap: 30px;                              /* espaçamento entre cards */
+  align-items: start;                     /* alinha o topo dos cards */
+  justify-items: center;                  /* centraliza cada card dentro da coluna */
+  width: min(1200px, 100%);               /* limita largura para centralizar melhor */
+  margin: 0 auto;                         /* centraliza o grid na página */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: visible;                      /* evita cortes estranhos */
 }
 
 #carrossel-depoimentos::after {
@@ -255,6 +260,31 @@ header img {
 .div-depoimentos:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+}
+
+#carrossel-depoimentos > .div-depoimentos {
+  height: 100%;
+}
+
+
+.btn-ver-todos {
+  display: inline-block;
+  background-color: rgb(101, 109, 74); /* mesma cor do tema */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-ver-todos:hover {
+  background-color: rgb(80, 86, 60);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .div-depoimentos img,
@@ -322,18 +352,12 @@ header img {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.btn-ver-todos a {
-    text-decoration: none;
-    background-color: #44633F;
-    color: #F5F0DC;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: 0.3s;
+.ver-todos-container {
+  text-align: center;
+  margin-top: 35px;
 }
 
-.btn-ver-todos a:hover {
-    background-color: #5A7A52;
-}
+
 /* ======== RODAPÉ ======== */
 .footer {
     background-color: rgb(220, 218, 190);

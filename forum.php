@@ -146,6 +146,11 @@ if (!isset($_SESSION['usuario'])) {
                         <?php echo date('d/m/Y H:i', strtotime($row['data_criacao'])); ?>
                     </cite>
                 </div>
+                <!-- botão de ver todos -->
+    <div class="ver-todos-container">
+        <a href="todos-comentarios.php" class="btn-ver-todos">Ver todos os comentários</a>
+    </div>
+</section>
             </div>
             <?php
                 endwhile;

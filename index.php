@@ -119,8 +119,6 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
                 <img class="lixeiraa" src="images/lixeira-index.webp" alt="Sobre">
             </picture>
             <h2 id="sobre">SOBRE</h2>
-            <p class="descrição">Na página “sobre”, você conhecerá um pouco mais do projeto, das nossas motivações e
-                dos colaboradores do projeto!</p> 
         </div>
     </a>
         <!-- porque -->
@@ -131,8 +129,6 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
                 <img class="lixeiraa" src="images/lixeira-index.jpg" alt="Porque">
             </picture>
             <h2 id="porque">PORQUE?</h2>
-            <p class="descrição">Na página “porque?” você entenderá o porque da TrashTracker se a melhor solução,
-            com foco nos nossos diferenciais e com dados reais!</p>
         </div>
     </a>  
         <!-- dashboard -->
@@ -143,8 +139,6 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
                 <img class="lixeiraa" src="images/lixeira-index.jpg" alt="Dashboard">
             </picture>
             <h2 id="dashboard">DASHBOARD</h2>
-            <p class="descrição">Na página “dashboard”, você terá acesso ao nível de lixo das lixeiras que estiverem
-            mais perto de você, aonde quer que você esteja!</p>
         </div>
     </a>
     </section>

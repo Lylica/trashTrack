@@ -290,6 +290,10 @@ header img {
     color: #DCDABE;
 }
 
+#sobre{
+    text-decoration: none;
+}
+
 .content-box:hover::after {
   background: rgba(0, 0, 0, 0.6);
 }
