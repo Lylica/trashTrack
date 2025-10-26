@@ -296,33 +296,54 @@ session_start();
 
    <!-- rodapé -->
     <footer class="footer">
-        <picture>
-            <source type="image/webp" srcset="images/trash.webp">
-            <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-        </picture>
-        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
-        <!--Contato-->
-        <div>
-            <h3 style="color: black;">Contate-nos</h3>
-                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
+    <div class="footer-inner">
+        <div class="footer-col">
+            <picture>
+                <source type="image/webp" srcset="images/logoTT.webp">
+                <img src="images/logoTT.jpg" alt="Logo TrashTracker" class="footer-logo">
+            </picture>
+            <p class="footer-descricao">Sua solução para o descarte incorreto de lixo doméstico!</p>
         </div>
-        <!--Integrantes-->
-        <div> 
-            <h3 style="color: black;">Páginas</h3>
-            <p style="color: black;"> 
-                <a href="index.php">INÍCIO</a> <br>
-                <a href="sobre.php">SOBRE</a> <br>
-                <a href="porque.php">PORQUE NÓS?</a> <br>
-                <a href="dashboard.php">DASHBOARD</a> <br>
-                <a href="forum.php">FORÚM</a>
-            </p>
+
+        <div class="footer-col">
+            <h3>Páginas</h3>
+            <ul>
+                <li><a href="index.php">INÍCIO</a></li>
+                <li><a href="sobre.php">SOBRE</a></li>
+                <li><a href="porque.php">PORQUE NÓS?</a></li>
+                <li><a href="dashboard.php">DASHBOARD</a></li>
+                <li><a href="forum.php">FÓRUM</a></li>
+            </ul>
         </div>
-        <!--Repositório-->
-        <div>
-            <h3 style="color: black;">Repositório</h3>
-                <a href="https://github.com/Lylica/trashTrack"> Acesse o repositório do projeto</a> 
+
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <ul>
+                <li><a href="mailto:aylla.aoliveira@gmail.com">Email</a></li>
+                <li><a href="https://github.com/Lylica/trashTrack" target="_blank">Repositório do Projeto</a></li>
+            </ul>
         </div>
-    </footer>
+
+        <div class="footer-col">
+            <h3>Siga-nos</h3>
+            <div class="footer-socials">
+                <a href="#" target="_blank" aria-label="Link para o Instagram">
+                    Instagram
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Facebook">
+                    Facebook
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Twitter">
+                    Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 TrashTracker. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
 </body>
 

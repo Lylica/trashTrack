@@ -145,30 +145,53 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     
     <!-- rodapé -->
     <footer class="footer">
-  <div class="footer-inner">
-    
-    <div class="footer-col">
-      <h3>Contate-nos</h3>
-      <a href="mailto:aylla.aoliveira@gmail.com">Email</a>
+    <div class="footer-inner">
+        <div class="footer-col">
+            <picture>
+                <source type="image/webp" srcset="images/logoTT.webp">
+                <img src="images/logoTT.jpg" alt="Logo TrashTracker" class="footer-logo">
+            </picture>
+            <p class="footer-descricao">Sua solução para o descarte incorreto de lixo doméstico!</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Páginas</h3>
+            <ul>
+                <li><a href="index.php">INÍCIO</a></li>
+                <li><a href="sobre.php">SOBRE</a></li>
+                <li><a href="porque.php">PORQUE NÓS?</a></li>
+                <li><a href="dashboard.php">DASHBOARD</a></li>
+                <li><a href="forum.php">FÓRUM</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <ul>
+                <li><a href="mailto:aylla.aoliveira@gmail.com">Email</a></li>
+                <li><a href="https://github.com/Lylica/trashTrack" target="_blank">Repositório do Projeto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Siga-nos</h3>
+            <div class="footer-socials">
+                <a href="#" target="_blank" aria-label="Link para o Instagram">
+                    Instagram
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Facebook">
+                    Facebook
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Twitter">
+                    Twitter
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="footer-col">
-      <h3>Páginas</h3>
-      <ul>
-        <li><a href="index.php">INÍCIO</a></li>
-        <li><a href="sobre.php">SOBRE</a></li>
-        <li><a href="porque.php">PORQUE NÓS?</a></li>
-        <li><a href="dashboard.php">DASHBOARD</a></li>
-        <li><a href="forum.php">FÓRUM</a></li>
-      </ul>
+    <div class="footer-bottom">
+        <p>&copy; 2025 TrashTracker. Todos os direitos reservados.</p>
     </div>
-
-    <div class="footer-col">
-      <h3>Repositório</h3>
-      <a href="https://github.com/Lylica/trashTrack" target="_blank">Acesse o repositório do projeto</a>
-    </div>
-
-  </div>
 </footer>
     <!-- JS -->
    <script src="js/index.js"></script>
