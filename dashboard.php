@@ -39,40 +39,52 @@ if (!isset($_SESSION['usuario'])) {
 
 <body>
 
-<header class="header-admin">
-    <a id="link-logo" href="index.php">
-        <picture>
+<!-- cabeçalho -->
+    <header class="header-admin">
+
+        <!-- logo -->
+        <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logoTT.webp">
-            <img src="images/logoTT.webp" alt="Logo TrashTracker" width="220" height="80">
+            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
         </picture>
-    </a>
 
-    <nav class="nav">
-        <a class="menu-bar" href="index.php">INÍCIO</a>
-        <a class="menu-bar" href="sobre.php">SOBRE</a>
-        <a class="menu-bar" href="porque.php">PORQUE NÓS?</a>
-        <a class="menu-bar" href="dashboard.php">DASHBOARD</a>
-        <a class="menu-bar" href="forum.php">FÓRUM</a>
-    </nav>
+        <!-- páginas -->
+        <div class="nav">
+                <!-- início -->
+                <a href="index.php">
+                    <button class="botao-header">INÍCIO</button>
+                </a>
+                <!-- sobre -->
+                <a href="sobre.php">
+                    <button class="botao-header">SOBRE</button>
+                </a>
+                <!-- porque nós? -->
+                <a href="porque.php">
+                    <button class="botao-header">PORQUE NÓS?</button>
+                </a>
+                <!-- dashboard -->
+                <a href="dashboard.php">
+                    <button class="botao-header">DASHBOARD</button>
+                </a>
+                <!-- forúm -->
+                <a href="forum.php">
+                    <button class="botao-header">FORÚM</button>
+                </a>
+        </div>
 
-    <div class="header-user">
-        <?php if(isset($_SESSION['usuario'])): ?>
-            <div class="desktop-only-user-info">
-                <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar do usuário">
-                <span id="user-greeting">Olá, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</span>
-            </div>
-            
-            <a href="logout.php" class="desktop-only-logout-container">
-                <button id="btn-sair-header">Sair</button>
-            </a>
-            
+        <!-- botões de login/cadastro -->
+        <div class="header-user">
+            <?php if(isset($_SESSION['usuario'])): ?>
+            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            <span>Olá,
+                <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
+            </span>
+            <a href="logout.php"><button id="btn-sair-header">Sair</button></a>
             <?php else: ?>
             <a href="login.php"><button id="btn-login-header">Login</button></a>
-        <?php endif; ?>
-    </div>
-
-    <button id="btn-mobile-menu" class="mobile-menu-button">☰</button>
-</header>
+            <?php endif; ?>
+        </div>
+    </header>
 
 <nav id="sidebar-mobile" class="sidebar-mobile">
     <button id="close-sidebar" class="close-sidebar">×</button>
@@ -107,7 +119,7 @@ if (!isset($_SESSION['usuario'])) {
         <button data-tipo="step">Step</button>
     </div>
 
-    <button id="btnCSV-mobile">Exportar CSV</button>
+    <button id="btnCSV-mobile">Exportar dados</button>
 
     </nav>
 
@@ -134,7 +146,7 @@ if (!isset($_SESSION['usuario'])) {
                 <button data-tipo="step">Step</button>
             </div>
 
-            <button id="btnCSV">Exportar CSV</button>
+            <button id="btnCSV">Exportar dados</button>
         </div>
     </aside>
 
@@ -154,22 +166,56 @@ if (!isset($_SESSION['usuario'])) {
 
 </main>
 
-<footer class="footer">
-    <h2>TrashTracker - Todos os direitos reservados ℗</h2>
-
-    <div class="footer-content-wrapper">
-        <div>
-            <h3>Contate-nos</h3>
-            <p>Número<br>Email<br>Instagram</p>
+<!-- rodapé -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <picture>
+                <source type="image/webp" srcset="images/logoTT.webp">
+                <img src="images/logoTT.jpg" alt="Logo TrashTracker" class="footer-logo">
+            </picture>
+            <p class="footer-descricao">Sua solução para o descarte incorreto de lixo doméstico!</p>
         </div>
 
-        <div>
-            <h3>Repositório</h3>
-            <a href="https://github.com/Lylica/trashTrack" target="_blank">Acesse o repositório do projeto</a>
+        <div class="footer-col">
+            <h3>Páginas</h3>
+            <ul>
+                <li><a href="index.php">INÍCIO</a></li>
+                <li><a href="sobre.php">SOBRE</a></li>
+                <li><a href="porque.php">PORQUE NÓS?</a></li>
+                <li><a href="dashboard.php">DASHBOARD</a></li>
+                <li><a href="forum.php">FÓRUM</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <ul>
+                <li><a href="mailto:aylla.aoliveira@gmail.com">Email</a></li>
+                <li><a href="https://github.com/Lylica/trashTrack" target="_blank">Repositório do Projeto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Siga-nos</h3>
+            <div class="footer-socials">
+                <a href="#" target="_blank" aria-label="Link para o Instagram">
+                    Instagram
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Facebook">
+                    Facebook
+                </a>
+                <a href="#" target="_blank" aria-label="Link para o Twitter">
+                    Twitter
+                </a>
+            </div>
         </div>
     </div>
-</footer>
 
+    <div class="footer-bottom">
+        <p>&copy; 2025 TrashTracker. Todos os direitos reservados.</p>
+    </div>
+</footer>
 <script src="js/dashboard.js"></script>
 
 </body>

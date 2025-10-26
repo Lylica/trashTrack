@@ -252,6 +252,20 @@ header img {
     margin: 0 auto;
 }     
 
+#btn-login-header{
+    background-color: #582F0E;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition:all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
 .colaborador-card {
     flex-basis: 260px;
     text-align: center;

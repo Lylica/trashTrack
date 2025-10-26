@@ -88,27 +88,65 @@ a:focus, button:focus, select:focus {
 }
 
 /* Nav Desktop */
-.nav {
-    display: flex;
-    gap: 15px;
+.nav {   
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
+  width: 1300px;
 }
 
-.nav a {
-    font-family: var(--fonte-principal);
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--cor-primaria-escura);
-    text-decoration: none;
-    padding: 5px 0;
-    transition: all 0.2s ease;
+.botao-header {
+  background-color: #5A7A52;
+  color: #F5F0DC;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.botao-header:hover {
+  background-color: #44633F;
+  transform: scale(1.05);
 }
 
-.nav a:hover,
-.nav a:focus {
-    color: var(--cor-destaque); 
-    border-bottom: 3px solid var(--cor-destaque);
-    padding-bottom: 2px;
-    outline: none;
+#btn-sair-header{
+    background-color: #44633F;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition:all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+#btn-login-header{
+    background-color: #582F0E;
+    color: #DCDABE;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition:all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+#btn-login-header:hover{
+    transform: scale(1.05);
+}
+
+#btn-sair-header:hover{
+    transform: scale(1.05);
 }
 
 /* Usuário no canto direito */
@@ -405,81 +443,164 @@ a:focus, button:focus, select:focus {
 }
 
 
-/* ========================================= */
-/* 5. RODAPÉ (FOOTER) - Compactação EXTREMA  */
-/* ========================================= */
+/* ======== RODAPÉ ======== */
 .footer {
-    background-color: var(--cor-fundo-secundario); 
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    padding: 15px var(--padding-geral) 5px var(--padding-geral); 
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
-    margin-top: auto; 
-    gap: 5px; 
-    line-height: 1.2; 
-    color: var(--cor-destaque); 
-    font-size: 0.9rem; 
+    background-color: #DCDABE; 
+    padding: 50px 40px 20px 40px; /* Mais padding em cima, menos embaixo */
+    font-family: 'Inter', sans-serif;
+    /* Texto principal do rodapé será o bege claro */
+    color: #000; 
 }
 
-.footer h2 {
-    color: var(--cor-destaque); 
-    font-size: 1rem; 
-    font-weight: 600;
-    margin: 0;
-    width: 100%; 
-    text-align: center;
+/* container interno com 4 colunas */
+.footer-inner {
+    display: grid;
+    /* Força 4 colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr); 
+    align-items: start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
-/* CONTAINER PARA DISTRIBUIÇÃO COESA NO DESKTOP */
-.footer-content-wrapper {
-    display: flex;
-    justify-content: space-between; 
-    width: 100%; 
-    max-width: 1100px; 
-    flex-wrap: wrap; 
-    gap: 40px; 
-}
-
-/* Seletores Corrigidos para Colunas do Rodapé */
-.footer-content-wrapper div { /* Corrigido para div, caso seu HTML não use classe */
+/* colunas */
+.footer-col {
     display: flex;
     flex-direction: column;
-    gap: 5px; 
-    flex: 1 1 200px; 
-    max-width: 300px; 
-    text-align: left; 
+    gap: 0px;
 }
 
-.footer-content-wrapper div h3 {
-     color: var(--cor-destaque); 
-     font-size: 1.1rem; 
-     font-weight: var(--peso-negrito);
-     margin-bottom: 0;
+/* Logo no rodapé */
+.footer-logo {
+    width: 200px; /* Um pouco menor que no header */
+    height: auto;
+    margin-bottom: 10px;
 }
 
-.footer p {
-    white-space: pre-line;
-    line-height: 1.2;
+.footer-descricao {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000; /* Um tom um pouco mais escuro para a descrição */
+    max-width: 250px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* títulos */
+.footer-col h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* 18px */
+    font-weight: 700;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* listas */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
-.footer a {
+/* itens da lista */
+.footer-col li {
+    margin-bottom: 8px; /* Mais espaçamento */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* links */
+.footer-col a {
+    /* Cor do link agora é o bege, não mais o roxo */
+    color: #464646; 
     text-decoration: none;
-    line-height: 1.2;
-    transition: color 0.2s, text-decoration 0.2s;
-    margin: 0;
-    color: var(--cor-destaque);
+    font-size: 15px;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
-.footer a:hover,
-.footer a:focus {
-    color: var(--cor-secundaria-escura); 
+.footer-col a:hover {
+    /* Ao passar o mouse, fica branco e sublinhado */
+    color: #44633F; 
     text-decoration: underline;
+    padding-left: 4px; /* Efeito sutil de movimento */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Estilo para a nova seção de redes sociais */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 
+.footer-socials a {
+    /* Se você usar ícones (como Font Awesome),
+    eles pegarão este estilo.
+    */
+    font-size: 24px; /* Aumenta o tamanho (bom para ícones) */
+    color: #464646;
+    transition: transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+.footer-socials a:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    color: #44633F;
+    text-decoration: none; /* Remove o sublinhado dos ícones */
+    padding-left: 0; /* Remove o padding-left dos links normais */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+/* Barra de Copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #5A7A52; /* Linha sutil de separação */
+    font-size: 13px;
+    color: #555; /* Cor sutil */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Ajuste fino na responsividade do rodapé */
+@media (max-width: 800px) {
+    .footer-inner {
+        /* O 'auto-fit' já deve cuidar disso, mas podemos forçar
+        para 2 colunas em telas médias antes de ir para 1.
+        */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+    }
+
+    .footer-col {
+        align-items: flex-start; /* Alinha no começo, não no centro */
+    }
+
+    .footer-logo {
+        width: 160px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-inner {
+        /* Em telas muito pequenas, força 1 coluna */
+        grid-template-columns: 1fr; 
+    }
+}
 
 /* ========================================= */
 /* 6. MENU MOBILE (SIDEBAR FLUTUANTE)       */

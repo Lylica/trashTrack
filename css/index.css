@@ -552,6 +552,7 @@ header img {
         grid-template-columns: 1fr; 
     }
 }
+
 /* ======== RESPONSIVO ======== */
 @media (max-width: 1100px) {
     #section-lixeiras {
