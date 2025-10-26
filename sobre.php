@@ -118,12 +118,13 @@ session_start();
                 </div>    
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-aylla">
+                        <source type="image/webp" srcset="images/aylla.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/aylla.jpg" alt="foto-aylla">
                     </picture>
                     <!-- bio -->
-                    <p class="bio">Estudante de engenharia da computação do segundo
-                    semestre.</p>
+                    <p class="bio">18 anos <br>
+                    Estudante de Engenharia da Computação <br>
+                    Interesse: Backend e GameDev</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
                         <picture>
@@ -146,12 +147,13 @@ session_start();
                 </div>    
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-bianca">
+                        <source type="image/webp" srcset="images/bianca.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/bianca.jpg" alt="foto-bianca">
                     </picture>
                     <!-- bio -->
-                    <p class="bio">Estudante de engenharia da computação do segundo
-                    semestre.</p>
+                    <p class="bio">18 anos <br>
+                    Estudante de Engenharia da Computação <br>
+                    Interesse:</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/bividal/">
                         <picture>
@@ -173,11 +175,13 @@ session_start();
                 </div>
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-clara">
+                        <source type="image/webp" srcset="images/clara.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/clara.jpg" alt="foto-clara">
                     </picture>
                     <!-- bio --> 
-                    <p class="bio">Estudante de engenharia mecatrônica do segundo semestre.</p>
+                    <p class="bio">18 anos <br>
+                    Estudante de Engenharia Mecatrônica <br>
+                    Interesse: CLP (Controladores lógicos programáveis)</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/clara-rondello/">
                         <picture>
@@ -198,12 +202,13 @@ session_start();
                 </div>
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-le-lopes">
+                        <source type="image/webp" srcset="images/leticia.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/leticia.jpg" alt="foto-le-lopes">
                     </picture>
                     <!-- bio --> 
-                    <p class="bio">Estudante de engenharia da computação do segundo
-                    semestre.</p>
+                    <p class="bio">19 anos <br>
+                    Estudante de Engenharia da Computação <br>
+                    Interesse: Frontend</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
                         <picture>
@@ -224,12 +229,13 @@ session_start();
                 </div>
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-murilo">
+                        <source type="image/webp" srcset="images/murilo.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/murilo.jpg" alt="foto-murilo">
                     </picture>
                     <!-- bio --> 
-                    <p class="bio">Estudante de engenharia da computação do segundo
-                    semestre.</p>
+                    <p class="bio">18 anos <br>
+                    Estudante de Engenharia da Computação <br>
+                    Interesse:</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
                         <picture>
@@ -250,12 +256,13 @@ session_start();
                 </div>
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-dias">
+                        <source type="image/webp" srcset="images/dias.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/dias.jpg" alt="foto-dias">
                     </picture>
                     <!-- bio --> 
-                    <p class="bio">Estudante de engenharia da computação do segundo
-                    semestre.</p>
+                    <p class="bio"><p class="bio">18 anos <br>
+                    Estudante de Engenharia da Computação <br>
+                    Interesse: IA e Cibersegurança</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/phsdias/">
                         <picture>
@@ -276,12 +283,13 @@ session_start();
                 </div> 
                     <!-- foto -->
                     <picture>
-                        <source type="image/webp" srcset="images/icone.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 100px;" src="images/icone.jpg" alt="foto-yasmin">
+                        <source type="image/webp" srcset="images/yasmin.webp">
+                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/yasmin.jpg" alt="foto-yasmin">
                     </picture>
                     <!-- bio -->    
-                    <p class="bio">Estudante de engenharia da computação do segundo
-                    semestre.</p>
+                    <p class="bio">18 anos <br>
+                    Estudante de Engenharia da Computação <br>
+                    Interesse: Backend</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
                         <picture>
