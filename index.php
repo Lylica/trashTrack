@@ -111,37 +111,20 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 
     <!-- seção de destaques -->
     <section id="section-lixeiras">
-        <!-- sobre -->
-    <a href="sobre.php" class="content-box"> 
-        <div>
-            <picture>
-                <source type="image/webp" srcset="images/lixeira-index.webp">
-                <img class="lixeiraa" src="images/lixeira-index.webp" alt="Sobre">
-            </picture>
-            <h2 id="sobre">SOBRE</h2>
-        </div>
+    
+    <a href="sobre.php" class="content-box card-sobre"> 
+        <h2 id="sobre">SOBRE</h2>
     </a>
-        <!-- porque -->
-    <a href="porque.php" class="content-box">
-        <div> 
-            <picture>
-                <source type="image/webp" srcset="images/lixeira-index.webp">
-                <img class="lixeiraa" src="images/lixeira-index.jpg" alt="Porque">
-            </picture>
-            <h2 id="porque">PORQUE?</h2>
-        </div>
-    </a>  
-        <!-- dashboard -->
-    <a href="dashboard.php" class="content-box">
-        <div class="content-box dashboard-box">
-            <picture>
-                <source type="image/webp" srcset="images/lixeira-index.webp">
-                <img class="lixeiraa" src="images/lixeira-index.jpg" alt="Dashboard">
-            </picture>
-            <h2 id="dashboard">DASHBOARD</h2>
-        </div>
+
+    <a href="porque.php" class="content-box card-porque">
+        <h2 id="porque">PORQUE?</h2>
+    </a>  
+
+    <a href="dashboard.php" class="content-box card-dashboard">
+        <h2 id="dashboard">DASHBOARD</h2>
     </a>
-    </section>
+
+</section>
     
     <!-- rodapé -->
     <footer class="footer">

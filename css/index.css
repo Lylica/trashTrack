@@ -263,13 +263,6 @@ header img {
   background: rgba(0, 0, 0, 0.55);
 }
 
-.content-box img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0.5em;
-    z-index: 2;
-}
-
 .content-box::after {
   content: "";
   position: absolute;
@@ -288,6 +281,20 @@ header img {
 .content-box h2{
     text-decoration: none;
     color: #DCDABE;
+    position: relative;
+    z-index: 2;
+}
+
+.card-sobre {
+    background-image: url('../images/lixeira-index.webp');
+}
+
+.card-porque {
+    background-image: url('../images/lixeira-index.webp');
+}
+
+.card-dashboard {
+    background-image: url('../images/lixeira-index.webp');
 }
 
 #sobre{
@@ -296,16 +303,6 @@ header img {
 
 .content-box:hover::after {
   background: rgba(0, 0, 0, 0.6);
-}
-
-#section-lixeiras .content-box img,
-#section-lixeiras .lixo img {
-    width: 140px;
-    height: auto;
-    display: block;
-    align-self: center;
-    margin-bottom: 18px;
-    object-fit: contain;
 }
 
 .content-box:hover,
