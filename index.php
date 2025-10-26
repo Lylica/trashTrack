@@ -145,34 +145,31 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
     
     <!-- rodapé -->
     <footer class="footer">
-        <picture>
-            <source type="image/webp" srcset="images/trash.webp">
-            <img id="lata-lixo" src="images/trash.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-        </picture>
-        <h2>TrashTracker - Todos os direitos reservados ℗ </h2>
-        <!--Contato-->
-        <div>
-            <h3 style="color: black;">Contate-nos</h3>
-                <a href="mailto:aylla.aoliveira@gmail.com">Email</a> 
-        </div>
-        <!--Integrantes-->
-        <div> 
-            <h3 style="color: black;">Páginas</h3>
-            <p style="color: black;"> 
-                <a href="index.php">INÍCIO</a> <br>
-                <a href="sobre.php">SOBRE</a> <br>
-                <a href="porque.php">PORQUE NÓS?</a> <br>
-                <a href="dashboard.php">DASHBOARD</a> <br>
-                <a href="forum.php">FORÚM</a>
-            </p>
-        </div>
-        <!--Repositório-->
-        <div>
-            <h3 style="color: black;">Repositório</h3>
-                <a href="https://github.com/Lylica/trashTrack"> Acesse o repositório do projeto</a> 
-        </div>
-    </footer>
+  <div class="footer-inner">
+    
+    <div class="footer-col">
+      <h3>Contate-nos</h3>
+      <a href="mailto:aylla.aoliveira@gmail.com">Email</a>
+    </div>
 
+    <div class="footer-col">
+      <h3>Páginas</h3>
+      <ul>
+        <li><a href="index.php">INÍCIO</a></li>
+        <li><a href="sobre.php">SOBRE</a></li>
+        <li><a href="porque.php">PORQUE NÓS?</a></li>
+        <li><a href="dashboard.php">DASHBOARD</a></li>
+        <li><a href="forum.php">FÓRUM</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Repositório</h3>
+      <a href="https://github.com/Lylica/trashTrack" target="_blank">Acesse o repositório do projeto</a>
+    </div>
+
+  </div>
+</footer>
     <!-- JS -->
    <script src="js/index.js"></script>
 </body>
