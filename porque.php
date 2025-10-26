@@ -113,53 +113,60 @@ session_start();
             <!--diferenciais-->
             <div class="card">
                 <div class="card-texto">
-                    <div class="tabela-header">TÓPICO</div>
-        <div class="tabela-header">NÓS</div>
-        <div class="tabela-header">CONCORRENTES</div>
+                    <h3 style="text-align: center;">TÓPICO</h3>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Dashboard público</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Custo benefício</p>
+                    <p style="margin-top: 15px; color: #C2C5AA;">Fórum aberto</p>
+                    
+                    <h3 style="text-align: center;">NÓS</h3>
+                    <!-- diferencial 1 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 2 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 3 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/check.webp">
+                            <img id="lata-lixo" src="images/check.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                
+                    <!-- concorrentes -->
+                    <h3 style="text-align: center;">CONCORRENTES</h3>
+                    <!-- diferencial 1 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/x.webp">
+                            <img id="lata-lixo" src="images/x.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 2 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/x.webp">
+                            <img id="lata-lixo" src="images/x.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
+                    <!-- diferencial 3 -->
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/x.webp">
+                            <img id="lata-lixo" src="images/x.jpg" alt="Logo" style="height: 30px; width: 30px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
+                        </picture>
+                    </div>
 
-        <div class="tabela-topico">Dashboard público</div>
-        <div class="tabela-check">
-            <picture>
-                <source type="image/webp" srcset="images/check.webp">
-                <img src="images/check.jpg" alt="Check">
-            </picture>
-        </div>
-        <div class="tabela-x">
-            <picture>
-                <source type="image/webp" srcset="images/x.webp">
-                <img src="images/x.jpg" alt="X">
-            </picture>
-        </div>
-
-        <div class="tabela-topico">Custo benefício</div>
-        <div class="tabela-check">
-            <picture>
-                <source type="image/webp" srcset="images/check.webp">
-                <img src="images/check.jpg" alt="Check">
-            </picture>
-        </div>
-        <div class="tabela-x">
-            <picture>
-                <source type="image/webp" srcset="images/x.webp">
-                <img src="images/x.jpg" alt="X">
-            </picture>
-        </div>
-
-        <div class="tabela-topico">Fórum aberto</div>
-        <div class="tabela-check">
-            <picture>
-                <source type="image/webp" srcset="images/check.webp">
-                <img src="images/check.jpg" alt="Check">
-            </picture>
-        </div>
-        <div class="tabela-x">
-            <picture>
-                <source type="image/webp" srcset="images/x.webp">
-                <img src="images/x.jpg" alt="X">
-            </picture>
-        </div>
-
-    </div> </div>
+                </div>
+            </div>
     </section>
 
     <!--dados-->

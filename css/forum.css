@@ -83,7 +83,7 @@ header img {
     font-size: 1em;
     cursor: pointer;
     margin-right: 10px;
-    transition: 0.3s;
+    transition:all 0.3s ease;
     font-family: 'Inter', sans-serif;
     font-weight: 800;
 }
@@ -97,11 +97,18 @@ header img {
     font-size: 1em;
     cursor: pointer;
     margin-right: 10px;
-    transition: 0.3s;
+    transition:all 0.3s ease;
     font-family: 'Inter', sans-serif;
     font-weight: 800;
 }
 
+#btn-login-header:hover{
+    transform: scale(1.05);
+}
+
+#btn-sair-header:hover{
+    transform: scale(1.05);
+}
 .header-user button:hover {
     background-color: #5A7A52;
 }
