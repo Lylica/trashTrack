@@ -30,7 +30,8 @@ header img {
   justify-content: center;
   gap: 50px;
   margin: 0 auto;
-  width: 1300px;
+  max-width: 1300px; 
+  width: 100%;
 }
 
 .botao-header {
@@ -180,7 +181,8 @@ header img {
 .section-title h1 {
     font-family: Inter;
     color: rgb(194, 197, 170);
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    text-align: center;
 }
 
 /* Diferenciais */
@@ -188,7 +190,7 @@ header img {
 #diferenciais{
     font-family: 'Inter', sans-serif; 
     color: #C2C5AA; 
-    margin-left: 50px;
+    text-align: center;
 }
 
 .card{
@@ -196,7 +198,7 @@ header img {
     border-radius: 30px;
     flex: 1;
     min-width: 280px;
-    max-width: 350px;
+    max-width: 500px;
     flex-direction: column;
     display: flex;
     font-family: 'Inter', sans-serif;
@@ -205,7 +207,7 @@ header img {
 .card-texto {
     background-color: #4a543b;
     color: #dde2d4;
-    padding: 25px;
+    padding: 25px 20px;
     border-radius: 15px;
     z-index: 10;
     flex-grow: 1;
@@ -242,7 +244,7 @@ header img {
 .tabela-comparativa {
     display: grid;
     /* Define 3 colunas: Tópico (flexível), Nós (auto), Concorrentes (auto) */
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr max-content max-content;
     gap: 20px 15px;      /* 20px entre linhas, 15px entre colunas */
     align-items: center; /* Alinha verticalmente texto e ícones */
     text-align: left;    /* IMPORTANTE: Reseta o 'text-align: justify' do .card-texto */
@@ -253,7 +255,7 @@ header img {
     font-size: 1.4rem; 
     font-weight: bold;
     color: #C2C5AA;
-    margin-bottom: 10px; /* Espaço extra abaixo do cabeçalho */
+    margin-bottom: 10px; /* Espaço extra abaixo do cabeçalho */     
 }
 
 /* Alinhamento dos cabeçalhos */
@@ -343,7 +345,8 @@ header img {
     max-width: 1200px;  
     display: flex;
     gap: 20px;
-    flex-direction: column;
+    justify-content: center;
+    /* flex-direction: column; */
 }
 
 .dado-item{
@@ -555,7 +558,8 @@ header img {
 #section-dados h1{
     font-family: 'Inter', sans-serif; 
     color: rgb(194, 197, 170); 
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    text-align: center;
 }
 
 
@@ -573,5 +577,15 @@ header img {
     .titulo-secao {
         text-align: center;
         font-size: 2.2rem;
+    }
+
+    .dados-container {
+        flex-direction: column; /* Faz os itens voltarem para vertical em telas menores */
+        align-items: center; /* Opcional: centraliza os cards */
+    }
+
+    .dado-item {
+        width: 100%;
+        max-width: 500px; /* Garante que o card não fique muito largo no tablet */
     }
 }

@@ -42,6 +42,9 @@ if (!isset($_SESSION['usuario'])) {
 <!-- cabeçalho -->
     <header class="header-admin">
 
+        <!-- botão responsivo para mobile (j)-->
+        <button id="btn-mobile-menu" class="mobile-menu-button"> &#9776; </button>
+
         <!-- logo -->
         <picture id="link-logo" href="index.php">
             <source type="image/webp" srcset="images/logoTT.webp">

@@ -34,7 +34,8 @@ header img {
   justify-content: center;
   gap: 50px;
   margin: 0 auto;
-  width: 1300px;
+  max-width: 1300px; 
+  width: 100%;
 }
 
 .botao-header {
@@ -240,11 +241,13 @@ header img {
     background-color: rgb(101, 109, 74); 
     height: auto; 
     width: auto; 
-    padding: 60px 20px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 #colaboradores-section h1{
     margin-left: 40px;
+    margin-bottom: 40px;
 }
 
 .colaboradores-container {

@@ -153,7 +153,7 @@ session_start();
                     <!-- bio -->
                     <p class="bio">18 anos <br>
                     Estudante de Engenharia da Computação <br>
-                    Interesse:</p>
+                    Interesse: indefinido</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/bividal/">
                         <picture>
@@ -235,7 +235,7 @@ session_start();
                     <!-- bio --> 
                     <p class="bio">18 anos <br>
                     Estudante de Engenharia da Computação <br>
-                    Interesse:</p>
+                    Interesse: indefinido</p>
                     <!-- linkedin -->
                     <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
                         <picture>

@@ -1,31 +1,93 @@
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F0DC;
-    margin: 0;
-    padding: 0;
+/* ========================================= */
+/* 1. VARIÁVEIS CSS (PALETA ESTRITA)        */
+/* ========================================= */
+:root {
+    /* Neutros (Claro para Escuro) */
+    --cor-fundo-principal: #F5F0DC;             
+    --cor-fundo-secundario: #DCDABE;            
+    --cor-acento-neutro: #C2C5AA;               
+    --cor-neutra-clara: #fff;                   
+
+    /* Tons de Verde (Escuro para Claro) */
+    --cor-primaria-escura: #414833;             
+    --cor-primaria-escura-rgb: 65, 72, 51;      
+    --cor-secundaria-escura: #656D4A;           
+
+    /* Tons de Contraste e Ação */
+    --cor-acento-marrom: #582F0E;               
+
+    /* Alias de Funcionalidade */
+    --cor-destaque: var(--cor-primaria-escura);     
+    --cor-login: var(--cor-acento-marrom);          
+    --cor-hover-secundaria: var(--cor-secundaria-escura); 
+    --cor-alerta: var(--cor-acento-marrom);         
+    --cor-sucesso: var(--cor-secundaria-escura);    
+    
+    --cor-suave-fundo: rgba(65, 72, 51, 0.08); 
+
+    /* Tipografia */
+    --fonte-principal: 'Montserrat', sans-serif;
+
+    /* Espaçamento */
+    --padding-geral: 24px;
+    --gap-geral: 20px;
 }
 
-/* ======== HEADER ======== */
-/* ======== CABEÇALHO ======== */
-header {
-    background-color: rgb(220, 218, 190);
+/* ========================================= */
+/* 2. GERAL & RESET (STICKY FOOTER E HARMONIA)*/
+/* ========================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-primaria-escura);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Acessibilidade: Outline de foco melhorado */
+a:focus, button:focus, select:focus {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ========================================= */
+/* 3. CABEÇALHO (HEADER)                    */
+/* ========================================= */
+.header-admin {
+    background-color: var(--cor-fundo-secundario); 
     display: flex;
     align-items: center;
-    padding: 6px 20px;
-    gap: 12px;
+    padding: 10px var(--padding-geral);
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header img {
+#link-logo img {
     height: 60px;
-    width: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
-.header-title h1 {
-    font-family: Inter, sans-serif;
-    color: rgb(65, 72, 51);
-    margin: 0;
-}
-
+/* Nav Desktop */
 .nav {   
   padding: 14px 0;
   display: flex;
@@ -46,7 +108,6 @@ header img {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .botao-header:hover {
   background-color: #44633F;
   transform: scale(1.05);
@@ -88,189 +149,299 @@ header img {
     transform: scale(1.05);
 }
 
-
 /* Usuário no canto direito */
 .header-user {
-    margin-left: auto;
+    margin-left: auto; 
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-.header-user img {
+.header-user img, .sidebar-user-profile img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #555;
+    border: 3px solid var(--cor-secundaria-escura);
+    transition: transform 0.2s;
 }
 
-.header-user button {
-    background-color: #44633F;
-    color: #F5F0DC;
+/* Container do ícone e saudação para desktop */
+.desktop-only-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Estilo Base para Botões de Ação */
+.header-user button, #btn-sair-mobile {
     border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.95em;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.2s ease, box-shadow 0.2s, transform 0.1s;
+    font-family: var(--fonte-principal);
+    font-weight: 800; 
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-user button:hover {
-    background-color: #5A7A52;
+/* Botão Sair/Login - Estilo de cor */
+#btn-sair-header, #btn-sair-mobile {
+    background-color: var(--cor-login); 
+    color: var(--cor-neutra-clara); 
+}
+#btn-login-header {
+    background-color: var(--cor-login); 
+    color: var(--cor-fundo-secundario); 
+}
+
+.header-user button:hover, #btn-sair-mobile:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-user button:active, #btn-sair-mobile:active {
+    transform: translateY(0);
 }
 
 .header-user span {
-    font-family: 'Inter', sans-serif;
-    color: #000;
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria-escura);
+    font-weight: 600; 
 }
 
-
-/* ======== LAYOUT PRINCIPAL ======== */
+/* ========================================= */
+/* 4. LAYOUT PRINCIPAL (DASHBOARD)          */
+/* ========================================= */
 .dashboard-main {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--gap-geral);
+  padding: var(--padding-geral);
+  width: 100%;
+  align-items: stretch; 
+  flex-grow: 1; 
 }
 
-/* ======== BARRA LATERAL ======== */
+/* Barra Lateral (ASIDE) - Layout Desktop */
 .barra-lateral {
-    background-color: #44633F;
-    border-radius: 10px;
-    width: 250px;
-    min-height: calc(100vh - 40px);
-    padding: 20px;
-    color: #fff;
-    flex-shrink: 0;
+  background-color: var(--cor-secundaria-escura); 
+  border-radius: 12px;
+  width: 280px;
+  padding: var(--padding-geral);
+  color: var(--cor-neutra-clara);
+  flex-shrink: 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: flex; 
+  flex-direction: column; 
 }
 
 .titulo-dashboard {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    font-weight: 700;
-    font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--cor-neutra-clara); 
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 15px;
 }
 
 .titulo-dashboard img {
-    width: 20px;
-    height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
+/* Configurações do Gráfico */
 .config-grafico {
-    background-color: #DCDABE;
-    color: #3F4B3B;
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  background-color: var(--cor-fundo-principal); 
+  color: var(--cor-primaria-escura); 
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
 }
 
-.config-grafico select, 
-.config-grafico .btn-group button,
-#btnCSV {
-    padding: 6px 10px;
-    border-radius: 5px;
-    border: 1px solid #3F4B3B;
-    cursor: pointer;
-    font-size: 0.85rem;
+.config-grafico h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    margin-bottom: 5px;
 }
 
-.config-grafico select:hover,
-.config-grafico .btn-group button:hover,
-#btnCSV:hover {
-    background-color: #C4C09C;
+/* Estilo de Inputs e Botões de Configuração */
+.config-grafico select,
+.sidebar-mobile select { 
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--cor-secundaria-escura); 
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-neutra-clara); 
+  color: var(--cor-primaria-escura); 
+  transition: all 0.2s ease;
+  appearance: none; 
+  /* SVG customizado para a seta do select */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23414833%22%20d%3D%22M287%20177.2L146.2%2036.4c-11.8-11.8-31-11.8-42.8%200l-40.4%2040.4c-11.8%2011.8-11.8%2031%200%2042.8L124.6%20197.8c11.8%2011.8%2031%2011.8%2042.8%200L287%2078.6c11.8-11.8%2011.8-31%200-42.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+
+.config-grafico select:hover {
+    border-color: var(--cor-destaque);
 }
 
 .btn-group {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-group button {
+    flex: 1 1 0;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-secundaria-escura);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-neutra-clara); 
+    color: var(--cor-primaria-escura); 
+    transition: all 0.2s ease;
 }
 
 .btn-group button.active {
-    background-color: #3F4B3B;
-    color: #F5F0DC;
-    border-color: #3F4B3B;
+  background-color: var(--cor-destaque); 
+  color: var(--cor-neutra-clara);
+  border-color: var(--cor-destaque);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 }
 
-/* ======== CONTEÚDO PRINCIPAL ======== */
+.btn-group button:not(.active):hover {
+    background-color: var(--cor-suave-fundo);
+    color: var(--cor-destaque);
+}
+
+#btnCSV, #btnCSV-mobile { 
+    background-color: var(--cor-destaque); 
+    color: var(--cor-neutra-clara);
+    font-weight: 700;
+    margin-top: 10px;
+    border: none;
+    padding: 12px 14px; 
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, transform 0.1s;
+}
+#btnCSV:hover, #btnCSV-mobile:hover {
+    background-color: var(--cor-hover-secundaria); 
+    transform: translateY(-1px);
+}
+
+
+/* Conteúdo Principal (SECTION) */
 .conteudo-dashboard {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-geral);
+  min-width: 0;
 }
 
 #data-titulo {
-    text-align: center;
-    font-weight: bold;
-    color: #191919;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 5px;
 }
 
 .container-graficos {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  gap: var(--gap-geral);
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
+/* Otimização da Proporção do Gráfico */
 #chart {
-    flex: 1 1 600px;
-    min-width: 300px;
-    height: 400px;
+  flex: 1 1 65%;
+  min-width: 300px;
+  height: 500px; 
+  background-color: var(--cor-neutra-clara);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-#lixeira-container {
-    width: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#lixeira {
-    width: 40px;
-    height: 150px;
-    border: 2px solid #191919;
-    border-radius: 4px;
-    background: #F5F0DC;
-    position: relative;
-    overflow: hidden;
-}
-
-#nivel {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 0%;
-    background: #44633F;
-    transition: height 0.4s ease;
-}
-
-#percentual {
-    margin-top: 5px;
-    font-weight: bold;
-    color: #191919;
-}
-
+/*WODjowDJ'wiodjawdawojcaowcnowc*/
 .info-bloco {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #DCDABE;
-    border-radius: 8px;
+    flex: 1 1 30%;
+    background-color: var(--cor-fundo-secundario); 
+    border-radius: 12px;
+    padding: 20px;
+    color: var(--cor-primaria-escura); 
+    font-family: var(--fonte-principal);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    color: #3F4B3B;
-    text-align: center;
+    flex-direction: row; /* ✅ SEMPRE EM LINHA */
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    gap: 15px; 
 }
 
-.mapa-rotas {
-    max-width: 100%;
-    border-radius: 8px;
+
+/* Estilo do Texto Descritivo */
+.info-bloco p {
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600; 
+    font-size: 0.95rem; 
 }
+
+/* Estilo para destaque */
+.info-bloco strong {
+    color: var(--cor-destaque); 
+    font-weight: 800; 
+    display: block; 
+    padding: 0; 
+    margin: 0; 
+    background: none; 
+    font-size: 1.5rem; 
+    line-height: 1.2;
+}
+
+/* Estilos de Status Dinâmicos para JavaScript */
+#status-lixeira {
+    font-weight: 800;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--cor-neutra-clara);
+}
+
+.status-cheio {
+    background-color: var(--cor-alerta); 
+}
+
+.status-normal {
+    background-color: var(--cor-sucesso); 
+}
+
+.status-vazio {
+    background-color: var(--cor-acento-neutro); 
+}
+
 
 /* ======== RODAPÉ ======== */
 .footer {
@@ -431,34 +602,318 @@ header img {
     }
 }
 
-.container-rotas {
+/* ========================================= */
+/* 6. MENU MOBILE (SIDEBAR FLUTUANTE)       */
+/* ========================================= */
+.mobile-menu-button {
+  display: none;
+  margin-left: auto; 
+  background: var(--cor-destaque); 
+  border: none;
+  font-size: 20px;
+  color: var(--cor-neutra-clara);
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  font-family: var(--fonte-principal);
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  order: 2; 
+}
+
+.mobile-menu-button:hover {
+    background: var(--cor-hover-secundaria); 
+}
+
+/* A Sidebar flutuante para mobile */
+.sidebar-mobile {
+  position: fixed;
+  top: 0;
+  left: -320px; 
+  width: 280px;
+  height: 100vh;
+  background: var(--cor-fundo-principal); 
+  color: var(--cor-primaria-escura); 
+  box-shadow: 8px 0 20px rgba(0,0,0,0.3);
+  padding: var(--padding-geral);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: left 0.35s ease-out;
+  z-index: 3000;
+  overflow-y: auto;
+}
+
+.sidebar-mobile.show {
+  left: 0; 
+}
+
+/* Estilo do Perfil do Usuário na Sidebar */
+.sidebar-user-profile {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.sidebar-user-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-secundaria-escura);
+}
+.sidebar-user-profile span {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--cor-destaque);
 }
 
-.rota-info, .mapa-rotas-container {
-    flex: 1 1 300px;
+/* Estiliza o botão de Sair Mobile para ter a aparência de um botão de ação */
+#btn-sair-mobile {
+    width: 100%; 
+    margin-top: 0; 
+}
+.mobile-only-logout-container {
+    width: 100%; 
 }
 
-/* Mapa responsivo */
-.mapa-rotas {
+
+/* Estilos de navegação dentro da sidebar flutuante */
+.sidebar-mobile a {
+  color: var(--cor-primaria-escura); 
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.15rem;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+.sidebar-mobile a:hover {
+    color: var(--cor-secundaria-escura);
+}
+
+.sidebar-mobile hr {
+  border: none;
+  border-top: 1px solid rgba(65, 72, 51, 0.2); 
+  margin: 10px 0;
+}
+
+/* Ajusta o estilo dos elementos de configuração do gráfico dentro do mobile sidebar */
+.sidebar-mobile h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Botões de grupo e exportação no mobile - Reutiliza estilos de .btn-group e #btnCSV */
+#btnCSV-mobile {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+}
+.sidebar-mobile .btn-group {
+    margin-bottom: 15px;
+}
+#selecionar-dia-mobile {
+    width: 100%;
 }
 
-/* Responsivo */
-@media(max-width: 768px){
-    .container-rotas {
+
+.close-sidebar {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: var(--cor-primaria-escura); 
+  transition: color 0.2s;
+}
+
+.close-sidebar:hover {
+    color: var(--cor-secundaria-escura); 
+}
+
+
+/* ========================================= */
+/* 7. RESPONSIVIDADE (MEDIA QUERIES)        */
+/* ========================================= */
+
+/* ----------------------------------------- */
+/* LÓGICA DE USUÁRIO E BOTÃO SAIR            */
+/* ----------------------------------------- */
+
+/* Padrão (Desktop): Oculta elementos de mobile e mostra os de desktop */
+.mobile-only-avatar, 
+.sidebar-user-profile,
+.mobile-only-logout-container,
+.mobile-only-hr {
+    display: none;
+}
+.desktop-only-user-info, 
+.desktop-only-logout-container {
+    display: flex; 
+}
+
+
+/* Tablet Grande / Desktop Pequeno (Max-width: 1100px) */
+@media (max-width: 1100px) {
+    .barra-lateral {
+        width: 220px;
+    }
+    .container-graficos {
         flex-direction: column;
+    }
+    #chart {
+        height: 450px; 
+        flex: 1 1 100%;
+    }
+    
+    .info-bloco {
+        flex-direction: row;
+        gap: 15px;
+        flex: 1 1 100%;
+        text-align: left; 
+        justify-content: space-between;
+        align-items: center; 
+    }
+    .info-bloco p {
+        flex: 1;
+        margin: 0;
+        min-width: 30%; 
+        font-size: 1.05rem; 
+    }
+    .info-bloco strong {
+        display: inline; 
+        font-size: 1.3rem; 
+        flex-shrink: 0;
     }
 }
 
 
-/* ======== RESPONSIVO ======== */
-@media(max-width: 900px){
-    .dashboard-main { flex-direction: column; }
-    .barra-lateral { width: 100%; min-height: auto; }
-    .container-graficos { flex-direction: column; align-items: center; }
+/* Tablet Médio (Max-width: 860px) - Layout Mobile */
+@media (max-width: 860px) {
+    .barra-lateral {
+      display: none; 
+    }
+    
+    .nav { 
+        display: none; 
+    }
+    .mobile-menu-button { 
+        display: block; 
+    }
+
+    .header-admin {
+        padding: 10px 15px;
+        justify-content: space-between; 
+        gap: 15px;
+    }
+    
+    .header-user {
+        margin-left: 0; 
+        order: 3;
+        flex-shrink: 0;
+        justify-content: flex-end; 
+    }
+    
+    /* ESCONDER ELEMENTOS DESKTOP NO HEADER */
+    .desktop-only-user-info,
+    .desktop-only-logout-container {
+        display: none; 
+    }
+    
+    /* MOSTRAR ELEMENTOS MOBILE na sidebar */
+    .sidebar-user-profile,
+    .mobile-only-logout-container {
+        display: flex; 
+    }
+    .mobile-only-hr {
+        display: block;
+    }
+
+    /* ESCONDE O AVATAR NO HEADER MOBILE */
+    .mobile-only-avatar {
+        display: none !important; 
+    }
+    
+    #btn-login-header {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile (Max-width: 600px) - Rodapé vira coluna única e centralizada */
+@media (max-width: 600px) {
+    
+    .dashboard-main {
+        padding: 15px;
+    }
+    
+    #data-titulo {
+        font-size: 1.5rem;
+    }
+    
+    #chart {
+        height: 350px; 
+        padding: 15px;
+    }
+    
+    .info-bloco {
+        flex-direction: column; /* VOLTA A FICAR VERTICAL */
+        align-items: flex-start;  /* Conteúdo alinhado à esquerda */
+        gap: 8px;
+    }
+    .info-bloco p {
+        word-break: break-word;
+        min-width: 100%;
+        font-size: 0.9rem; 
+    }
+    .info-bloco strong {
+        display: block; 
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        /* PADDING EXTREMO MOBILE */
+        padding: 15px 15px 5px 15px; 
+        gap: 5px; 
+    }
+    .footer h2 {
+        font-size: 0.9rem; 
+        margin-bottom: 0;
+    }
+    
+    .footer-content-wrapper {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 20px;
+        width: 100%; 
+        max-width: 350px; 
+    }
+
+    /* As duas colunas internas do rodapé */
+    .footer div {
+        flex: 1 1 100%; 
+        max-width: 100%;
+        text-align: center; 
+        align-items: center; 
+        /* Gap entre itens de coluna REDUZIDO AO MÍNIMO */
+        gap: 2px; /* MÍNIMO ABSOLUTO */
+    }
+    
+    .footer h3 {
+        font-size: 1rem;
+    }
+    .footer p, .footer a {
+        font-size: 0.85rem; 
+        line-height: 1.2;
+    }
+}
+
+/* Mobile Muito Pequeno (Max-width: 400px) */
+@media (max-width: 400px) {
+    .header-user {
+        gap: 4px;
+    }
 }

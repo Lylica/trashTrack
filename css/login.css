@@ -32,7 +32,8 @@ header img {
   justify-content: center;
   gap: 50px;
   margin: 0 auto;
-  width: 1300px;
+  max-width: 1300px; 
+  width: 100%;
 }
 
 .botao-header {
