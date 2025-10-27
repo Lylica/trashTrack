@@ -123,7 +123,8 @@ session_start();
                     <h3 class="tabela-header">NÓS</h3>
                     <h3 class="tabela-header">CONCORRENTES</h3>
 
-                    <p class="tabela-topico">Dashboard público</p>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #C2C5AA; text-align: left;">
+                    Dashboard público</p>
 
                     <div class="tabela-check">
                         <picture>
@@ -138,7 +139,8 @@ session_start();
                         </picture>
                     </div>
 
-                    <p class="tabela-topico">Custo benefício</p>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #C2C5AA; text-align: left;">
+                    Custo benefício</p>
                     <div class="tabela-check">
                         <picture>
                             <source type="image/webp" srcset="images/check.webp">
@@ -152,7 +154,8 @@ session_start();
                         </picture>
                     </div>
 
-                    <p class="tabela-topico">Fórum aberto</p>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #C2C5AA; text-align: left;">
+                    Fórum aberto</p>
                     <div class="tabela-check">
                         <picture>
                             <source type="image/webp" srcset="images/check.webp">
