@@ -112,6 +112,21 @@ session_start();
         </div>
     </section>
 
+    <section class="section-main">
+        <div>
+            <picture>
+                <source type="image/webp" srcset="images/ods-11.webp">
+                <img src="images/ods-11.jpg" alt="ods-11">
+            </picture>
+        </div>
+        <div>
+            <picture>
+                <source type="image/webp" srcset="images/ods-12.webp">
+                <img src="images/ods-12.jpg" alt="ods-12">
+            </picture>
+        </div>
+    </section>
+
     <!-- caixa diferenciais-->
     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; ">
         <h1 id="diferenciais">Diferenciais</h1>
