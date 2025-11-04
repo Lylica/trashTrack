@@ -156,6 +156,50 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </section>
 
+    <!--Dados-->
+    <section>
+       <div id="info-bloco" class="info-bloco">
+            <h2>ROTA INTELIGENTE</h2>
+            <p><strong>Tempo de rota: </strong> <span>1 hora</span></p>
+            <p><strong>Qtd de lixeiras: </strong><span>20 lixeiras</span></p>
+            <p><strong>Distância total: </strong> <span>20km</span> <br>
+                <strong>Rota inteligente: </strong> <span>20km</span> <br>
+            </p>
+            <p><strong>Combustível rota comum: </strong> <span>8L</span> <br>
+                <strong>Combustível rota inteligente: </strong> <span>3,2L</span> <br> <br>
+                <strong>Combustível economizado: </strong> <span>4,8L</span> <br>
+            </p>
+        </div>
+    </section>
+
+    <!--Google Maps-->
+    <section>
+        <div id="map" style="height: 500px; width: 600px;"></div>
+        <script>
+            // Função de callback que será executada quando a API do Google Maps for carregada
+            function initMap() {
+                // Localização que queremos centralizar (Ex: Coordenadas de São Paulo)
+                const myLatLng = { lat: -23.5505, lng: -46.6333 };
+
+                // Cria um novo objeto de mapa
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 12, // Nível de zoom
+                    center: myLatLng, // Centraliza o mapa na localização definida
+                });
+
+                // (Opcional) Adiciona um marcador (pin) no mapa
+                new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: "São Paulo!",
+                });
+            }
+        </script>
+
+        <script 
+            src="https://maps.googleapis.com/maps/api/js?key=API_AQUI&callback=initMap&v=weekly" async>
+        </script>
+    </section>
 
 </main>
 
