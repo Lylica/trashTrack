@@ -63,7 +63,7 @@ if (!isset($_SESSION['usuario'])) {
                 </a>
                 <!-- porque nós? -->
                 <a href="porque.php">
-                    <button class="botao-header">PORQUE NÓS?</button>
+                    <button class="botao-header">POR QUE NÓS?</button>
                 </a>
                 <!-- dashboard -->
                 <a href="dashboard.php">
@@ -107,7 +107,7 @@ if (!isset($_SESSION['usuario'])) {
 
     <a href="index.php">INÍCIO</a>
     <a href="sobre.php">SOBRE</a>
-    <a href="porque.php">PORQUE NÓS?</a>
+    <a href="porque.php">POR QUE NÓS?</a>
     <a href="dashboard.php">DASHBOARD</a>
     <a href="forum.php">FÓRUM</a>
 
@@ -185,7 +185,7 @@ if (!isset($_SESSION['usuario'])) {
             <ul>
                 <li><a href="index.php">INÍCIO</a></li>
                 <li><a href="sobre.php">SOBRE</a></li>
-                <li><a href="porque.php">PORQUE NÓS?</a></li>
+                <li><a href="porque.php">POR QUE NÓS?</a></li>
                 <li><a href="dashboard.php">DASHBOARD</a></li>
                 <li><a href="forum.php">FÓRUM</a></li>
             </ul>

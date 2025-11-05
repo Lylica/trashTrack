@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de informações "porque nós?" do site TrashTracker</title>
+    <title>Página de informações "por que nós?" do site TrashTracker</title>
     <meta name="description"
         content="Página de informações 'porque nós?' do site TrashTracker, usado para disponibilização das informações acerca dos diferenciais e alguns retornos visiveis">
     <link rel="stylesheet" href="css/porque.css">
@@ -62,7 +62,7 @@ session_start();
             </a>
             <!-- porque nós? -->
             <a href="porque.php">
-                <button class="botao-header">PORQUE NÓS?</button>
+                <button class="botao-header">POR QUE NÓS?</button>
             </a>
             <!-- dashboard -->
             <a href="dashboard.php">
@@ -91,7 +91,7 @@ session_start();
     <!-- primeira seção -->
     <section class="section-main">
         <div>
-            <h1 style="margin-bottom: 30px">Porque nós?</h1>
+            <h1 style="margin-bottom: 30px">Por que nós?</h1>
             <p>A TrashTracker é a melhor escolha quando se trata de monitoramento de lixo. Somos diferentes do mercado
                 convencional,
                 porque temos como foco nós conectar com as empresas e prefeituras, mas também com o dia a dia da

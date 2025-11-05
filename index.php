@@ -71,7 +71,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
             </a>
             <!-- porque nós? -->
             <a href="porque.php">
-                <button class="botao-header">PORQUE NÓS?</button>
+                <button class="botao-header">POR QUE NÓS?</button>
             </a>
             <!-- dashboard -->
             <a href="dashboard.php">
@@ -117,7 +117,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
         </a>
 
         <a href="porque.php" class="content-box card-porque">
-            <h2 id="porque">PORQUE?</h2>
+            <h2 id="porque">POR QUE?</h2>
         </a>  
 
         <a href="dashboard.php" class="content-box card-dashboard">
@@ -142,7 +142,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
                 <ul>
                     <li><a href="index.php">INÍCIO</a></li>
                     <li><a href="sobre.php">SOBRE</a></li>
-                    <li><a href="porque.php">PORQUE NÓS?</a></li>
+                    <li><a href="porque.php">POR QUE NÓS?</a></li>
                     <li><a href="dashboard.php">DASHBOARD</a></li>
                     <li><a href="forum.php">FÓRUM</a></li>
                 </ul>
