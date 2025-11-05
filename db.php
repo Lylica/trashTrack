@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root"; // padrão do XAMPP
-$pass = ""; // senha vazia por padrão
+$pass = "trashtrack"; // senha vazia por padrão
 $db   = "trashtrack";
 
 $conn = new mysqli($host, $user, $pass, $db);
