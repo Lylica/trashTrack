@@ -103,204 +103,185 @@ session_start();
     </section>
 
     <!--colaboradores-->
-    <section id="colaboradores-section">
-        <h1>Colaboradores</h1>
-        <!--Colaborador 1-->
-        <div class="colaboradores-container">
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <!-- logo -->
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Aylla Alves</h2>
-                </div>    
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/aylla.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/aylla.jpg" alt="foto-aylla">
-                    </picture>
-                    <!-- bio -->
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: Backend e GameDev</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                        <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        
-        <!--Colaborador 2-->
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <!-- logo -->
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Bianca Vidal</h2>
-                </div>    
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/bianca.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/bianca.jpg" alt="foto-bianca">
-                    </picture>
-                    <!-- bio -->
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: indefinido</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/bividal/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        <!--Colaborador 3-->
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <!-- logo -->
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Clara Rondello</h2>
+    <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    Colaboradores
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                AA
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Aylla Alves
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            18 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia da Computação
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: Backend e GameDev
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                BV
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Bianca Vidal
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            18 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia da Computação
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: Indefinido
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                CR
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Clara Rondello
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            18 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia Mecatrônica
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: CLP (Controladores lógicos programáveis)
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                LL
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Letícia Lopes
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            19 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia da Computação
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: Frontend
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                MC
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Murilo Cortez
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            18 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia da Computação
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: Indefinido
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                PD
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Pedro Dias
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            18 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia da Computação
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: IA e Cibersegurança
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+                        <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl font-bold text-blue-600">
+                                YS
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                            Yasmin Souza
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-1">
+                            18 anos
+                        </p>
+                        <p class="text-sm text-gray-500 mb-1">
+                            Estudante de Engenharia da Computação
+                        </p>
+                        <p class="text-sm text-indigo-600 mb-4">
+                            Interesse: Backend
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </a>
+                    </div>
+
                 </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/clara.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/clara.jpg" alt="foto-clara">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia Mecatrônica <br>
-                    Interesse: CLP (Controladores lógicos programáveis)</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/clara-rondello/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
             </div>
-        <!--Colaborador 4-->
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Letícia Lopes</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/leticia.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/leticia.jpg" alt="foto-le-lopes">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio">19 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: Frontend</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        <!--Colaborador 5-->
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Murilo Cortez</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/murilo.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/murilo.jpg" alt="foto-murilo">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: indefinido</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        <!--Colaborador 6-->
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Pedro Dias</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/dias.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/dias.jpg" alt="foto-dias">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio"><p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: IA e Cibersegurança</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/phsdias/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        <!--Colaborador 7-->
-            <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Yasmin Souza</h2>
-                </div> 
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/yasmin.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/yasmin.jpg" alt="foto-yasmin">
-                    </picture>
-                    <!-- bio -->    
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: Backend</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        </div>    
-    </section>
+        </section>
+    
 
    <!-- rodapé -->
     <footer class="footer">
