@@ -17,7 +17,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="description" content="Dashboard do TrashTracker, mostrando o nível das lixeiras próximas ao usuário.">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboardAdmin.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -39,35 +39,32 @@ if (!isset($_SESSION['usuario'])) {
 
 <body>
 
-<!-- cabeçalho -->
-    <header class="header-admin">
+<header class="header-admin">
 
-        <!-- logo -->
-        <picture id="link-logo" href="index.php">
-            <source type="image/webp" srcset="images/logoTT.webp">
-            <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo">
-        </picture>
+        <a id="link-logo" href="index.php">
+            <picture>
+                <source type="image/webp" srcset="images/logoTT.webp">
+                <img style="width: 220px; height: 80px" id="lata-lixo" src="images/logoTT.jpg" alt="Logo TrashTracker">
+            </picture>
+        </a>
+        
+        <button id="btn-mobile-menu" class="btn-mobile-menu">☰</button>
 
-        <!-- páginas -->
-        <div class="nav">
-                <!-- início -->
+        <nav class="nav">
                 <a href="admin.php">
                     <button class="botao-header">MENU ADMIN</button>
                 </a>
-                <!-- dashboard -->
                 <a href="dashboardAdmin.php">
                     <button class="botao-header">DASHBOARD</button>
                 </a>
-                <!-- forúm -->
                 <a href="forumAdmin.php">
                     <button class="botao-header">FORÚM</button>
                 </a>
-        </div>
+        </nav>
 
-        <!-- botões de login/cadastro -->
         <div class="header-user">
             <?php if(isset($_SESSION['usuario'])): ?>
-            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar">
+            <img src="avatares/<?php echo htmlspecialchars($_SESSION['avatar']); ?>" alt="Avatar do usuário logado">
             <span>Olá,
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>!
             </span>
@@ -117,64 +114,64 @@ if (!isset($_SESSION['usuario'])) {
 
 <main class="dashboard-main">
 
-    <aside class="barra-lateral">
-        <h2 class="titulo-dashboard">
-            <picture>
-                <source type="image/webp" srcset="images/dashboard_icon.webp">
-                <img src="images/dashboard_icon.jpg" alt="Ícone Dashboard">
-            </picture>
-            Dashboard
-        </h2>
+    <div class="dashboard-container">
+        <aside class="barra-lateral">
+            <h2 class="titulo-dashboard">
+                <picture>
+                    <source type="image/webp" srcset="images/dashboard_icon.webp">
+                    <img src="images/dashboard_icon.jpg" alt="Ícone Dashboard">
+                </picture>
+                Dashboard
+            </h2>
 
-        <div class="config-grafico">
-            <h3>Selecionar Dia</h3>
-            <select id="selecionar-dia">
-                <option disabled selected>Carregando dias...</option>
-            </select>
+            <div class="config-grafico">
+                <h3>Selecionar Dia</h3>
+                <select id="selecionar-dia">
+                    <option disabled selected>Carregando dias...</option>
+                </select>
 
-            <h3>Tipo de Gráfico</h3>
-            <div class="btn-group">
-                <button data-tipo="bar" class="active">Bar</button>
-                <button data-tipo="step">Step</button>
+                <h3>Tipo de Gráfico</h3>
+                <div class="btn-group">
+                    <button data-tipo="bar" class="active">Bar</button>
+                    <button data-tipo="step">Step</button>
+                </div>
+
+                <button id="btnCSV">Exportar dados</button>
+            </div>
+        </aside>
+
+        <section class="conteudo-dashboard">
+            <h2 id="data-titulo">Nível da Lixeira</h2>
+
+            <div class="container-graficos">
+                <canvas id="chart"></canvas>
             </div>
 
-            <button id="btnCSV">Exportar dados</button>
-        </div>
-    </aside>
-
-    <section class="conteudo-dashboard">
-        <h2 id="data-titulo">Nível da Lixeira</h2>
-
-        <div class="container-graficos">
-            <canvas id="chart"></canvas>
-        </div>
-
-        <div id="info-bloco" class="info-bloco">
-            <p><strong>Última atualização:</strong> <span id="ultima-atualizacao">--:--</span></p>
-            <p><strong>Nível atual:</strong> <span id="nivel-atual">0%</span></p>
-            <p><strong>Status:</strong> <span id="status-lixeira">--</span></p>
-        </div>
-    </section>
-
-    <!--Dados-->
-    <section>
-       <div id="info-bloco" class="info-bloco">
+            <div id="dashboard-info-bloco" class="info-bloco">
+                <p><strong>Última atualização:</strong> <span id="ultima-atualizacao">--:--</span></p>
+                <p><strong>Nível atual:</strong> <span id="nivel-atual">0%</span></p>
+                <p><strong>Status:</strong> <span id="status-lixeira">--</span></p>
+            </div>
+        </section>
+    </div>
+    <section class="rota-inteligente-section">
+       <div id="rota-info-bloco" class="info-bloco">
             <h2>ROTA INTELIGENTE</h2>
             <p><strong>Tempo de rota: </strong> <span>1 hora</span></p>
             <p><strong>Qtd de lixeiras: </strong><span>20 lixeiras</span></p>
-            <p><strong>Distância total: </strong> <span>20km</span> <br>
-                <strong>Rota inteligente: </strong> <span>20km</span> <br>
-            </p>
-            <p><strong>Combustível rota comum: </strong> <span>8L</span> <br>
-                <strong>Combustível rota inteligente: </strong> <span>3,2L</span> <br> <br>
-                <strong>Combustível economizado: </strong> <span>4,8L</span> <br>
-            </p>
+            <p><strong>Distância total (Comum): </strong> <span>20km</span></p>
+            <p><strong>Distância total (Inteligente): </strong> <span>12km</span></p>
+            
+            <p><strong>Combustível rota comum: </strong> <span>8L</span></p>
+            <p><strong>Combustível rota inteligente: </strong> <span>3,2L</span></p> 
+            <br>
+            <p><strong>Combustível economizado: </strong> <span>4,8L</span></p>
         </div>
     </section>
 
-    <!--Google Maps-->
-    <section>
-        <div id="map" style="height: 500px; width: 600px;"></div>
+    <section class="google-maps-section">
+        <h2>Mapa de Lixeiras e Rotas</h2>
+        <div id="map" style="height: 500px; width: 100%;"></div> 
         <script>
             // Função de callback que será executada quando a API do Google Maps for carregada
             function initMap() {
@@ -203,8 +200,7 @@ if (!isset($_SESSION['usuario'])) {
 
 </main>
 
-<!-- rodapé -->
-    <footer class="footer">
+<footer class="footer">
     <div class="footer-inner">
         <div class="footer-col">
             <picture>

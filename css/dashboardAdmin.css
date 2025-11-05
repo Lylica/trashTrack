@@ -12,6 +12,7 @@
     --cor-primaria-escura: #414833;             
     --cor-primaria-escura-rgb: 65, 72, 51;      
     --cor-secundaria-escura: #656D4A;           
+    --cor-verde-botao-hover: #44633F; /* NOVO: Cor específica do hover do botão */
 
     /* Tons de Contraste e Ação */
     --cor-acento-marrom: #582F0E;               
@@ -24,9 +25,14 @@
     --cor-sucesso: var(--cor-secundaria-escura);    
     
     --cor-suave-fundo: rgba(65, 72, 51, 0.08); 
+    
+    /* Alias de Cores de Texto (Para Consistência de Botões) */
+    --cor-texto-botao-claro: var(--cor-fundo-principal); /* #F5F0DC */
+    --cor-texto-acento-claro: var(--cor-fundo-secundario); /* #DCDABE */ 
 
     /* Tipografia */
     --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Inter', sans-serif; /* NOVO: Para usar onde o 'Inter' é fixo */
 
     /* Espaçamento */
     --padding-geral: 24px;
@@ -97,57 +103,72 @@ a:focus, button:focus, select:focus {
   width: 1300px;
 }
 
+/* Base de Estilo para o Botão Principal de Navegação (REUTILIZA VARIÁVEIS E REM) */
 .botao-header {
-  background-color: #5A7A52;
-  color: #F5F0DC;
+  background-color: var(--cor-secundaria-escura); /* Cor primária */
+  color: var(--cor-texto-botao-claro); /* Cor de texto clara */
   border: none;
   border-radius: 10px;
   padding: 12px 28px;
-  font-size: 16px;
+  font-size: 1rem; /* Alterado de 16px para rem */
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .botao-header:hover {
-  background-color: #44633F;
+  background-color: var(--cor-verde-botao-hover); /* Usa a nova variável */
   transform: scale(1.05);
 }
 
-#btn-sair-header{
-    background-color: #44633F;
-    color: #DCDABE;
+/* === Botões de Login/Sair (Utilizam a Base e Sobrescrevem Cor) === */
+
+/* Estilo Base para Botões de Ação de Usuário */
+.header-user button, #btn-sair-mobile {
+    /* Estilos herdados de .header-user button: */
     border: none;
     border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 1em;
+    padding: 10px 18px;
+    font-size: 0.95em;
     cursor: pointer;
-    margin-right: 10px;
-    transition:all 0.3s ease;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
+    transition: background-color 0.2s ease, box-shadow 0.2s, transform 0.1s;
+    font-family: var(--fonte-principal);
+    font-weight: 800; 
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#btn-login-header{
-    background-color: #582F0E;
-    color: #DCDABE;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-right: 10px;
-    transition:all 0.3s ease;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
+/* Botão Sair - Cores */
+#btn-sair-header, #btn-sair-mobile {
+    background-color: var(--cor-verde-botao-hover); /* Usa a cor de destaque (verde mais escuro) */
+    color: var(--cor-texto-acento-claro); /* Cor clara (#DCDABE) */
+    font-family: var(--fonte-secundaria); /* Usa a variável Inter */
+    margin-right: 10px; /* Mantém o espaçamento */
+}
+#btn-sair-header:hover {
+    transform: scale(1.05); /* Reutiliza o estilo de hover */
 }
 
-#btn-login-header:hover{
-    transform: scale(1.05);
+/* Botão Login - Cores */
+#btn-login-header {
+    background-color: var(--cor-login); /* Marrom (#582F0E) */
+    color: var(--cor-texto-acento-claro); /* Cor clara (#DCDABE) */
+    font-family: var(--fonte-secundaria); /* Usa a variável Inter */
+    margin-right: 10px; /* Mantém o espaçamento */
+}
+#btn-login-header:hover {
+    transform: scale(1.05); /* Reutiliza o estilo de hover */
 }
 
-#btn-sair-header:hover{
-    transform: scale(1.05);
+/* REUTILIZAÇÃO DE HOVER/ACTIVE */
+.header-user button:hover, #btn-sair-mobile:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
+.header-user button:active, #btn-sair-mobile:active {
+    transform: translateY(0);
+}
+
 
 /* Usuário no canto direito */
 .header-user {
@@ -173,40 +194,6 @@ a:focus, button:focus, select:focus {
     gap: 12px;
 }
 
-/* Estilo Base para Botões de Ação */
-.header-user button, #btn-sair-mobile {
-    border: none;
-    border-radius: 10px;
-    padding: 10px 18px;
-    font-size: 0.95em;
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s, transform 0.1s;
-    font-family: var(--fonte-principal);
-    font-weight: 800; 
-    white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Botão Sair/Login - Estilo de cor */
-#btn-sair-header, #btn-sair-mobile {
-    background-color: var(--cor-login); 
-    color: var(--cor-neutra-clara); 
-}
-#btn-login-header {
-    background-color: var(--cor-login); 
-    color: var(--cor-fundo-secundario); 
-}
-
-.header-user button:hover, #btn-sair-mobile:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.header-user button:active, #btn-sair-mobile:active {
-    transform: translateY(0);
-}
-
 .header-user span {
     font-family: var(--fonte-principal);
     color: var(--cor-primaria-escura);
@@ -216,14 +203,25 @@ a:focus, button:focus, select:focus {
 /* ========================================= */
 /* 4. LAYOUT PRINCIPAL (DASHBOARD)          */
 /* ========================================= */
+
+/* CORREÇÃO: Remove display: flex do main para que as seções se empilhem */
 .dashboard-main {
-  display: flex;
+  display: block; 
   gap: var(--gap-geral);
   padding: var(--padding-geral);
   width: 100%;
-  align-items: stretch; 
   flex-grow: 1; 
 }
+
+/* NOVO CONTÊINER: Aplica o layout de duas colunas apenas à barra lateral e ao dashboard */
+.dashboard-container {
+    display: flex;
+    gap: var(--gap-geral);
+    width: 100%;
+    align-items: stretch; 
+    margin-bottom: var(--gap-geral); 
+}
+
 
 /* Barra Lateral (ASIDE) - Layout Desktop */
 .barra-lateral {
@@ -290,7 +288,7 @@ a:focus, button:focus, select:focus {
   transition: all 0.2s ease;
   appearance: none; 
   /* SVG customizado para a seta do select */
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23414833%22%20d%3D%22M287%20177.2L146.2%2036.4c-11.8-11.8-31-11.8-42.8%200l-40.4%2040.4c-11.8%2011.8-11.8%2031%200%2042.8L124.6%20197.8c11.8%2011.8%2031%2011.8%2042.8%200L287%2078.6c11.8-11.8%2011.8-31%200-42.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%2D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23414833%22%20d%3D%22M287%20177.2L146.2%2036.4c-11.8-11.8-31-11.8-42.8%200l-40.4%2040.4c-11.8%2011.8-11.8%2031%200%2042.8L124.6%20197.8c11.8%2011.8%2031%2011.8%2042.8%200L287%2078.6c11.8-11.8%2011.8-31%200-42.8z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
@@ -383,7 +381,6 @@ a:focus, button:focus, select:focus {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/*WODjowDJ'wiodjawdawojcaowcnowc*/
 .info-bloco {
     flex: 1 1 30%;
     background-color: var(--cor-fundo-secundario); 
@@ -393,7 +390,7 @@ a:focus, button:focus, select:focus {
     font-family: var(--fonte-principal);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     display: flex;
-    flex-direction: row; /* ✅ SEMPRE EM LINHA */
+    flex-direction: row; 
     justify-content: space-between;
     align-items: center;
     min-width: 250px;
@@ -442,20 +439,89 @@ a:focus, button:focus, select:focus {
     background-color: var(--cor-acento-neutro); 
 }
 
+/* ========================================= */
+/* 5. SEÇÕES DE ROTA E MAPA (Corrigidas)     */
+/* ========================================= */
+.rota-inteligente-section, .google-maps-section {
+    width: 100%; 
+    margin-bottom: var(--gap-geral);
+}
 
-/* ======== RODAPÉ ======== */
+/* Estilo do bloco de rota (ID único) */
+#rota-info-bloco {
+    background-color: var(--cor-fundo-secundario); 
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    /* GRID LAYOUT para 2 COLUNAS */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px 40px; 
+}
+
+/* Título deve ocupar as duas colunas */
+#rota-info-bloco h2 {
+    color: var(--cor-destaque);
+    font-size: 1.2rem;
+    margin-bottom: 5px; 
+    border-bottom: 2px solid rgba(65, 72, 51, 0.2);
+    padding-bottom: 8px;
+    width: 100%;
+    
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+}
+
+/* CORREÇÃO DA DISTRIBUIÇÃO: Usa Flexbox dentro de cada <p> */
+#rota-info-bloco p {
+    font-size: 1rem;
+    line-height: 1.5;
+    
+    display: flex;
+    justify-content: space-between; /* Espalha rótulo e valor */
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#rota-info-bloco p strong {
+    font-weight: 700;
+    color: var(--cor-primaria-escura); /* Ajusta a cor do rótulo para o padrão */
+    display: inline; /* Volta a ser inline para o flex funcionar */
+}
+
+#rota-info-bloco p span {
+    font-weight: 800; /* Destaca o valor */
+    color: var(--cor-destaque);
+}
+
+
+.google-maps-section h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 15px;
+}
+
+#map {
+    width: 100% !important; 
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======== RODAPÉ (Reutiliza a variável de fonte) ======== */
 .footer {
-    background-color: #DCDABE; 
-    padding: 50px 40px 20px 40px; /* Mais padding em cima, menos embaixo */
-    font-family: 'Inter', sans-serif;
-    /* Texto principal do rodapé será o bege claro */
+    background-color: var(--cor-fundo-secundario); 
+    padding: 50px 40px 20px 40px; 
+    font-family: var(--fonte-secundaria);
     color: #000; 
 }
 
 /* container interno com 4 colunas */
 .footer-inner {
     display: grid;
-    /* Força 4 colunas de tamanho igual */
     grid-template-columns: repeat(4, 1fr); 
     align-items: start;
     gap: 30px;
@@ -473,7 +539,7 @@ a:focus, button:focus, select:focus {
 
 /* Logo no rodapé */
 .footer-logo {
-    width: 200px; /* Um pouco menor que no header */
+    width: 200px; 
     height: auto;
     margin-bottom: 10px;
 }
@@ -481,9 +547,9 @@ a:focus, button:focus, select:focus {
 .footer-descricao {
     font-size: 14px;
     line-height: 1.5;
-    color: #000; /* Um tom um pouco mais escuro para a descrição */
+    color: #000; 
     max-width: 250px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
     margin-top: 5px;
 }
@@ -491,10 +557,10 @@ a:focus, button:focus, select:focus {
 /* títulos */
 .footer-col h3 {
     margin-bottom: 10px;
-    font-size: 1.1rem; /* 18px */
+    font-size: 1.1rem; 
     font-weight: 700;
     color: #000;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-secundaria);
 }
 
 /* listas */
@@ -502,34 +568,32 @@ a:focus, button:focus, select:focus {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
 /* itens da lista */
 .footer-col li {
-    margin-bottom: 8px; /* Mais espaçamento */
-    font-family: 'Inter', sans-serif;
+    margin-bottom: 8px; 
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
 /* links */
 .footer-col a {
-    /* Cor do link agora é o bege, não mais o roxo */
     color: #464646; 
     text-decoration: none;
     font-size: 15px;
     transition: all 0.2s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
 .footer-col a:hover {
-    /* Ao passar o mouse, fica branco e sublinhado */
-    color: #44633F; 
+    color: var(--cor-verde-botao-hover); /* Usando variável mais clara que o original */
     text-decoration: underline;
-    padding-left: 4px; /* Efeito sutil de movimento */
-    font-family: 'Inter', sans-serif;
+    padding-left: 4px; 
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
@@ -537,29 +601,26 @@ a:focus, button:focus, select:focus {
 .footer-socials {
     display: flex;
     gap: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
 
 .footer-socials a {
-    /* Se você usar ícones (como Font Awesome),
-    eles pegarão este estilo.
-    */
-    font-size: 24px; /* Aumenta o tamanho (bom para ícones) */
+    font-size: 24px; 
     color: #464646;
     transition: transform 0.2s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
 
 .footer-socials a:hover {
-    transform: scale(1.1); /* Efeito de zoom */
-    color: #44633F;
-    text-decoration: none; /* Remove o sublinhado dos ícones */
-    padding-left: 0; /* Remove o padding-left dos links normais */
-    font-family: 'Inter', sans-serif;
+    transform: scale(1.1); 
+    color: var(--cor-verde-botao-hover);
+    text-decoration: none; 
+    padding-left: 0; 
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
@@ -569,25 +630,22 @@ a:focus, button:focus, select:focus {
     text-align: center;
     padding-top: 20px;
     margin-top: 20px;
-    border-top: 1px solid #5A7A52; /* Linha sutil de separação */
+    border-top: 1px solid var(--cor-secundaria-escura); /* Usando variável */
     font-size: 13px;
-    color: #555; /* Cor sutil */
-    font-family: 'Inter', sans-serif;
+    color: #555; 
+    font-family: var(--fonte-secundaria);
     font-weight: 700;
 }
 
 /* Ajuste fino na responsividade do rodapé */
 @media (max-width: 800px) {
     .footer-inner {
-        /* O 'auto-fit' já deve cuidar disso, mas podemos forçar
-        para 2 colunas em telas médias antes de ir para 1.
-        */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        text-align: left; /* Mantém o texto alinhado à esquerda */
+        text-align: left; 
     }
 
     .footer-col {
-        align-items: flex-start; /* Alinha no começo, não no centro */
+        align-items: flex-start; 
     }
 
     .footer-logo {
@@ -597,7 +655,6 @@ a:focus, button:focus, select:focus {
 
 @media (max-width: 500px) {
     .footer-inner {
-        /* Em telas muito pequenas, força 1 coluna */
         grid-template-columns: 1fr; 
     }
 }
@@ -757,9 +814,15 @@ a:focus, button:focus, select:focus {
 
 /* Tablet Grande / Desktop Pequeno (Max-width: 1100px) */
 @media (max-width: 1100px) {
-    .barra-lateral {
-        width: 220px;
+    /* CORREÇÃO AQUI: Força o dashboard principal a empilhar */
+    .dashboard-container {
+        flex-direction: column; 
     }
+    
+    .barra-lateral {
+        width: 100%; /* Ocupa a largura total */
+    }
+
     .container-graficos {
         flex-direction: column;
     }
@@ -831,9 +894,9 @@ a:focus, button:focus, select:focus {
         display: block;
     }
 
-    /* ESCONDE O AVATAR NO HEADER MOBILE */
+    /* ESCONDE O AVATAR NO HEADER MOBILE (Removido !important) */
     .mobile-only-avatar {
-        display: none !important; 
+        display: none; 
     }
     
     #btn-login-header {
@@ -873,6 +936,30 @@ a:focus, button:focus, select:focus {
         font-size: 1.4rem;
         margin-bottom: 5px;
     }
+    
+    /* --- CORREÇÃO DE RESPONSIVIDADE PARA ROTA INTELIGENTE --- */
+    #rota-info-bloco {
+        grid-template-columns: 1fr;
+        gap: 10px 0; 
+        padding-bottom: 15px;
+    }
+    
+    #rota-info-bloco h2 {
+        grid-column: auto;
+    }
+    
+    /* Para telas pequenas, o rótulo e o valor devem ficar empilhados (removendo space-between) */
+    #rota-info-bloco p {
+        display: block; /* Volta a ser display block para empilhar */
+    }
+
+    /* Força o valor a quebrar linha e ter um pequeno espaçamento */
+    #rota-info-bloco p span {
+        display: block;
+        margin-top: 2px;
+        font-size: 1.3rem; 
+    }
+    /* --------------------------------------------------------- */
 
     .footer {
         /* PADDING EXTREMO MOBILE */
@@ -884,6 +971,7 @@ a:focus, button:focus, select:focus {
         margin-bottom: 0;
     }
     
+    /* Remove a classe wrapper de mobile que não existe no HTML */
     .footer-content-wrapper {
         flex-direction: column; 
         align-items: center;    
@@ -917,3 +1005,7 @@ a:focus, button:focus, select:focus {
         gap: 4px;
     }
 }
+
+/* ========================================= */
+/* 8. CÓDIGO DUPLICADO REMOVIDO / REORGANIZADO*/
+/* ========================================= */
