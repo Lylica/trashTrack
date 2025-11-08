@@ -184,7 +184,7 @@ if (!isset($_SESSION['usuario'])) {
                 new google.maps.Marker({
                     position: myLatLng,
                     map: map,
-                    title: "Facens!",
+                    title: "Sao Paulo!",
                 });
             }
         </script>
