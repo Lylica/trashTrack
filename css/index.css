@@ -644,10 +644,9 @@ header img {
         text-align: center;
     }
 
-    #section-lixeiras {
-        grid-template-columns: 1fr;
-    }
-}
+    /* A REGRA DE GRID QUE ESTAVA AQUI FOI REMOVIDA */
+
+} /* <--- A CHAVE AGORA ESTÁ NO LUGAR CERTO */
 
 @media (max-width: 800px) {
     .footer {
