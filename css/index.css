@@ -225,19 +225,14 @@ header img {
 }
 
 .content-box {
-    /* Ajuste a largura base (flex-basis) para cerca de 1/3, permitindo que encolha (flex-shrink) */
     flex: 1 1 300px;
-    /* Cresce (1), Encolhe (1), Base (300px) */
     max-width: 400px;
-    /* Define uma largura máxima por cartão */
-
     position: relative;
-    width: 100%;
     height: 230px;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
