@@ -220,7 +220,6 @@ header img {
     align-items: stretch;
     /* Garante que tenham a mesma altura */
     flex-wrap: wrap;
-    /* Permite que quebrem em mobile */
     gap: 2em;
 }
 

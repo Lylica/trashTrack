@@ -118,7 +118,7 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['tipo']) && $_SESSION['tipo']
 
         <a href="porque.php" class="content-box card-porque">
             <h2 id="porque">POR QUE?</h2>
-        </a>  
+        </a>
 
         <a href="dashboard.php" class="content-box card-dashboard">
             <h2 id="dashboard">DASHBOARD</h2>
