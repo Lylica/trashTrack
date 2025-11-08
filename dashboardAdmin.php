@@ -173,28 +173,24 @@ if (!isset($_SESSION['usuario'])) {
         <h2>Mapa de Lixeiras e Rotas</h2>
         <div id="map" style="height: 500px; width: 100%;"></div> 
         <script>
-            // Função de callback que será executada quando a API do Google Maps for carregada
             function initMap() {
-                // Localização que queremos centralizar (Ex: Coordenadas de São Paulo)
-                const myLatLng = { lat: -23.5505, lng: -46.6333 };
-
-                // Cria um novo objeto de mapa
+                // Localização que queremos centralizar 
+                const myLatLng = { lat: -23.4698745, lng: -47.429797 };
                 const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 12, // Nível de zoom
-                    center: myLatLng, // Centraliza o mapa na localização definida
+                    zoom: 16,
+                    center: myLatLng, 
                 });
 
-                // (Opcional) Adiciona um marcador (pin) no mapa
                 new google.maps.Marker({
                     position: myLatLng,
                     map: map,
-                    title: "São Paulo!",
+                    title: "Facens!",
                 });
             }
         </script>
 
         <script 
-            src="https://maps.googleapis.com/maps/api/js?key=API_AQUI&callback=initMap&v=weekly" async>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWsFxmwBnS2FeeaMicOC3IEt9JI2IkRPo&callback=initMap&v=weekly" async>
         </script>
     </section>
 

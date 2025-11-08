@@ -116,13 +116,13 @@ session_start();
         <div>
             <picture>
                 <source type="image/webp" srcset="images/ods-11.webp">
-                <img src="images/ods-11.jpg" alt="ods-11">
+                <img style="width: 250px; height: 250px; border-radius: 10px;" src="images/ods-11.jpg" alt="ods-11">
             </picture>
         </div>
         <div>
             <picture>
                 <source type="image/webp" srcset="images/ods-12.webp">
-                <img src="images/ods-12.jpg" alt="ods-12">
+                <img style="width: 250px; height: 250px; border-radius: 10px;" src="images/ods-12.jpg" alt="ods-12">
             </picture>
         </div>
     </section>
