@@ -190,7 +190,7 @@ if (!isset($_SESSION['usuario'])) {
         </script>
 
         <script 
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWsFxmwBnS2FeeaMicOC3IEt9JI2IkRPo&callback=initMap&v=weekly" async>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWsFxmwBnS2FeeaMicOC3IEt9JI2IkRPo&callback=initMap" async defer>
         </script>
     </section>
 
