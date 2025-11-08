@@ -171,6 +171,21 @@ header img {
     font-weight: 500;
 }
 
+.ods-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+.ods-container img {
+    transition: transform 0.3s ease; 
+}
+
+.ods-container img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 /* Diferenciais título */
 .section-title {

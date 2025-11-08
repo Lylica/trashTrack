@@ -112,7 +112,7 @@ session_start();
         </div>
     </section>
 
-    <section class="section-main">
+    <section class="section-main ods-container">
         <div>
             <picture>
                 <source type="image/webp" srcset="images/ods-11.webp">
