@@ -110,7 +110,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        AA
+        <img src="images/aylla.webp" alt="Foto de Aylla Alves" class="colaborador-avatar">
     </div>
 
     <h2>Aylla Alves</h2>
@@ -132,7 +132,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        BV
+        <img src="images/bianca.webp" alt="Foto de Bianca Vidal" class="colaborador-avatar">
     </div>
 
     <h2>Bianca Vidal</h2>
@@ -154,7 +154,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        CR
+       <img src="images/clara.webp" alt="Foto de Clara Rondello" class="colaborador-avatar">
     </div>
 
     <h2>Clara Rondello</h2>
@@ -176,7 +176,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        LL
+       <img src="images/leticia.webp" alt="Foto de Letícia Lopes" class="colaborador-avatar">
     </div>
 
     <h2>Letícia Lopes</h2>
@@ -199,7 +199,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        MC
+      <img src="images/murilo.webp" alt="Foto de Murilo Cortez" class="colaborador-avatar">
     </div>
 
     <h2>Murilo Cortez</h2>
@@ -222,7 +222,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        PD
+        <img src="images/dias.webp" alt="Foto de Pedro Dias" class="colaborador-avatar">
     </div>
 
     <h2>Pedro Dias</h2>
@@ -245,7 +245,7 @@ session_start();
             <div class="colaborador-card">
     
     <div class="colaborador-avatar">
-        YS
+        <img src="images/yasmin.webp" alt="Foto de Yasmin Souza" class="colaborador-avatar">
     </div>
 
     <h2>Yasmin Souza</h2>
