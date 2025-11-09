@@ -278,17 +278,16 @@ header img {
 
 .card-sobre {
     background-image: url('../images/lixeira-index.webp');
+    text-decoration: none;
 }
 
 .card-porque {
     background-image: url('../images/lixeira-index.webp');
+    text-decoration: none;
 }
 
 .card-dashboard {
     background-image: url('../images/lixeira-index.webp');
-}
-
-#sobre {
     text-decoration: none;
 }
 
@@ -300,9 +299,6 @@ header img {
 .lixo:hover {
     transform: translateY(-5px);
 }
-
-
-
 
 .div-depoimentos {
     flex: 0 0 auto;

@@ -60,7 +60,7 @@ session_start();
                 </a>
                 <!-- porque nós? -->
                 <a href="porque.php">
-                    <button class="botao-header">POR QUE NÓS?</button>
+                    <button class="botao-header">PORQUE NÓS?</button>
                 </a>
                 <!-- dashboard -->
                 <a href="dashboard.php">
@@ -108,199 +108,159 @@ session_start();
         <!--Colaborador 1-->
         <div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <!-- logo -->
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Aylla Alves</h2>
-                </div>    
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/aylla.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/aylla.jpg" alt="foto-aylla">
-                    </picture>
-                    <!-- bio -->
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: Backend e GameDev</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/aylla-alves-206629251/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                        <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
+    
+    <div class="colaborador-avatar">
+        AA
+    </div>
+
+    <h2>Aylla Alves</h2>
+
+    <p class="bio">
+        18 anos <br>
+        Estudante de Engenharia da Computação <br>
+        <span class="interesse">Interesse: Backend e GameDev</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/aylla-alves-206629251/" class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
         
         <!--Colaborador 2-->
+           <div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <!-- logo -->
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Bianca Vidal</h2>
-                </div>    
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/bianca.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/bianca.jpg" alt="foto-bianca">
-                    </picture>
-                    <!-- bio -->
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: indefinido</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/bividal/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
+    
+    <div class="colaborador-avatar">
+        BV
+    </div>
+
+    <h2>Bianca Vidal</h2>
+
+    <p class="bio">
+        18 anos <br>
+        Estudante de Engenharia da Computação <br>
+        <span class="interesse">Interesse: indefinido</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/bividal/" class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
+            
         <!--Colaborador 3-->
+    <div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <!-- logo -->
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Clara Rondello</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/clara.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/clara.jpg" alt="foto-clara">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia Mecatrônica <br>
-                    Interesse: CLP (Controladores lógicos programáveis)</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/clara-rondello/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
+    
+    <div class="colaborador-avatar">
+        CR
+    </div>
+
+    <h2>Clara Rondello</h2>
+
+    <p class="bio">
+        18 anos <br>
+        Estudante de Engenharia Mecatrônica  <br>
+        <span class="interesse">Interesse: CLP (Controladores lógicos programáveis)</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/clara-rondello/" class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
         <!--Colaborador 4-->
+
+<div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Letícia Lopes</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/leticia.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/leticia.jpg" alt="foto-le-lopes">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio">19 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: Frontend</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/leticia-malagola-lopes/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
+    
+    <div class="colaborador-avatar">
+        LL
+    </div>
+
+    <h2>Letícia Lopes</h2>
+
+    <p class="bio">
+        19 anos <br>
+        Estudante de Engenharia da computação  <br>
+        <span class="interesse">Interesse: Frontend</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/leticia-malagola-lopes/" class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
+
         <!--Colaborador 5-->
+
+<div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Murilo Cortez</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/murilo.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/murilo.jpg" alt="foto-murilo">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: indefinido</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/murilo-cortez-092673351/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
+    
+    <div class="colaborador-avatar">
+        MC
+    </div>
+
+    <h2>Murilo Cortez</h2>
+
+    <p class="bio">
+        18 anos <br>
+        Estudante de Engenharia da computação  <br>
+        <span class="interesse">Interesse: indefinido</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/murilo-cortez-092673351/"class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
+
         <!--Colaborador 6-->
+
+<div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Pedro Dias</h2>
-                </div>
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/dias.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/dias.jpg" alt="foto-dias">
-                    </picture>
-                    <!-- bio --> 
-                    <p class="bio"><p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: IA e Cibersegurança</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/phsdias/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
+    
+    <div class="colaborador-avatar">
+        PD
+    </div>
+
+    <h2>Pedro Dias</h2>
+
+    <p class="bio">
+        18 anos <br>
+        Estudante de Engenharia da computação  <br>
+        <span class="interesse"> Interesse: IA e Cibersegurança</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/phsdias/"class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
+
         <!--Colaborador 7-->
+
+<div class="colaboradores-container">
             <div class="colaborador-card">
-                <div class="nome-container">
-                    <picture>
-                        <source type="image/webp" srcset="images/trash.webp">
-                        <img src="images/trash.jpg" alt="Logo">
-                    </picture>
-                    <h2>Yasmin Souza</h2>
-                </div> 
-                    <!-- foto -->
-                    <picture>
-                        <source type="image/webp" srcset="images/yasmin.webp">
-                        <img style="width: 150px; height: 150px; border-radius: 50px;" src="images/yasmin.jpg" alt="foto-yasmin">
-                    </picture>
-                    <!-- bio -->    
-                    <p class="bio">18 anos <br>
-                    Estudante de Engenharia da Computação <br>
-                    Interesse: Backend</p>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/yasmin-souza-santos-/">
-                        <picture>
-                            <source type="image/webp" srcset="images/linkedin.webp">
-                            <img id="lata-lixo" src="images/linkedin.jpg" alt="Logo" style="height: 25px; width: 25px; margin-top: 20px; margin-right: 10px; margin-left: auto;">
-                        </picture>
-                    <span class="linkedin-link">Linkedin</span>
-                    </a>
-            </div>
-        </div>    
-    </section>
+    
+    <div class="colaborador-avatar">
+        YS
+    </div>
+
+    <h2>Yasmin Souza</h2>
+
+    <p class="bio">
+        18 anos <br>
+        Estudante de Engenharia da computação  <br>
+        <span class="interesse"> Interesse: Backend</span>
+    </p>
+
+    <a href="https://www.linkedin.com/in/yasmin-souza-santos-/"class="linkedin-link">
+        <img src="images/linkedin.webp" alt="Logo LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
 
    <!-- rodapé -->
     <footer class="footer">
@@ -318,7 +278,7 @@ session_start();
             <ul>
                 <li><a href="index.php">INÍCIO</a></li>
                 <li><a href="sobre.php">SOBRE</a></li>
-                <li><a href="porque.php">POR QUE NÓS?</a></li>
+                <li><a href="porque.php">PORQUE NÓS?</a></li>
                 <li><a href="dashboard.php">DASHBOARD</a></li>
                 <li><a href="forum.php">FÓRUM</a></li>
             </ul>

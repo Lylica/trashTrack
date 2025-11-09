@@ -195,7 +195,7 @@ session_start();
             <div class="dado-item co2">
                 <div class="dado-texto">
                     <details>
-                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">MENOS CO2 DISSIPADO
+                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA; cursor: pointer;">MENOS CO2 DISSIPADO
                         </summary>
                         <p style="margin-top: 15px; color: #C2C5AA;">Com o TrashTracker,
                             estimamos uma redução de cerca de 1 tonelada de CO₂ a menos gerada por mês por caminhão,
@@ -207,7 +207,7 @@ session_start();
             <div class="dado-item combustivel">
                 <div class="dado-texto">
                     <details>
-                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">MAIS ECONOMIA DE
+                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA; cursor: pointer;">MAIS ECONOMIA DE
                             COMBUSTÍVEL</summary>
                         <p style="margin-top: 15px; color: #C2C5AA;"> Com o nosso sistema inteligente de rotas,
                             poupamos cerca de 375 litros de combustível por mês por caminhão.
@@ -220,7 +220,7 @@ session_start();
             <div class="dado-item rotas">
                 <div class="dado-texto">
                     <details>
-                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA;">ROTAS MENORES</summary>
+                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA; cursor: pointer;">ROTAS MENORES</summary>
                         <p style="margin-top: 15px; color: #C2C5AA;">O nosso sistema de rotas inteligentes contribui
                             para a otimização da coleta, focando em pontos específicos nos quais as lixeiras estão mais
                             cheias,
