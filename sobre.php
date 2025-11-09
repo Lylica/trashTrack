@@ -104,163 +104,116 @@ session_start();
 
     <!--colaboradores-->
     <section id="colaboradores-section">
-        <h1>Colaboradores</h1>
-        <!--Colaborador 1-->
-        <div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-        <img src="images/aylla.webp" alt="Foto de Aylla Alves" class="colaborador-avatar">
-    </div>
+    <h1>Colaboradores</h1>
 
-    <h2>Aylla Alves</h2>
-
-    <p class="bio">
-        18 anos <br>
-        Estudante de Engenharia da Computação <br>
-        <span class="interesse">Interesse: Backend e GameDev</span>
-    </p>
-
-    <a href="https://www.linkedin.com/in/aylla-alves-206629251/" class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
-        
-        <!--Colaborador 2-->
-           <div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-        <img src="images/bianca.webp" alt="Foto de Bianca Vidal" class="colaborador-avatar">
-    </div>
-
-    <h2>Bianca Vidal</h2>
-
-    <p class="bio">
-        18 anos <br>
-        Estudante de Engenharia da Computação <br>
-        <span class="interesse">Interesse: indefinido</span>
-    </p>
-
-    <a href="https://www.linkedin.com/in/bividal/" class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
-            
-        <!--Colaborador 3-->
     <div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-       <img src="images/clara.webp" alt="Foto de Clara Rondello" class="colaborador-avatar">
-    </div>
 
-    <h2>Clara Rondello</h2>
+        <div class="colaborador-card">
+            <img src="images/aylla.webp" alt="Foto de Aylla Alves" class="colaborador-avatar">
 
-    <p class="bio">
-        18 anos <br>
-        Estudante de Engenharia Mecatrônica  <br>
-        <span class="interesse">Interesse: CLP (Controladores lógicos programáveis)</span>
-    </p>
+            <h2>Aylla Alves</h2>
+            <p class="bio">
+                18 anos <br>
+                Estudante de Engenharia da Computação <br>
+                <span class="interesse">Interesse: Backend e GameDev</span>
+            </p>
+            <a href="https://www.linkedin.com/in/aylla-alves-206629251/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-    <a href="https://www.linkedin.com/in/clara-rondello/" class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
-        <!--Colaborador 4-->
+        <div class="colaborador-card">
+            <img src="images/bianca.webp" alt="Foto de Bianca Vidal" class="colaborador-avatar">
 
-<div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-       <img src="images/leticia.webp" alt="Foto de Letícia Lopes" class="colaborador-avatar">
-    </div>
+            <h2>Bianca Vidal</h2>
+            <p class="bio">
+                18 anos <br>
+                Estudante de Engenharia da Computação <br>
+                <span class="interesse">Interesse: indefinido</span>
+            </p>
+            <a href="https://www.linkedin.com/in/bividal/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-    <h2>Letícia Lopes</h2>
+        <div class="colaborador-card">
+            <img src="images/clara.webp" alt="Foto de Clara Rondello" class="colaborador-avatar">
 
-    <p class="bio">
-        19 anos <br>
-        Estudante de Engenharia da computação  <br>
-        <span class="interesse">Interesse: Frontend</span>
-    </p>
+            <h2>Clara Rondello</h2>
+            <p class="bio">
+                18 anos <br>
+                Estudante de Engenharia Mecatrônica <br>
+                <span class="interesse">Interesse: CLP (Controladores lógicos programáveis)</span>
+            </p>
+            <a href="https://www.linkedin.com/in/clara-rondello/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-    <a href="https://www.linkedin.com/in/leticia-malagola-lopes/" class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
+        <div class="colaborador-card">
+            <img src="images/leticia.webp" alt="Foto de Letícia Lopes" class="colaborador-avatar">
 
-        <!--Colaborador 5-->
+            <h2>Letícia Lopes</h2>
+            <p class="bio">
+                19 anos <br>
+                Estudante de Engenharia da computação <br>
+                <span class="interesse">Interesse: Frontend</span>
+            </p>
+            <a href="https://www.linkedin.com/in/leticia-malagola-lopes/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-<div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-      <img src="images/murilo.webp" alt="Foto de Murilo Cortez" class="colaborador-avatar">
-    </div>
+        <div class="colaborador-card">
+            <img src="images/murilo.webp" alt="Foto de Murilo Cortez" class="colaborador-avatar">
 
-    <h2>Murilo Cortez</h2>
+            <h2>Murilo Cortez</h2>
+            <p class="bio">
+                18 anos <br>
+                Estudante de Engenharia da computação <br>
+                <span class="interesse">Interesse: indefinido</span>
+            </p>
+            <a href="https://www.linkedin.com/in/murilo-cortez-092673351/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-    <p class="bio">
-        18 anos <br>
-        Estudante de Engenharia da computação  <br>
-        <span class="interesse">Interesse: indefinido</span>
-    </p>
+        <div class="colaborador-card">
+            <img src="images/dias.webp" alt="Foto de Pedro Dias" class="colaborador-avatar">
 
-    <a href="https://www.linkedin.com/in/murilo-cortez-092673351/"class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
+            <h2>Pedro Dias</h2>
+            <p class="bio">
+                18 anos <br>
+                Estudante de Engenharia da computação <br>
+                <span class="interesse"> Interesse: IA e Cibersegurança</span>
+            </p>
+            <a href="https://www.linkedin.com/in/phsdias/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-        <!--Colaborador 6-->
+        <div class="colaborador-card">
+            <img src="images/yasmin.webp" alt="Foto de Yasmin Souza" class="colaborador-avatar">
 
-<div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-        <img src="images/dias.webp" alt="Foto de Pedro Dias" class="colaborador-avatar">
-    </div>
+            <h2>Yasmin Souza</h2>
+            <p class="bio">
+                18 anos <br>
+                Estudante de Engenharia da computação <br>
+                <span class="interesse"> Interesse: Backend</span>
+            </p>
+            <a href="https://www.linkedin.com/in/yasmin-souza-santos-/" class="linkedin-link">
+                <img src="images/linkedin.webp" alt="Logo LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
 
-    <h2>Pedro Dias</h2>
-
-    <p class="bio">
-        18 anos <br>
-        Estudante de Engenharia da computação  <br>
-        <span class="interesse"> Interesse: IA e Cibersegurança</span>
-    </p>
-
-    <a href="https://www.linkedin.com/in/phsdias/"class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
-
-        <!--Colaborador 7-->
-
-<div class="colaboradores-container">
-            <div class="colaborador-card">
-    
-    <div class="colaborador-avatar">
-        <img src="images/yasmin.webp" alt="Foto de Yasmin Souza" class="colaborador-avatar">
-    </div>
-
-    <h2>Yasmin Souza</h2>
-
-    <p class="bio">
-        18 anos <br>
-        Estudante de Engenharia da computação  <br>
-        <span class="interesse"> Interesse: Backend</span>
-    </p>
-
-    <a href="https://www.linkedin.com/in/yasmin-souza-santos-/"class="linkedin-link">
-        <img src="images/linkedin.webp" alt="Logo LinkedIn">
-        <span>LinkedIn</span>
-    </a>
-</div>
+    </div> </section>   
 
    <!-- rodapé -->
     <footer class="footer">
