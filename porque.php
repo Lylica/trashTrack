@@ -113,19 +113,21 @@ session_start();
     </section>
 
     <section class="section-main ods-container">
-        <div>
-            <picture>
-                <source type="image/webp" srcset="images/ods-11.webp">
-                <img style="width: 250px; height: 250px; border-radius: 10px;" src="images/ods-11.jpg" alt="ods-11">
-            </picture>
-        </div>
-        <div>
-            <picture>
-                <source type="image/webp" srcset="images/ods-12.webp">
-                <img style="width: 250px; height: 250px; border-radius: 10px;" src="images/ods-12.jpg" alt="ods-12">
-            </picture>
-        </div>
-    </section>
+    <div>
+        <picture>
+            <source type="image/webp" srcset="images/ods-11.webp"> 
+            
+            <img src="images/ods-11.webp" alt="ODS 11: Cidades Sustentáveis" class="ods-imagem-filtro">
+        </picture>
+    </div>
+    <div>
+        <picture>
+            <source type="image/webp" srcset="images/ods-12.webp"> 
+            
+            <img src="images/ods-12.webp" alt="ODS 12: Consumo Sustentável" class="ods-imagem-filtro">
+        </picture>
+    </div>
+</section>
 
     <!-- caixa diferenciais-->
     <section style="background-color: rgb(101, 109, 74); height: auto; width: auto; padding: 20px; ">
