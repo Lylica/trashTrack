@@ -162,11 +162,9 @@ if (!isset($_SESSION['usuario'])) {
         <div class="footer-col">
             <h3>Páginas</h3>
             <ul>
-                <li><a href="index.php">INÍCIO</a></li>
-                <li><a href="sobre.php">SOBRE</a></li>
-                <li><a href="porque.php">POR QUE NÓS?</a></li>
-                <li><a href="dashboard.php">DASHBOARD</a></li>
-                <li><a href="forum.php">FÓRUM</a></li>
+                <li><a href="admin.php">MENU ADMIN</a></li>
+                <li><a href="dashboardAdmin.php">DASHBOARD</a></li>
+                <li><a href="forumAdmin.php">FÓRUM</a></li>
             </ul>
         </div>
 

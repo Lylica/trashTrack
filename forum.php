@@ -34,49 +34,6 @@ if (!isset($_SESSION['usuario'])) {
     <meta property="og:image" content="images/icone.png">
     <meta property="og:url" content="https://srv1074333.hstgr.cloud">
 
-    <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          // Usei um tema escuro padrão (estilo shadcn/ui) para combinar com os nomes das classes
-          colors: {
-            background: 'hsl(222.2 84% 4.9%)',
-            foreground: 'hsl(210 40% 98%)',
-            card: 'hsl(222.2 84% 4.9%)',
-            'card-foreground': 'hsl(210 40% 98%)',
-            primary: 'hsl(210 40% 98%)',
-            'primary-foreground': 'hsl(210 40% 9.8%)',
-            secondary: 'hsl(217.2 32.6% 17.5%)',
-            'secondary-foreground': 'hsl(210 40% 98%)',
-            accent: 'hsl(217.2 32.6% 25.5%)', // Cor para 'text-accent'
-            'muted-foreground': 'hsl(215 20.2% 65.1%)',
-          }
-        }
-      }
-    }
-  </script>
-
-    <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: hsl(222.2 84% 4.9%); /* Cor 'background' */
-      color: hsl(210 40% 98%); /* Cor 'foreground' */
-    }
-    
-    /* Estilo para o spinner de carregamento */
-    .spinner {
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-left-color: #FFF;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
       <!-- Google Analytics-->
