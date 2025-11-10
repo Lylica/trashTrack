@@ -104,8 +104,8 @@ if (!isset($_SESSION['usuario'])) {
 
     <h3>Tipo de Gráfico</h3>
     <div class="btn-group">
-        <button data-tipo="bar">Bar</button>
-        <button data-tipo="step">Step</button>
+        <button data-tipo="bar">Barra</button>
+        <button data-tipo="step">Linha</button>
     </div>
 
     <button id="btnCSV-mobile">Exportar dados</button>
@@ -140,6 +140,7 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </aside>
 
+        <!-- Mostra dados do dashboard -->
         <section class="conteudo-dashboard">
             <h2 id="data-titulo">Nível da Lixeira</h2>
 
@@ -154,6 +155,8 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </section>
     </div>
+
+    <!-- Mostra dados ficticios -->
     <section class="rota-inteligente-section">
        <div id="rota-info-bloco" class="info-bloco">
             <h2>ROTA INTELIGENTE</h2>
@@ -173,21 +176,43 @@ if (!isset($_SESSION['usuario'])) {
         <h2>Mapa de Lixeiras e Rotas</h2>
         <div id="map" style="height: 500px; width: 100%;"></div> 
         <script>
-            function initMap() {
-                // Localização que queremos centralizar 
-                const myLatLng = { lat: -23.4698745, lng: -47.429797 };
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 16,
-                    center: myLatLng, 
-                });
+    // Função principal que é chamada quando a API do Google Maps é carregada
+    function initMap() {
+      // 1. Criar os objetos principais
+      const directionsService = new google.maps.DirectionsService();
+      const directionsRenderer = new google.maps.DirectionsRenderer();
 
-                new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    title: "Sao Paulo!",
-                });
-            }
-        </script>
+      // 2. Criar o mapa (centralizado em São Paulo, por exemplo)
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 7,
+        center: { lat: -23.5505, lng: -46.6333 }, // Coordenadas de São Paulo
+      });
+
+      // 3. Desenha a rota
+      directionsRenderer.setMap(map);
+
+      // 4. Chamar a função que calcula e exibe a rota
+      calculateAndDisplayRoute(directionsService, directionsRenderer);
+    }
+
+    function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+      // 5. Defini rota de exemplo
+      const request = {
+        origin: "Avenida Paulista, 1578, São Paulo, SP", 
+        destination: "Praça da Sé, 0, São Paulo, SP",  
+        travelMode: google.maps.TravelMode.DRIVING     
+      };
+
+      // 6. Chamar a API Directions (o "cérebro") e ve a rota mais rápida
+      directionsService.route(request, (result, status) => {
+        if (status === "OK") {
+          directionsRenderer.setDirections(result);
+        } else {
+          window.alert("Falha ao solicitar a rota: " + status);
+        }
+      });
+    }
+  </script>
 
         <script 
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWsFxmwBnS2FeeaMicOC3IEt9JI2IkRPo&callback=initMap" async defer>

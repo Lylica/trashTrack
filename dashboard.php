@@ -118,8 +118,8 @@ if (!isset($_SESSION['usuario'])) {
 
     <h3>Tipo de Gráfico</h3>
     <div class="btn-group">
-        <button data-tipo="bar">Bar</button>
-        <button data-tipo="step">Step</button>
+        <button data-tipo="bar">Barra</button>
+        <button data-tipo="step">Linha</button>
     </div>
 
     <button id="btnCSV-mobile">Exportar dados</button>
