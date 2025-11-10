@@ -292,14 +292,10 @@ header img {
     height: 100px;
     border-radius: 50%; 
     margin: 0 auto 15px auto; 
-    
-    /* Propriedades para garantir que a imagem preencha o círculo */
     object-fit: cover; 
-    object-position: center; /* Garante que o centro da imagem é o foco */
-
-    /* Remove qualquer padding/margin extra que possa estar empurrando a imagem */
+    object-position: center;
     padding: 0; 
-    display: block; /* Garante que a imagem se comporte como um bloco para o margin: auto */
+    display: block; 
 }
 
 .colaborador-card h2 {
@@ -326,20 +322,20 @@ header img {
 }
 
 .linkedin-link {
-    display: inline-flex; /* Para alinhar ícone e texto */
+    display: inline-flex; 
     align-items: center;
-    justify-content: center; /* Centraliza no card */
-    gap: 8px; /* Espaço entre ícone e texto */
+    justify-content: center; 
+    gap: 8px; 
     text-decoration: none;
-    color: #656D4A; /* Cor do link (verde) */
+    color: #656D4A; 
     font-weight: bold;
     font-family: 'Inter', sans-serif;
-    margin-top: auto; /* Empurra para o final do card */
+    margin-top: auto; 
     padding-top: 10px;
 }
 
 .linkedin-link:hover {
-    color: #414833; /* Escurece ao passar o mouse */
+    color: #414833; 
     text-decoration: underline;
 }
 
@@ -352,16 +348,14 @@ header img {
 /* ======== RODAPÉ ======== */
 .footer {
     background-color: #DCDABE; 
-    padding: 50px 40px 20px 40px; /* Mais padding em cima, menos embaixo */
+    padding: 50px 40px 20px 40px; 
     font-family: 'Inter', sans-serif;
-    /* Texto principal do rodapé será o bege claro */
     color: #000; 
 }
 
-/* container interno com 4 colunas */
+
 .footer-inner {
     display: grid;
-    /* Força 4 colunas de tamanho igual */
     grid-template-columns: repeat(4, 1fr); 
     align-items: start;
     gap: 30px;
@@ -379,7 +373,7 @@ header img {
 
 /* Logo no rodapé */
 .footer-logo {
-    width: 200px; /* Um pouco menor que no header */
+    width: 200px; 
     height: auto;
     margin-bottom: 10px;
 }
@@ -387,7 +381,7 @@ header img {
 .footer-descricao {
     font-size: 14px;
     line-height: 1.5;
-    color: #000; /* Um tom um pouco mais escuro para a descrição */
+    color: #000; 
     max-width: 250px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -397,7 +391,7 @@ header img {
 /* títulos */
 .footer-col h3 {
     margin-bottom: 10px;
-    font-size: 1.1rem; /* 18px */
+    font-size: 1.1rem; 
     font-weight: 700;
     color: #000;
     font-family: 'Inter', sans-serif;
@@ -414,14 +408,13 @@ header img {
 
 /* itens da lista */
 .footer-col li {
-    margin-bottom: 8px; /* Mais espaçamento */
+    margin-bottom: 8px; 
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
 /* links */
 .footer-col a {
-    /* Cor do link agora é o bege, não mais o roxo */
     color: #464646; 
     text-decoration: none;
     font-size: 15px;
@@ -431,15 +424,14 @@ header img {
 }
 
 .footer-col a:hover {
-    /* Ao passar o mouse, fica branco e sublinhado */
     color: #44633F; 
     text-decoration: underline;
-    padding-left: 4px; /* Efeito sutil de movimento */
+    padding-left: 4px; 
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
-/* Estilo para a nova seção de redes sociais */
+
 .footer-socials {
     display: flex;
     gap: 15px;
@@ -449,10 +441,7 @@ header img {
 
 
 .footer-socials a {
-    /* Se você usar ícones (como Font Awesome),
-    eles pegarão este estilo.
-    */
-    font-size: 24px; /* Aumenta o tamanho (bom para ícones) */
+    font-size: 24px; 
     color: #464646;
     transition: transform 0.2s ease;
     font-family: 'Inter', sans-serif;
@@ -461,10 +450,10 @@ header img {
 
 
 .footer-socials a:hover {
-    transform: scale(1.1); /* Efeito de zoom */
+    transform: scale(1.1); 
     color: #44633F;
-    text-decoration: none; /* Remove o sublinhado dos ícones */
-    padding-left: 0; /* Remove o padding-left dos links normais */
+    text-decoration: none; 
+    padding-left: 0; 
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
@@ -475,9 +464,9 @@ header img {
     text-align: center;
     padding-top: 20px;
     margin-top: 20px;
-    border-top: 1px solid #5A7A52; /* Linha sutil de separação */
+    border-top: 1px solid #5A7A52; 
     font-size: 13px;
-    color: #555; /* Cor sutil */
+    color: #555; 
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
@@ -485,15 +474,12 @@ header img {
 /* Ajuste fino na responsividade do rodapé */
 @media (max-width: 800px) {
     .footer-inner {
-        /* O 'auto-fit' já deve cuidar disso, mas podemos forçar
-        para 2 colunas em telas médias antes de ir para 1.
-        */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        text-align: left; /* Mantém o texto alinhado à esquerda */
+        text-align: left; 
     }
 
     .footer-col {
-        align-items: flex-start; /* Alinha no começo, não no centro */
+        align-items: flex-start; 
     }
 
     .footer-logo {
@@ -503,7 +489,6 @@ header img {
 
 @media (max-width: 500px) {
     .footer-inner {
-        /* Em telas muito pequenas, força 1 coluna */
         grid-template-columns: 1fr; 
     }
 }

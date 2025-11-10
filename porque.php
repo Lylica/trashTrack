@@ -190,44 +190,37 @@ session_start();
     </section>
 
     <!--dados-->
+
     <section id="section-dados">
         <h1 style="margin-bottom: 30px">Dados</h1>
-        <div class="dados-container">
-            <!--dado 1-->
-            <div class="dado-item co2">
-                <div class="dado-texto">
-                    <details>
-                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA; cursor: pointer;">MENOS CO2 DISSIPADO
-                        </summary>
-                        <p style="margin-top: 15px; color: #C2C5AA;">Com o TrashTracker,
+            <div class="dados-container">
+                <div class="dado-item co2">  
+                    <div class="dado-texto">
+                        <h2 style="font-family:  'Inter', sans-serif; font-weight: bold; color: #C2C5AA; text-align: center;">MENOS CO2 DISSIPADO</h2>   
+                        <p style="margin-top: 15px; color: #C2C5AA; text-align: justify;">Com o TrashTracker,
                             estimamos uma redução de cerca de 1 tonelada de CO₂ a menos gerada por mês por caminhão,
-                            contribuindo para a menor geração de gases poluentes para o meio ambiente.</p>
-                    </details>
-                </div>
-            </div>
-            <!--dado 2-->
+                            contribuindo para a menor geração de gases poluentes para o meio ambiente.</p> 
+                    </div>
+                </div>  
+
             <div class="dado-item combustivel">
                 <div class="dado-texto">
-                    <details>
-                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA; cursor: pointer;">MAIS ECONOMIA DE
-                            COMBUSTÍVEL</summary>
-                        <p style="margin-top: 15px; color: #C2C5AA;"> Com o nosso sistema inteligente de rotas,
+                    <h2 style="font-family: 'Inter', sans-serif; font-weight: bold; color: #C2C5AA; text-align: center;">MAIS ECONOMIA DE COMBUSTÍVEL</h2> 
+                    <p style="margin-top: 15px; color: #C2C5AA; text-align: justify;"> Com o nosso sistema inteligente de rotas,
                             poupamos cerca de 375 litros de combustível por mês por caminhão.
                             Além de representar um gasto a menos para a cidade,
                             essa economia também contribui para a redução da geração de gases poluentes.
-                    </details>
+                    </p>
                 </div>
             </div>
-            <!--dado 3-->
+
             <div class="dado-item rotas">
                 <div class="dado-texto">
-                    <details>
-                        <summary style="font-family: inter; font-weight: bold; color: #C2C5AA; cursor: pointer;">ROTAS MENORES</summary>
-                        <p style="margin-top: 15px; color: #C2C5AA;">O nosso sistema de rotas inteligentes contribui
+                    <h2 style="font-family: 'Inter', sans-serif; font-weight: bold; color: #C2C5AA; text-align: center;">ROTAS MENORES</h2> 
+                    <p style="margin-top: 15px; color: #C2C5AA; text-align: justify;">O nosso sistema de rotas inteligentes contribui
                             para a otimização da coleta, focando em pontos específicos nos quais as lixeiras estão mais
                             cheias,
                             e impacta diretamente na economia de combustível e na redução dessas emissões.</p>
-                    </details>
                 </div>
             </div>
         </div>
