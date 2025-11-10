@@ -232,7 +232,7 @@ header img {
     border-radius: 30px;
     flex: 1;
     min-width: 280px;
-    max-width: 500px;
+    max-width: 1000px;
     flex-direction: column;
     display: flex;
     font-family: 'Inter', sans-serif;
@@ -277,11 +277,10 @@ header img {
 
 .tabela-comparativa {
     display: grid;
-    /* Define 3 colunas: Tópico (flexível), Nós (auto), Concorrentes (auto) */
-    grid-template-columns: 1fr max-content max-content;
-    gap: 20px 15px;      /* 20px entre linhas, 15px entre colunas */
-    align-items: center; /* Alinha verticalmente texto e ícones */
-    text-align: left;    /* IMPORTANTE: Reseta o 'text-align: justify' do .card-texto */
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px 15px;      
+    align-items: center; 
+    text-align: left;    
 }
 
 .tabela-header {
@@ -557,9 +556,9 @@ header img {
     text-align: center;
     padding-top: 20px;
     margin-top: 20px;
-    border-top: 1px solid #5A7A52; /* Linha sutil de separação */
+    border-top: 1px solid #5A7A52; 
     font-size: 13px;
-    color: #555; /* Cor sutil */
+    color: #555; 
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
@@ -567,15 +566,12 @@ header img {
 /* Ajuste fino na responsividade do rodapé */
 @media (max-width: 800px) {
     .footer-inner {
-        /* O 'auto-fit' já deve cuidar disso, mas podemos forçar
-        para 2 colunas em telas médias antes de ir para 1.
-        */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        text-align: left; /* Mantém o texto alinhado à esquerda */
+        text-align: left; 
     }
 
     .footer-col {
-        align-items: flex-start; /* Alinha no começo, não no centro */
+        align-items: flex-start; 
     }
 
     .footer-logo {
@@ -585,7 +581,6 @@ header img {
 
 @media (max-width: 500px) {
     .footer-inner {
-        /* Em telas muito pequenas, força 1 coluna */
         grid-template-columns: 1fr; 
     }
 }
@@ -594,34 +589,62 @@ header img {
 #section-dados h1{
     font-family: 'Inter', sans-serif; 
     color: rgb(194, 197, 170); 
-    /* margin-left: 50px; */
     text-align: center;
 }
 
 
 @media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }   
+    
+    
+         .cards-container {
+         flex-direction: column;
+         align-items: center;
+         padding: 20px; 
+ }  
 
-    .card {
-        width: 100%;
-        max-width: 400px;
+   
+        .card {
+         width: 100%;
+         max-width: 100%; 
+ }
+
+    
+    .card-texto.tabela-comparativa {
+        padding: 20px 15px; 
     }
 
-    .titulo-secao {
-        text-align: center;
-        font-size: 2.2rem;
+    .tabela-comparativa {
+        gap: 15px 10px; 
     }
+    
+    .tabela-header {
+        font-size: 1.1rem; 
+    }
+
+    
+    .tabela-topico {
+        font-size: 0.95rem; 
+    }
+
+    .tabela-check img,
+    .tabela-x img {
+        width: 25px; 
+        height: 25px;
+    }
+
+    
+     .titulo-secao {
+         text-align: center;
+         font-size: 2.2rem;
+     }
 
     .dados-container {
-        flex-direction: column; /* Faz os itens voltarem para vertical em telas menores */
-        align-items: center; /* Opcional: centraliza os cards */
-    }
+         flex-direction: column; 
+         align-items: center; 
+     }
 
-    .dado-item {
-        width: 100%;
-        max-width: 500px; /* Garante que o card não fique muito largo no tablet */
-    }
+     .dado-item {
+         width: 100%;
+         max-width: 500px; 
+     }
 }
